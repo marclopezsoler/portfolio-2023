@@ -1,3 +1,5 @@
+import styles from "@/public/styles/About.module.scss"
+
 export const metadata = {
   title: "about | marc lópez portfolio",
   description: "",
@@ -5,7 +7,7 @@ export const metadata = {
 
 export default function About() {
   return (
-    <div>
+    <div className={styles.main}>
       <p>ABOUT</p>
     </div>
   );

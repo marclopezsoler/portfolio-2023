@@ -1,3 +1,6 @@
+import styles from "@/public/styles/Contact.module.scss"
+
+
 export const metadata = {
    title: "contact | marc lópez portfolio",
    description: "",
@@ -5,7 +8,7 @@ export const metadata = {
 
 export default function Contact(){
    return(
-      <div>
+      <div className={styles.main}>
          <p>CONTACT</p>
       </div>
    )

@@ -8,7 +8,9 @@ export const metadata = {
 export default function App() {
   return (
     <main className={styles.main}>
-      <p>HOME</p>
+      <section className={styles.home_section_1}>
+        <h1 className={styles.home_title}>creative digital artist</h1>
+      </section>
     </main>
   );
 }

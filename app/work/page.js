@@ -1,5 +1,6 @@
 import Link from "next/link";
 import works from "../_data/data";
+import styles from "@/public/styles/Work.module.scss"
 
 export const metadata = {
   title: "work | marc lópez portfolio",
@@ -8,7 +9,7 @@ export const metadata = {
 
 export default function Work() {
   return (
-    <div>
+    <div className={styles.main}>
       <p>WORK</p>
       {works.map((work) => (
         <Link href={`/work/${work.id}`} key={work.id}>

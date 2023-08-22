@@ -1,8 +1,14 @@
 @import "/public/styles/variables.scss";
 
-html, body{
-   padding: 0;
-   margin: 0;
+html,
+body {
+  padding: 0;
+  margin: 0;
 
-   background-color: $blue;
+  background-color: $blue;
+
+  cursor: none;
+
+  overflow-x: hidden;
 }
+

@@ -1,0 +1,12 @@
+.main {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   min-height: 100%;
+   color: white;
+   flex: 1 0 auto;
+   width: 100%;
+ 
+   padding-top: calc(1em + 2em + 1.4rem + 1vw + 0.2em);
+ }
