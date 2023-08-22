@@ -1,3 +1,26 @@
-.menu_item{
-   color: black;
+@import "/public/styles/variables.scss";
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+.menu_item {
+  color: $green;
+  background-color: $blue;
+  text-decoration: none;
+  font-family: $font-titles, sans-serif;
+  font-weight: 800;
+  font-size: calc(1.2rem + 1vw);
+  padding: 0.2em;
+  transition: 0.25s;
+
+  &:hover{
+   color: $greenhv;
+  }
 }
