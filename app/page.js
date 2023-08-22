@@ -1,5 +1,3 @@
-"use client";
-import { motion } from "framer-motion";
 import styles from "./page.module.scss";
 
 export const metadata = {
@@ -9,32 +7,24 @@ export const metadata = {
 
 export default function App() {
   return (
-    <motion.div
-      className="container text-center  bg-black"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.35 }}
-    >
-      <main className={styles.main}>
-        <section className={styles.home_section_1}>
-          <h1 className={styles.home_title}>creative digital artist</h1>
-        </section>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-        <p>home</p>
-      </main>
-    </motion.div>
+    <main className={styles.main}>
+      <section className={styles.home_section_1}>
+        <h1 className={styles.home_title}>creative digital artist</h1>
+      </section>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+      <p>home</p>
+    </main>
   );
 }
