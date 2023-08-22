@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+import styles from "@/public/styles/Home.module.scss";
 
 export const metadata = {
   title: "marc lópez portfolio",
