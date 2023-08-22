@@ -10,5 +10,18 @@ body {
   cursor: none;
 
   overflow-x: hidden;
+
+  display: flex;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body{
+  max-width: 100%;
+  padding: 0 2.5%;
+  overflow: hidden;
 }
 
