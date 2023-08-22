@@ -1,3 +1,5 @@
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
 import Cursor from "./components/Cursor";
 import Header from "./components/Header";
 import "./globals.scss";
@@ -11,7 +13,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Cursor />
         <Header />
-        {children}
+        <AnimatePresence>{children}</AnimatePresence>
       </body>
     </html>
   );

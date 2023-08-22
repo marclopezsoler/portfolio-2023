@@ -84,6 +84,7 @@
     background-color: $green;
     color: $blue;
     cursor: none;
+    font-size: calc(1.6rem + 1.6vw);
 
     &:hover{
       color: $bluehv;
