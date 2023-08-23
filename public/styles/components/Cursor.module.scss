@@ -6,8 +6,8 @@
   height: 40px;
   background: $green;
   border-radius: 50%;
-  top: var(--y, 0);
-  left: var(--x, 0);
+  top: var(--y, -1000px);
+  left: var(--x, -1000px);
   transform: translate(-50%, -100%);
   z-index: 2;
   mix-blend-mode: difference;
