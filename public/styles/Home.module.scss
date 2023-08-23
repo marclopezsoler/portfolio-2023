@@ -11,6 +11,9 @@
   width: 100%;
   max-width: 100vw;
   padding-top: calc(1em + 2em + 1.4rem + 1vw + 0.2em);
+
+  flex: 1;
+  flex-grow: 1;
 }
 
 .home_section_1 {
@@ -47,12 +50,6 @@
   padding: 0;
   margin: 0;
 }
-
-// @media only screen and (min-width: 1080px) {
-//   .home_subtitle {
-//     max-width: 1080px;
-//   }
-// }
 
 @media only screen and (max-width: 900px) {
   .home_subtitle {

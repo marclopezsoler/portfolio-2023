@@ -3,6 +3,7 @@ import { isMobile } from "react-device-detect";
 import Cursor from "./components/Cursor";
 import Header from "./components/Header";
 import "./globals.scss";
+import Footer from "./components/Footer";
 
 const RootLayout = ({ children }) => {
   return (
@@ -11,9 +12,12 @@ const RootLayout = ({ children }) => {
         <link rel="shortcut icon" href="./icon.ico" />
       </Head>
       <body>
-        <Header />
-        {isMobile ? <></> : <Cursor />}
-        {children}
+        <section className="content">
+          <Header />
+          {isMobile ? <></> : <Cursor />}
+          <div className="main">{children}</div>
+          <Footer />
+        </section>
       </body>
     </html>
   );

@@ -1,0 +1,31 @@
+@import "/public/styles/utilities/variables.scss";
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.footer_row{
+   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-size: 14px;
+}
+
+.footer_link {
+  font-family: $font-titles;
+  color: $green;
+  text-decoration: none;
+}
+
+.footer_copy {
+  font-family: $font-titles;
+  color: $green;
+}
+
