@@ -4,6 +4,11 @@ import styles from "@/public/styles/Work.module.scss";
 import Link from "next/link";
 import works from "../_data/data";
 
+export const metadata = {
+  title: "work | marc lópez portfolio",
+  description: "",
+};
+
 const Work = () => {
   return (
     // <motion.div

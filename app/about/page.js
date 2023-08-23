@@ -2,6 +2,11 @@
 // import { motion } from "framer-motion";
 import styles from "@/public/styles/About.module.scss";
 
+export const metadata = {
+  title: "about | marc lópez portfolio",
+  description: "",
+};
+
 const About = () => {
   return (
     // <motion.div
