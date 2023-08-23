@@ -1,8 +1,8 @@
+import Head from "next/head";
 import { isMobile } from "react-device-detect";
 import Cursor from "./components/Cursor";
 import Header from "./components/Header";
 import "./globals.scss";
-import Head from "next/head";
 
 const RootLayout = ({ children }) => {
   return (
@@ -13,7 +13,6 @@ const RootLayout = ({ children }) => {
       <body>
         <Header />
         {isMobile ? <></> : <Cursor />}
-
         {children}
       </body>
     </html>
