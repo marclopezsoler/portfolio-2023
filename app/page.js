@@ -1,34 +1,13 @@
-"use client";
+// "use client";
 // import { motion } from "framer-motion";
 import styles from "@/public/styles/Home.module.scss";
-import { useEffect } from "react";
 
-
+export const metadata = {
+  title: "marc lópez portfolio",
+  description: "",
+};
 
 const App = () => {
-  useEffect(() => {
-    const originalTitle = "marc lópez portfolio"; // Store the original title
-
-    const changeTitle = (newTitle) => {
-      document.title = newTitle;
-    };
-
-    const onBlur = () => {
-      changeTitle("Hey, come back!");
-    };
-
-    const onFocus = () => {
-      changeTitle(originalTitle);
-    };
-
-    window.addEventListener('blur', onBlur);
-    window.addEventListener('focus', onFocus);
-
-    return () => {
-      window.removeEventListener('blur', onBlur);
-      window.removeEventListener('focus', onFocus);
-    };
-  }, []);
   return (
     // <motion.div
     //   className="container text-center  bg-black"
@@ -40,7 +19,7 @@ const App = () => {
       <main className={styles.main}>
         <section className={styles.home_section_1}>
           <h1 className={styles.home_title}>creative digital artist</h1>
-          <h2 className={styles.home_subtitle}>marc lópez is a digital artist and developer from Barcelona, he's keen on creating cool and simple stuff</h2>
+          <h2 className={styles.home_subtit}>marc lópez is a digital artist and developer from Barcelona, he's keen on creating cool and simple stuff</h2>
         </section>
         <p>home</p>
         <p>home</p>
