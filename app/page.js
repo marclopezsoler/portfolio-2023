@@ -1,13 +1,34 @@
-// "use client";
+"use client";
 // import { motion } from "framer-motion";
 import styles from "@/public/styles/Home.module.scss";
+import { useEffect } from "react";
 
-export const metadata = {
-  title: "marc lópez portfolio",
-  description: "",
-};
+
 
 const App = () => {
+  useEffect(() => {
+    const originalTitle = "marc lópez portfolio"; // Store the original title
+
+    const changeTitle = (newTitle) => {
+      document.title = newTitle;
+    };
+
+    const onBlur = () => {
+      changeTitle("Hey, come back!");
+    };
+
+    const onFocus = () => {
+      changeTitle(originalTitle);
+    };
+
+    window.addEventListener('blur', onBlur);
+    window.addEventListener('focus', onFocus);
+
+    return () => {
+      window.removeEventListener('blur', onBlur);
+      window.removeEventListener('focus', onFocus);
+    };
+  }, []);
   return (
     // <motion.div
     //   className="container text-center  bg-black"

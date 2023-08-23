@@ -22,7 +22,7 @@ export default function WorkDetail({ params }) {
         <p>Title: {work.title}</p>
         <p>ID: {work.id}</p>
         <img
-          src={`/assets/${work.id}/image1.jpg`}
+          src={`/assets/images/work/${work.id}/image1.jpg`}
           alt={`Image for ${work.title}`}
         />
       </div>
