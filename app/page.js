@@ -19,6 +19,7 @@ const App = () => {
       <main className={styles.main}>
         <section className={styles.home_section_1}>
           <h1 className={styles.home_title}>creative digital artist</h1>
+          <h2 className={styles.home_subtitle}>marc lópez is a digital artist and developer from Barcelona, he's keen on creating cool and simple stuff</h2>
         </section>
         <p>home</p>
         <p>home</p>

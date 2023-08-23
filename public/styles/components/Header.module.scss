@@ -59,6 +59,8 @@
   padding: 0.2em;
   transition: 0.25s;
 
+  cursor: none;
+
   &:hover {
     color: $greenhv;
   }
@@ -86,6 +88,7 @@
 
     &:hover {
       color: $bluehv;
+      cursor: none;
     }
   }
 
