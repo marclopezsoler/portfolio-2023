@@ -2,7 +2,7 @@
 import styles from "@/public/styles/About.module.scss";
 import { motion } from "framer-motion";
 
-export default function About() {
+const About = () => {
   return (
     <motion.div
       className="container text-center  bg-black"
@@ -17,3 +17,5 @@ export default function About() {
     </motion.div>
   );
 }
+
+export default About;

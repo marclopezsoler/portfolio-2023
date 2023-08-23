@@ -4,7 +4,7 @@ import Link from "next/link";
 import works from "../_data/data";
 import { motion } from "framer-motion";
 
-export default function Work() {
+const Work = () => {
   return (
     <motion.div
       className="container text-center  bg-black"
@@ -24,3 +24,5 @@ export default function Work() {
     </motion.div>
   );
 }
+
+export default Work;

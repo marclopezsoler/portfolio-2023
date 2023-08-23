@@ -7,7 +7,7 @@ export const metadata = {
   description: "",
 };
 
-export default function Contact() {
+const Contact = () => {
   return (
     <motion.div
       className="container text-center  bg-black"
@@ -22,3 +22,5 @@ export default function Contact() {
     </motion.div>
   );
 }
+
+export default Contact;

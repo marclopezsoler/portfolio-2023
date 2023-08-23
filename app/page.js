@@ -7,7 +7,7 @@ export const metadata = {
   description: "",
 };
 
-export default function App() {
+const App = () => {
   return (
     <motion.div
       className="container text-center  bg-black"
@@ -38,3 +38,5 @@ export default function App() {
     </motion.div>
   );
 }
+
+export default App;
