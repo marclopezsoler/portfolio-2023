@@ -11,16 +11,17 @@ export const metadata = {
   description: "",
 };
 
-const RootLayout = ({children}) => {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en" className="main">
       <body className={inter.className}>
         <Header />
         {isMobile ? <></> : <Cursor />}
+
         {children}
       </body>
     </html>
   );
-}
+};
 
 export default RootLayout;
