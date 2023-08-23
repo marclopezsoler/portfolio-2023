@@ -1,11 +1,13 @@
+"use client";
 import Head from "next/head";
 import { isMobile } from "react-device-detect";
-import Cursor from "./components/Cursor";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.scss";
-import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
 
 const RootLayout = ({ children }) => {
+
   return (
     <html lang="en" className="main">
       <Head>

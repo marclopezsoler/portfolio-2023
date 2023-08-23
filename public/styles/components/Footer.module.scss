@@ -9,13 +9,25 @@
   gap: 1em;
 }
 
-.footer_row{
-   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
+.footer_row {
   font-size: 14px;
+
+  &:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 2em 0 2em;
+    gap: 1em;
+  }
+
+  &:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2em 2em 2em;
+  }
 }
 
 .footer_link {
@@ -28,4 +40,3 @@
   font-family: $font-titles;
   color: $green;
 }
-
