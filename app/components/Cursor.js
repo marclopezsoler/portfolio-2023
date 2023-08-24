@@ -10,9 +10,11 @@ function Cursor() {
       let path = ev.composedPath();
 
       if (path.some((x) => x.tagName === "A" || x.tagName === "BUTTON")) {
-        size = 30;
+        size = 20;
+        cursor.classList.add(`${styles.hovering}`);
       } else {
         size = 15;
+        cursor.classList.remove(`${styles.hovering}`);
       }
 
       cursor.style.left = ev.clientX - size / 2 + "px";

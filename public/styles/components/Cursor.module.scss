@@ -6,6 +6,12 @@
   pointer-events: none;
   mix-blend-mode: difference;
   border-radius: 50%;
-  transition: 0.05s linear;
+  border: 2px solid $green;
+  transition: 0.067s linear, width 0.15s linear, height 0.15s linear, background-color 0.15s linear;
   z-index: 9999;
+}
+
+.hovering{
+  background-color: transparent;
+  border: 2px solid $green;
 }
