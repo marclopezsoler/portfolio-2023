@@ -1,5 +1,5 @@
-"use client";
-import { motion } from "framer-motion";
+// "use client";
+// import { motion } from "framer-motion";
 import works from "@/app/_data/data";
 import styles from "@/public/styles/WorkDetail.module.scss";
 
@@ -19,13 +19,13 @@ export default function WorkDetail({ params }) {
   }
 
   return (
-    <motion.div
-      className="container text-center  bg-black"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.35 }}
-    >
+    // <motion.div
+    //   className="container text-center  bg-black"
+    //   initial={{ opacity: 0 }}
+    //   animate={{ opacity: 1 }}
+    //   exit={{ opacity: 0 }}
+    //   transition={{ duration: 0.35 }}
+    // >
       <div className={styles.main}>
         <p>Title: {work.title}</p>
         <p>ID: {work.id}</p>
@@ -34,6 +34,6 @@ export default function WorkDetail({ params }) {
           alt={`Image for ${work.title}`}
         />
       </div>
-    </motion.div>
+    // </motion.div>
   );
 }
