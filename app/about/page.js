@@ -1,16 +1,8 @@
-import styles from "@/public/styles/About.module.scss";
+// components/DynamicAboutPage.js
+import dynamic from "next/dynamic";
 
-export const metadata = {
-  title: "about | marc lópez portfolio",
-  description: "",
-};
-
-const About = () => {
-  return (
-    <div className={styles.main}>
-      <p>ABOUT</p>
-    </div>
-  );
-};
+const About = dynamic(() => import("./AboutPage"), {
+  ssr: false, // Render on the client side only
+});
 
 export default About;
