@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <nav className={styles.nav_extended}>
-      <a className={styles.toggle} onClick={toggleMenu}>m</a>
+      <button className={styles.toggle} onClick={toggleMenu}>m</button>
       <div className={` ${isMenuOpen ? styles.show_element : styles.hide_element} ${styles.nav_menu_parent}`}>
         <div className={styles.nav_menu}>
           <Link href="/" className={`${styles.menu_item} ${isMenuOpen ? "" : styles.hide1}`} onClick={closeMenu}>home</Link>

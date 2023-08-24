@@ -1,19 +1,11 @@
 @import "/public/styles/utilities/variables.scss";
 
 .cursor {
-  position: absolute;
-  width: 40px;
-  height: 40px;
+  position: fixed;
   background: $green;
-  border-radius: 50%;
-  top: var(--y, -1000px);
-  left: var(--x, -1000px);
-  transform: translate(-50%, -100%);
-  z-index: 2;
-  mix-blend-mode: difference;
   pointer-events: none;
-}
-
-.cursor.link-hover {
-  transform: translate(-50%, -50%) scale(10.75);
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  transition: 0.05s linear;
+  z-index: 9999;
 }

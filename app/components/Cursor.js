@@ -1,47 +1,34 @@
-"use client";
 import React, { useEffect } from "react";
 import styles from "@/public/styles/components/Cursor.module.scss";
 
 function Cursor() {
   useEffect(() => {
-    const cursor = document.querySelector(`.${styles.cursor}`);
-    const links = document.querySelectorAll(".link");
+    const cursor = document.getElementById("cursor");
+    let size;
 
-    const handleMouseMove = (e) => {
-      document.body.style.setProperty('--x', e.clientX + 'px');
-      document.body.style.setProperty('--y', e.clientY + window.pageYOffset + 'px');
+    const handleMouseMove = (ev) => {
+      let path = ev.composedPath();
+
+      if (path.some((x) => x.tagName === "A" || x.tagName === "BUTTON")) {
+        size = 30;
+      } else {
+        size = 15;
+      }
+
+      cursor.style.left = ev.clientX - size / 2 + "px";
+      cursor.style.top = ev.clientY - size / 2 + "px";
+      cursor.style.width = size + "px";
+      cursor.style.height = size + "px";
     };
 
-    const handleLinkMouseEnter = () => {
-      cursor.classList.add('link-hover');
-    };
-
-    const handleLinkMouseLeave = () => {
-      cursor.classList.remove('link-hover');
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    links.forEach((link) => {
-      link.addEventListener("mouseenter", handleLinkMouseEnter);
-      link.addEventListener("mouseleave", handleLinkMouseLeave);
-    });
+    document.body.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      links.forEach((link) => {
-        link.removeEventListener("mouseenter", handleLinkMouseEnter);
-        link.removeEventListener("mouseleave", handleLinkMouseLeave);
-      });
+      document.body.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
-  return (
-    <div>
-      <h4 className={styles.cursor}></h4>
-    </div>
-  );
+  return <div id="cursor" className={styles.cursor}></div>;
 }
 
 export default Cursor;
-
