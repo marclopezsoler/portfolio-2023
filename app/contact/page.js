@@ -1,16 +1,7 @@
-import styles from "@/public/styles/Contact.module.scss";
+import dynamic from "next/dynamic";
 
-export const metadata = {
-  title: "contact | marc lópez portfolio",
-  description: "",
-};
-
-const Contact = () => {
-  return (
-    <div className={styles.main}>
-      <p>CONTACT</p>
-    </div>
-  );
-};
+const Contact = dynamic(() => import("./ContactPage"), {
+  ssr: false,
+});
 
 export default Contact;

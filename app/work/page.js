@@ -1,23 +1,7 @@
-import styles from "@/public/styles/Work.module.scss";
-import Link from "next/link";
-import works from "../_data/data";
+import dynamic from "next/dynamic";
 
-export const metadata = {
-  title: "work | marc lópez portfolio",
-  description: "",
-};
-
-const Work = () => {
-  return (
-    <div className={styles.main}>
-      <p>WORK</p>
-      {works.map((work) => (
-        <Link href={`/work/${work.id}`} key={work.id}>
-          {work.title}
-        </Link>
-      ))}
-    </div>
-  );
-};
+const Work = dynamic(() => import("./WorkPage"), {
+  ssr: false,
+});
 
 export default Work;

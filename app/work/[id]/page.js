@@ -1,29 +1,7 @@
-import works from "@/app/_data/data";
-import styles from "@/public/styles/WorkDetail.module.scss";
+import dynamic from "next/dynamic";
 
-export async function generateMetadata({ params }) {
-  const work = works.find((work) => work.id === params.id);
+const WorkDetail = dynamic(() => import("./WorkDetailPage"), {
+  ssr: false,
+});
 
-  return {
-    title: `${work.title} | marc lópez portfolio`,
-  };
-}
-
-export default function WorkDetail({ params }) {
-  const work = works.find((work) => work.id === params.id);
-
-  if (!work) {
-    return <div>Work not found</div>;
-  }
-
-  return (
-    <div className={styles.main}>
-      <p>Title: {work.title}</p>
-      <p>ID: {work.id}</p>
-      <img
-        src={`/assets/images/work/${work.id}/image1.jpg`}
-        alt={`Image for ${work.title}`}
-      />
-    </div>
-  );
-}
+export default WorkDetail;
