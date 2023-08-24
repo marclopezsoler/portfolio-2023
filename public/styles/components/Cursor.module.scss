@@ -2,16 +2,26 @@
 
 .cursor {
   position: fixed;
-  background: $green;
   pointer-events: none;
+  background-color: transparent;
   mix-blend-mode: difference;
   border-radius: 50%;
   border: 2px solid $green;
-  transition: 0.067s linear, width 0.15s linear, height 0.15s linear, background-color 0.15s linear;
+  transition: 0.2s ease-out, width 0.15s linear, height 0.15s linear, background-color 0.15s linear;
+  z-index: 9999;
+}
+
+.cursor_small{
+  position: fixed;
+  pointer-events: none;
+  background-color: $green;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  transition: 0.025s linear, width 0.15s linear, height 0.15s linear;
   z-index: 9999;
 }
 
 .hovering{
-  background-color: transparent;
+  background: $green;
   border: 2px solid $green;
 }

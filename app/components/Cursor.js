@@ -4,16 +4,20 @@ import styles from "@/public/styles/components/Cursor.module.scss";
 function Cursor() {
   useEffect(() => {
     const cursor = document.getElementById("cursor");
+    const cursorSmall = document.getElementById("cursor_small");
     let size;
+    let sizeSmall;
 
     const handleMouseMove = (ev) => {
       let path = ev.composedPath();
 
       if (path.some((x) => x.tagName === "A" || x.tagName === "BUTTON")) {
-        size = 20;
+        size = 15;
+        sizeSmall = 0;
         cursor.classList.add(`${styles.hovering}`);
       } else {
-        size = 15;
+        size = 20;
+        sizeSmall = 7.5;
         cursor.classList.remove(`${styles.hovering}`);
       }
 
@@ -21,6 +25,10 @@ function Cursor() {
       cursor.style.top = ev.clientY - size / 2 + "px";
       cursor.style.width = size + "px";
       cursor.style.height = size + "px";
+      cursorSmall.style.left = ev.clientX - sizeSmall / 4 + "px";
+      cursorSmall.style.top = ev.clientY - sizeSmall / 4 + "px";
+      cursorSmall.style.width = sizeSmall + "px";
+      cursorSmall.style.height = sizeSmall + "px";
     };
 
     document.body.addEventListener("mousemove", handleMouseMove);
@@ -30,7 +38,12 @@ function Cursor() {
     };
   }, []);
 
-  return <div id="cursor" className={styles.cursor}></div>;
+  return (
+    <>
+      <div id="cursor" className={styles.cursor}></div>
+      <div id="cursor_small" className={styles.cursor_small}></div>
+    </>
+  );
 }
 
 export default Cursor;
