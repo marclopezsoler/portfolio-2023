@@ -36,7 +36,7 @@ const HomePage = () => {
           <div className={styles.title_parent}>
             <h1
               className={`${styles.home_title} ${
-                loads === 1 ? styles.animate_titleX : ""
+                loads > 1 ? styles.animate_titleY : ""
               }`}
             >
               creative
@@ -44,14 +44,14 @@ const HomePage = () => {
             <div className={styles.title_parent2}>
               <h1
                 className={`${styles.home_title} ${
-                  loads === 1 ? styles.animate_titleX2 : ""
+                  loads > 1 ? styles.animate_titleX2 : ""
                 }`}
               >
                 digital{' '}
               </h1>
               <h1
                 className={`${styles.home_title} ${
-                  loads === 1 ? styles.animate_titleX : ""
+                  loads > 1 ? styles.animate_titleX : ""
                 }`}
               >
                 artist

@@ -68,12 +68,25 @@
   margin: 0;
 }
 
+.animate_titleY{
+  animation: animateTitleY 1s;
+}
+
 .animate_titleX {
   animation: animateTitleX 1s;
 }
 
 .animate_titleX2 {
   animation: animateTitleX2 1s;
+}
+
+@keyframes animateTitleY {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes animateTitleX {
