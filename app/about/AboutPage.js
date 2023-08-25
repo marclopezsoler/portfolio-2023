@@ -23,7 +23,7 @@ const AboutPage = () => {
           name="description"
           content="Get to know me better and discover my experience and passions."
         />
-        <meta name="theme-color" content="#3aff49" />
+        <meta name="theme-color" content="#020b55" />
         <link rel="icon" href="../icon.ico" type="image/x-icon"/>
       </Head>
       <div className={styles.main}>

@@ -40,7 +40,7 @@ const HomePage = () => {
           content="This is Marc López's portfolio website, where you can check all his
           projects and experience."
         />
-        <meta name="theme-color" content="#3aff49" />
+        <meta name="theme-color" content="#020b55" />
         <link rel="icon" href="./icon.ico" type="image/x-icon"/>
       </Head>
       <main className={styles.main}>

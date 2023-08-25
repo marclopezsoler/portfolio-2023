@@ -35,7 +35,7 @@ export default function WorkDetailPage({ params }) {
           name="description"
           content="Check out {work.title}, and the rest of my works here!"
         />
-        <meta name="theme-color" content="#3aff49" />
+        <meta name="theme-color" content="#020b55" />
         <link rel="icon" href="../../icon.ico" type="image/x-icon"/>
       </Head>
       <div className={styles.main}>

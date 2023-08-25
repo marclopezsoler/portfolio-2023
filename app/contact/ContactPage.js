@@ -24,7 +24,7 @@ const ContactPage = () => {
           name="description"
           content="Contact if you would like to work with me or have any question."
         />
-        <meta name="theme-color" content="#3aff49" />
+        <meta name="theme-color" content="#020b55" />
         <link rel="icon" href="../icon.ico" type="image/x-icon"/>
       </Head>
       <div className={styles.main}>
