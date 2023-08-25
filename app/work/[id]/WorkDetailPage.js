@@ -2,9 +2,10 @@
 import { motion } from "framer-motion";
 import works from "@/app/_data/data";
 import styles from "@/public/styles/WorkDetail.module.scss";
+import Image from "next/image";
 
 export async function generateMetadata({ params }) {
-  const work = works.find((work) => work.id === params.id);
+  const work = works.find((work) => work.slug === params.slug);
 
   return {
     title: `${work.title} | marc lópez portfolio`,
@@ -12,7 +13,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default function WorkDetailPage({ params }) {
-  const work = works.find((work) => work.id === params.id);
+  const work = works.find((work) => work.slug === params.slug);
 
   if (!work) {
     return <div>Work not found</div>;
@@ -29,8 +30,8 @@ export default function WorkDetailPage({ params }) {
     <div className={styles.main}>
       <p>Title: {work.title}</p>
       <p>ID: {work.id}</p>
-      <img
-        src={`/assets/images/work/${work.id}/image1.jpg`}
+      <Image
+        src={`/assets/images/work/${work.slug}/image1.jpg`}
         alt={`Image for ${work.title}`}
       />
     </div>

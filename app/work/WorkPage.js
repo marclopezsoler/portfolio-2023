@@ -41,27 +41,51 @@ const WorkPage = () => {
     >
       <div className={styles.main}>
         <p>WORK</p>
-        {works.map((work) => (
-          <button
-            className={`${styles.workItem} ${
-              hoveredItemId === work.id ? styles.opacity : ""
-            }`}
-            key={work.id}
-            onMouseEnter={() => setHoveredItemId(work.id)}
-            onMouseLeave={() => setHoveredItemId(null)}
-          >
-            <Link href={`/work/${work.id}`} className={styles.link}>
-              <p className={styles.title}>{work.title}</p>
-            </Link>
-            <Image
-              src={`/assets/images/work/${work.id}/image1.jpg`}
-              width={100}
-              height={100}
-              className={styles.image}
-              style={{ left: localX - 220 + "px", top: localY - 50 + "px" }}
-            />
-          </button>
-        ))}
+        <section className={styles.work_content}>
+          <div className={styles.tags_parent}>
+            <section className={styles.work_tags}>
+              <a href="#uni">uni</a>
+              <a href="#personal">personal</a>
+              <a href="#work">work</a>
+            </section>
+          </div>
+          <section className={styles.work_items}>
+            {works.map((work) => {
+              return (
+                <button
+                  className={`${styles.workItem} ${
+                    hoveredItemId === work.slug ? styles.opacity : ""
+                  }`}
+                  key={work.slug}
+                  onMouseEnter={() => setHoveredItemId(work.slug)}
+                  onMouseLeave={() => setHoveredItemId(null)}
+                >
+                  <Link
+                    href={`/work/${work.slug}`}
+                    className={styles.link}
+                    id={work.type}
+                  >
+                    <p className={styles.title}>{work.title}</p>
+                  </Link>
+                  <Image
+                    src={`/assets/images/work/${work.slug}/image1.jpg`}
+                    width={100}
+                    height={100}
+                    className={styles.image}
+                    style={{
+                      left: `${
+                        work.id % 2 === 0
+                          ? localX - 220 + "px"
+                          : localX + 20 + "px"
+                      }`,
+                      top: localY - 50 + "px",
+                    }}
+                  />
+                </button>
+              );
+            })}
+          </section>
+        </section>
       </div>
     </motion.div>
   );
