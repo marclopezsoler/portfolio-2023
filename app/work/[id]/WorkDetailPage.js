@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${work.title} | marc lópez portfolio`,
-    description: `Check out ${work.title}, and the rest of my works here!`
+    description: `Check out ${work.title}, and the rest of my works here!`,
   };
 }
 
@@ -31,9 +31,10 @@ export default function WorkDetailPage({ params }) {
     >
       <Head>
         <title>{work.title} | marc lópez portfolio</title>
-        <meta>
-          Check out {work.title}, and the rest of my works here!
-        </meta>
+        <meta
+          name="description"
+          content="Check out {work.title}, and the rest of my works here!"
+        />
         <link rel="shortcut icon" href="./icon.ico" />
       </Head>
       <div className={styles.main}>

@@ -5,12 +5,13 @@ import Head from "next/head";
 
 export const metadata = {
   title: "contact | marc lópez portfolio",
-  description: "Contact if you would like to work with me or have any question.",
+  description:
+    "Contact if you would like to work with me or have any question.",
 };
 
 const ContactPage = () => {
   return (
-   <motion.div
+    <motion.div
       className="container text-center  bg-black"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -19,12 +20,15 @@ const ContactPage = () => {
     >
       <Head>
         <title>contact | marc lópez portfolio</title>
-        <meta>Contact if you would like to work with me or have any question.</meta>
+        <meta
+          name="description"
+          content="Contact if you would like to work with me or have any question."
+        />
         <link rel="shortcut icon" href="./icon.ico" />
       </Head>
-    <div className={styles.main}>
-      <p>CONTACT</p>
-    </div>
+      <div className={styles.main}>
+        <p>CONTACT</p>
+      </div>
     </motion.div>
   );
 };

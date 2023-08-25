@@ -19,7 +19,10 @@ const AboutPage = () => {
     >
       <Head>
         <title>about | marc lópez portfolio</title>
-        <meta>Get to know me better and discover my experience and passions.</meta>
+        <meta
+          name="description"
+          content="Get to know me better and discover my experience and passions."
+        />
         <link rel="shortcut icon" href="./icon.ico" />
       </Head>
       <div className={styles.main}>

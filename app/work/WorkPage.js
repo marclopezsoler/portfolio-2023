@@ -42,7 +42,7 @@ const WorkPage = () => {
     >
       <Head>
         <title>work | marc lópez portfolio</title>
-        <meta>Check out all my works here!</meta>
+        <meta name="description" content="Check out all my works here!" />
         <link rel="shortcut icon" href="./icon.ico" />
       </Head>
       <div className={styles.main}>

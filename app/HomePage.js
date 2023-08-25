@@ -35,10 +35,11 @@ const HomePage = () => {
     >
       <Head>
         <title>marc lópez portfolio</title>
-        <meta>
-          This is Marc López's portfolio website, where you can check all his
-          projects and experience.
-        </meta>
+        <meta
+          name="description"
+          content="This is Marc López's portfolio website, where you can check all his
+          projects and experience."
+        />
         <link rel="shortcut icon" href="./icon.ico" />
       </Head>
       <main className={styles.main}>
