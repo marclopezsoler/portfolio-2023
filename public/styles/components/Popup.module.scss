@@ -17,7 +17,7 @@
   padding: 2%;
   border: 2px solid $green;
 
-  top: -12vh;
+  top: -16vh;
 
   background-color: $greenop;
   box-shadow: 0 8px 32px 0 $blueop;
@@ -39,7 +39,7 @@
 
 @keyframes movePopup {
   0% {
-    top: -12vh;
+    top: -16vh;
   }
 
   20% {
@@ -51,6 +51,6 @@
   }
 
   100% {
-    top: -12vh;
+    top: -16vh;
   }
 }

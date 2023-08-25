@@ -25,6 +25,7 @@
   align-items: center;
   width: 100%;
   max-width: 1080px;
+  padding-bottom: 5%;
 }
 
 .tags_parent {
@@ -240,5 +241,98 @@
 
   .link {
     text-decoration: none;
+  }
+}
+
+//RESPONSIVE
+
+@media only screen and (max-width: 750px) {
+  .tags_parent {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    
+    .work_tags {
+      top: calc(2.4rem + 6vh + 0.4em);
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      align-self: start;
+      gap: 2em;
+      
+      a {
+        font-family: $font-titles;
+        color: $blue;
+        font-size: 1.4em;
+        text-decoration: none;
+        pointer-events: auto;
+        padding: 0.2em 0.5em;
+        background-color: $green;
+      }
+
+      &:nth-child(1) {
+        padding: 0 40px;
+      }
+    }
+  }
+
+  .work_items {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: transparent;
+    gap: 2em;
+    z-index: 0;
+    pointer-events: auto;
+    padding: 15% 0 5% 0;
+  }
+
+  .workItem {
+    border: 0;
+    background-color: transparent;
+
+    font-family: $font-titles;
+    font-weight: 800;
+    font-size: 2rem;
+    text-decoration: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px $green;
+    transform-origin: center right;
+
+    width: fit-content;
+    height: fit-content;
+
+    text-align: right;
+    transition: 0.35s ease-out;
+
+    .title {
+      text-decoration: none;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px $green;
+      margin: 0;
+      padding: 0;
+
+      span {
+        font-size: 1rem;
+        margin-bottom: 0.11rem;
+        font-weight: 500;
+        -webkit-text-fill-color: $green;
+        -webkit-text-stroke: 0;
+      }
+
+      .space {
+        margin: 0 4px;
+      }
+    }
+
+    .link {
+      text-decoration: none;
+    }
   }
 }
