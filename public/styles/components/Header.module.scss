@@ -17,6 +17,8 @@
   top: 0;
 
   flex-shrink: 0;
+
+  z-index: 99999;
 }
 
 .nav_menu {
@@ -26,7 +28,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  gap: 3em;
   opacity: 1;
 
   padding-top: -2em;
@@ -78,7 +80,7 @@
   }
 
   .nav_extended {
-    gap: 1.4em;
+    gap: 1em;
   }
 
   .nav_menu {
