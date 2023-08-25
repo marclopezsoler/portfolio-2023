@@ -43,7 +43,8 @@ const WorkPage = () => {
       <Head>
         <title>work | marc lópez portfolio</title>
         <meta name="description" content="Check out all my works here!" />
-        <link rel="shortcut icon" href="./icon.ico" />
+        <meta name="theme-color" content="#3aff49" />
+        <link rel="icon" href="../icon.ico" type="image/x-icon" />
       </Head>
       <div className={styles.main}>
         <p>WORK</p>

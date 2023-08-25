@@ -13,10 +13,12 @@ const RootLayout = ({ children }) => {
         <title>marc lópez portfolio</title>
         <meta
           name="description"
-          content="This is Marc López's portfolio website, where you can check all his projects and experience."
+          content="This is 
+          Marc López's portfolio website, where you can check all his projects and experience."
         />
+        <meta name="theme-color" content="#3aff49" />
         <link rel="manifest" href="./manifest.webmanifest" />
-        <link rel="shortcut icon" href="./icon.ico" />
+        <link rel="icon" href="./icon.ico" type="image/x-icon"/>
       </Head>
       <body>
         <section className="content">

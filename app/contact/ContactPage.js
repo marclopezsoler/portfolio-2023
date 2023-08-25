@@ -24,7 +24,8 @@ const ContactPage = () => {
           name="description"
           content="Contact if you would like to work with me or have any question."
         />
-        <link rel="shortcut icon" href="./icon.ico" />
+        <meta name="theme-color" content="#3aff49" />
+        <link rel="icon" href="../icon.ico" type="image/x-icon"/>
       </Head>
       <div className={styles.main}>
         <p>CONTACT</p>
