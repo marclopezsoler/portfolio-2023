@@ -80,6 +80,10 @@
   animation: animateTitleX2 1s;
 }
 
+.animate_subtitle {
+  animation: animateSubtitle 2.5s;
+}
+
 @keyframes animateTitleY {
   from {
     transform: translateY(-400px);
@@ -104,6 +108,15 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes animateSubtitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

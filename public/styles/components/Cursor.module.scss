@@ -9,7 +9,7 @@
   border: 2px solid $green;
   transition: 0.25s cubic-bezier(0.2, 0.6, 0.8, 1), width 0.15s linear,
     height 0.15s linear, background-color 0.15s linear;
-  z-index: 9999;
+  z-index: 99999999;
 }
 
 .cursor_small {

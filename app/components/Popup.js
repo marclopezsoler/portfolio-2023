@@ -6,13 +6,13 @@ export default function Popup() {
   const [popup, setPopup] = useState(0);
 
   useEffect(() => {
-    let count = sessionStorage.getItem("popup");
+    let count = localStorage.getItem("popup");
     if (count === null) {
       count = 1;
     } else {
       count = Number(count) + 1;
     }
-    sessionStorage.setItem("popup", count);
+    localStorage.setItem("popup", count);
 
     setPopup(count);
   }, []);

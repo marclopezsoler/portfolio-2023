@@ -1,12 +1,12 @@
 "use client";
-import { motion } from "framer-motion";
 import styles from "@/public/styles/Work.module.scss";
-import Link from "next/link";
-import works from "../_data/data";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
+import works from "../_data/data";
+import WorkCategory from "../components/WorkCategory";
+import WorkCategoryMobile from "../components/WorkCategoryMobile";
 
 export const metadata = {
   title: "work | marc lópez portfolio",
@@ -17,6 +17,20 @@ const WorkPage = () => {
   const [localX, setLocalX] = useState(0);
   const [localY, setLocalY] = useState(0);
   const [hoveredItemId, setHoveredItemId] = useState(null);
+
+  const [loads, setLoads] = useState(0);
+
+  useEffect(() => {
+    let count = sessionStorage.getItem("count");
+    if (count === null) {
+      count = 1;
+    } else {
+      count = Number(count) + 1;
+    }
+    sessionStorage.setItem("count", count);
+
+    setLoads(count);
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (ev) => {
@@ -57,46 +71,12 @@ const WorkPage = () => {
                 <a href="#work">work</a>
               </div>
             </section>
-            <section className={styles.work_items}>
-              {works.map((work) => {
-                return (
-                  <button
-                    className={`${styles.workItem} ${
-                      hoveredItemId === work.id ? styles.opacity : ""
-                    }`}
-                    key={work.id}
-                    onMouseEnter={() => setHoveredItemId(work.id)}
-                    onMouseLeave={() => setHoveredItemId(null)}
-                  >
-                    <Link
-                      href={`/work/${work.id}`}
-                      className={styles.link}
-                      id={work.type}
-                    >
-                      <p className={styles.title}>
-                        <span>{work.class}</span>
-                        <span className={styles.space}>/</span>
-                        {work.title}
-                      </p>
-                    </Link>
-                    <Image
-                      src={`/assets/images/work/${work.id}/image1.jpg`}
-                      width={100}
-                      height={100}
-                      className={styles.image}
-                      style={{
-                        left: `${
-                          work.num % 2 != 0
-                            ? localX - 220 + "px"
-                            : localX + 20 + "px"
-                        }`,
-                        top: localY - 50 + "px",
-                      }}
-                      alt={work.title}
-                    />
-                  </button>
-                );
-              })}
+            <section className={`${styles.work_items} ${
+                loads === 1 ? styles.animate_content: ""
+              }`}>
+              <WorkCategory works={works} categoryType="uni" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategory works={works} categoryType="personal" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategory works={works} categoryType="work" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
             </section>
           </section>
         ) : (
@@ -106,31 +86,12 @@ const WorkPage = () => {
               <a href="#personal">personal</a>
               <a href="#work">work</a>
             </section>
-            <section className={styles.work_items_mobile}>
-              {works.map((work) => {
-                return (
-                  <button
-                    className={`${styles.workItem_mobile} ${
-                      hoveredItemId === work.id ? styles.opacity : ""
-                    }`}
-                    key={work.id}
-                    onMouseEnter={() => setHoveredItemId(work.id)}
-                    onMouseLeave={() => setHoveredItemId(null)}
-                  >
-                    <Link
-                      href={`/work/${work.id}`}
-                      className={styles.link}
-                      id={work.type}
-                    >
-                      <p className={styles.title}>
-                        <span>{work.class}</span>
-                        <span className={styles.space}>/</span>
-                        {work.title}
-                      </p>
-                    </Link>
-                  </button>
-                );
-              })}
+            <section className={`${styles.work_items_mobile} ${
+                loads === 1 ? styles.animate_content: ""
+              }`}>
+              <WorkCategoryMobile works={works} categoryType="uni" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategoryMobile works={works} categoryType="personal" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategoryMobile works={works} categoryType="work" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
             </section>
           </section>
         )}

@@ -41,7 +41,7 @@ const HomePage = () => {
           projects and experience."
         />
         <meta name="theme-color" content="#020b55" />
-        <link rel="icon" href="./icon.ico" type="image/x-icon"/>
+        <link rel="icon" href="./icon.ico" type="image/x-icon" />
       </Head>
       <main className={styles.main}>
         <section className={styles.home_section_1}>
@@ -70,7 +70,11 @@ const HomePage = () => {
               </h1>
             </div>
           </div>
-          <h2 className={styles.home_subtitle}>
+          <h2
+            className={`${styles.home_subtitle} ${
+              loads === 1 ? styles.animate_subtitle : ""
+            }`}
+          >
             marc lópez is a digital artist and developer from Barcelona, he's
             keen on creating cool and simple stuff
           </h2>
