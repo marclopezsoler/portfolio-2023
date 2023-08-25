@@ -1,10 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import styles from "@/public/styles/About.module.scss";
+import Head from "next/head";
 
 export const metadata = {
   title: "about | marc lópez portfolio",
-  description: "",
+  description: "Get to know me better and discover my experience and passions.",
 };
 
 const AboutPage = () => {
@@ -16,6 +17,11 @@ const AboutPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35 }}
     >
+      <Head>
+        <title>about | marc lópez portfolio</title>
+        <meta>Get to know me better and discover my experience and passions.</meta>
+        <link rel="shortcut icon" href="./icon.ico" />
+      </Head>
       <div className={styles.main}>
         <p>ABOUT</p>
       </div>

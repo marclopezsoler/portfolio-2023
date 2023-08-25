@@ -5,10 +5,11 @@ import Link from "next/link";
 import works from "../_data/data";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export const metadata = {
   title: "work | marc lópez portfolio",
-  description: "",
+  description: "Check out all my works here!",
 };
 
 const WorkPage = () => {
@@ -39,6 +40,11 @@ const WorkPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35 }}
     >
+      <Head>
+        <title>work | marc lópez portfolio</title>
+        <meta>Check out all my works here!</meta>
+        <link rel="shortcut icon" href="./icon.ico" />
+      </Head>
       <div className={styles.main}>
         <p>WORK</p>
         <section className={styles.work_content}>

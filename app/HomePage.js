@@ -2,10 +2,12 @@
 import { animate, motion } from "framer-motion";
 import styles from "@/public/styles/Home.module.scss";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export const metadata = {
   title: "marc lópez portfolio",
-  description: "",
+  description:
+    "This is Marc López's portfolio website, where you can check all his projects and experience.",
 };
 
 const HomePage = () => {
@@ -31,6 +33,14 @@ const HomePage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35 }}
     >
+      <Head>
+        <title>marc lópez portfolio</title>
+        <meta>
+          This is Marc López's portfolio website, where you can check all his
+          projects and experience.
+        </meta>
+        <link rel="shortcut icon" href="./icon.ico" />
+      </Head>
       <main className={styles.main}>
         <section className={styles.home_section_1}>
           <div className={styles.title_parent}>
@@ -47,7 +57,7 @@ const HomePage = () => {
                   loads === 1 ? styles.animate_titleX2 : ""
                 }`}
               >
-                digital{' '}
+                digital{" "}
               </h1>
               <h1
                 className={`${styles.home_title} ${
