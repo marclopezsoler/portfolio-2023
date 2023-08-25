@@ -66,7 +66,7 @@ const WorkPage = () => {
                     <Link
                       href={`/work/${work.id}`}
                       className={styles.link}
-                      id={work.type}
+                      id={`${work.type} ${work.id}`}
                     >
                       <p className={styles.title}>{work.title}</p>
                     </Link>
