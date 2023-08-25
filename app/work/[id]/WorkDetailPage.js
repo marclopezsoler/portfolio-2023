@@ -5,7 +5,7 @@ import styles from "@/public/styles/WorkDetail.module.scss";
 import Image from "next/image";
 
 export async function generateMetadata({ params }) {
-  const work = works.find((work) => work.slug === params.slug);
+  const work = works.find((work) => work.id === params.id);
 
   return {
     title: `${work.title} | marc lópez portfolio`,
@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default function WorkDetailPage({ params }) {
-  const work = works.find((work) => work.slug === params.slug);
+  const work = works.find((work) => work.id === params.id);
 
   if (!work) {
     return <div>Work not found</div>;
@@ -31,7 +31,9 @@ export default function WorkDetailPage({ params }) {
       <p>Title: {work.title}</p>
       <p>ID: {work.id}</p>
       <Image
-        src={`/assets/images/work/${work.slug}/image1.jpg`}
+        src={`/assets/images/work/${work.id}/image1.jpg`}
+        width={200}
+        height={100}
         alt={`Image for ${work.title}`}
       />
     </div>

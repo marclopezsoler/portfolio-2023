@@ -25,7 +25,6 @@
   align-items: center;
   width: 100%;
   max-width: 1080px;
-  background-color: transparent;
 }
 
 .tags_parent {
@@ -36,6 +35,8 @@
   align-items: center;
   width: 100%;
   max-width: 1080px;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .work_tags {
@@ -46,16 +47,14 @@
   align-items: flex-start;
   justify-content: center;
   align-self: start;
-  width: calc(100% - 40px);
-  max-width: 1080px;
   padding-left: 5%;
-  z-index: -1;
 
   a {
     font-family: $font-titles;
     color: $green;
     font-size: 3em;
     text-decoration: none;
+    pointer-events: auto;
   }
 }
 
@@ -79,9 +78,10 @@
   align-items: flex-end;
   justify-content: center;
   background-color: transparent;
+  gap: 4em;
+  z-index: 2;
+  pointer-events: auto;
 }
-
-
 
 .workItem {
   border: 0;
@@ -89,13 +89,17 @@
 
   font-family: $font-titles;
   font-weight: 800;
-  font-size: 3em;
+  font-size: 3rem;
   text-decoration: none;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px $green;
   transform-origin: center right;
-  transition: 0.35s;
+
+  width: fit-content;
+  height: fit-content;
+
   text-align: right;
+  transition: 0.35s ease-out;
 
   &:hover {
     .title {
@@ -109,9 +113,31 @@
     text-decoration: none;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px $green;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .link {
   text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.title_name{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  span{
+    font-size: 1rem;
+    margin-bottom: 0.11rem;
+    font-weight: 500;
+    -webkit-text-fill-color: $green;
+    -webkit-text-stroke: 0;
+  }
+
+  .space{
+    margin: 0 4px;
+  }
 }

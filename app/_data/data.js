@@ -1,63 +1,73 @@
 const works = [
    {
-     id: '1',
-     slug: 'work1',
-     title: 'Project 1',
-     type: 'uni'
+     num: '1',
+     id: 'work1',
+     title: 'project 1',
+     type: 'uni',
+     class: '3d'
    },
    {
-     id: '2',
-     slug: 'work2',
-     title: 'Project 2',
-     type: 'uni'
+     num: '2',
+     id: 'work2',
+     title: 'project 2',
+     type: 'uni',
+     class: 'design'
    },
    {
-    id: '3',
-    slug: 'work3',
-    title: 'Project 3',
-    type: 'uni'
+    num: '3',
+    id: 'work3',
+    title: 'project 3',
+    type: 'uni',
+    class: 'frontend'
   },
   {
-    id: '4',
-    slug: 'work4',
-    title: 'Project 4',
-    type: 'personal'
+    num: '4',
+    id: 'work4',
+    title: 'project 4',
+    type: 'personal',
+    class: 'photography'
   },
    {
-     id: '5',
-     slug: 'work5',
-     title: 'Project 5',
-     type: 'personal'
+     num: '5',
+     id: 'work5',
+     title: 'project 5',
+     type: 'personal',
+     class: 'seo'
    },
    {
-     id: '6',
-     slug: 'work6',
-     title: 'Project 6',
-     type: 'personal'
+     num: '6',
+     id: 'work6',
+     title: 'project 6',
+     type: 'personal',
+     class: 'social media'
    },
    {
-    id: '7',
-    slug: 'work7',
-    title: 'Project 7',
-    type: 'personal'
+    num: '7',
+    id: 'work7',
+    title: 'project 7',
+    type: 'personal',
+    class: 'developing'
   },
   {
-    id: '8',
-    slug: 'work8',
-    title: 'Project 8',
-    type: 'work'
+    num: '8',
+    id: 'work8',
+    title: 'project 8',
+    type: 'work',
+    class: 'design'
   },
   {
-    id: '9',
-    slug: 'work9',
-    title: 'Project 9',
-    type: 'work'
+    num: '9',
+    id: 'work9',
+    title: 'project 9',
+    type: 'work',
+    class: 'social media'
   },
   {
-   id: '0',
-   slug: 'work10',
-   title: 'Project 10',
-   type: 'work'
+   num: '0',
+   id: 'work10',
+   title: 'project 10',
+   type: 'work',
+   class: '3d'
  },
  ];
  
