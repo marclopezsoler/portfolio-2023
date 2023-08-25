@@ -7,11 +7,12 @@
   mix-blend-mode: difference;
   border-radius: 50%;
   border: 2px solid $green;
-  transition: 0.2s ease-out, width 0.15s linear, height 0.15s linear, background-color 0.15s linear;
+  transition: 0.25s cubic-bezier(0.2, 0.6, 0.8, 1), width 0.15s linear,
+    height 0.15s linear, background-color 0.15s linear;
   z-index: 9999;
 }
 
-.cursor_small{
+.cursor_small {
   position: fixed;
   pointer-events: none;
   background-color: $green;
@@ -21,7 +22,7 @@
   z-index: 9999;
 }
 
-.hovering{
+.hovering {
   background: $green;
   border: 2px solid $green;
 }

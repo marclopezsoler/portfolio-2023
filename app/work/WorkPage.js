@@ -29,7 +29,7 @@ const WorkPage = () => {
     return () => {
       document.body.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [localY]);
+  }, []);
 
   return (
     <motion.div
@@ -43,23 +43,23 @@ const WorkPage = () => {
         <p>WORK</p>
         {works.map((work) => (
           <button
-            className={styles.workItem}
+            className={`${styles.workItem} ${
+              hoveredItemId === work.id ? styles.opacity : ""
+            }`}
             key={work.id}
             onMouseEnter={() => setHoveredItemId(work.id)}
             onMouseLeave={() => setHoveredItemId(null)}
           >
             <Link href={`/work/${work.id}`} className={styles.link}>
-                <p className={styles.title}>{work.title}</p>
+              <p className={styles.title}>{work.title}</p>
             </Link>
-            {hoveredItemId === work.id && (
-              <Image
-                src={`/assets/images/work/${work.id}/image1.jpg`}
-                width={100}
-                height={100}
-                className={`${styles.image} ${hoveredItemId === work.id ? styles.opacity : ""}`}
-                style={{ left: localX - 220 + "px", top: localY - 50 + "px"}}
-              />
-            )}
+            <Image
+              src={`/assets/images/work/${work.id}/image1.jpg`}
+              width={100}
+              height={100}
+              className={styles.image}
+              style={{ left: localX - 220 + "px", top: localY - 50 + "px" }}
+            />
           </button>
         ))}
       </div>

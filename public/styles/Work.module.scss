@@ -24,9 +24,10 @@
   height: auto;
   opacity: 0;
   transition: 0.2s;
+  pointer-events:none;
 }
 
-.opacity{
+.workItem.opacity .image{
   opacity: 1;
 }
 
