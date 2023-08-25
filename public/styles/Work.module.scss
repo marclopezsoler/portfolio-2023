@@ -56,6 +56,11 @@
     text-decoration: none;
     pointer-events: auto;
     background-color: $blue;
+    transition: 0.25s;
+
+    &:hover {
+      color: $greenhv;
+    }
   }
 }
 
@@ -101,6 +106,7 @@
 
   text-align: right;
   transition: 0.35s ease-out;
+  max-width: 75%;
 
   &:hover {
     .title {
@@ -212,18 +218,10 @@
   text-align: right;
   transition: 0.35s ease-out;
 
-  &:hover {
-    .title {
-      color: $green;
-      -webkit-text-fill-color: $green;
-      -webkit-text-stroke: 0px $green;
-    }
-  }
-
   .title {
     text-decoration: none;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px $green;
+    -webkit-text-fill-color: $green;
+    -webkit-text-stroke: 0;
     margin: 0;
     padding: 0;
 

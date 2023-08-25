@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.scss";
 import Cursor from "./components/Cursor";
+import Popup from "./components/Popup";
 
 const RootLayout = ({ children }) => {
   return (
@@ -24,6 +25,7 @@ const RootLayout = ({ children }) => {
         <section className="content">
           <Header />
           {isMobile ? <></> : <Cursor />}
+          {isMobile ? <Popup /> : <></>}
           <div className="main">{children}</div>
           <Footer />
         </section>
