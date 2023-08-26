@@ -70,18 +70,22 @@
 
 .animate_titleY{
   animation: animateTitleY 1s;
+  animation-delay: 2s;
 }
 
 .animate_titleX {
   animation: animateTitleX 1s;
+  animation-delay:25s;
 }
 
 .animate_titleX2 {
   animation: animateTitleX2 1s;
+  animation-delay: 2s;
 }
 
 .animate_subtitle {
   animation: animateSubtitle 2.5s;
+  animation-delay: 2s;
 }
 
 @keyframes animateTitleY {
