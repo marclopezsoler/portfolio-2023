@@ -15,6 +15,7 @@ export default function Header() {
   };
 
   return (
+    <>
     <nav className={styles.nav_extended}>
       <button className={styles.toggle} onClick={toggleMenu}>m</button>
       <div className={` ${isMenuOpen ? styles.show_element : styles.hide_element} ${styles.nav_menu_parent}`}>
@@ -26,5 +27,7 @@ export default function Header() {
         </div>
       </div>
     </nav>
+    <div className={` ${isMenuOpen ? styles.show_elementBg: styles.hide_elementBg} ${styles.background}`}></div>
+    </>
   );
 }

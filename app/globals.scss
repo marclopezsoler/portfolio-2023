@@ -16,6 +16,7 @@ body {
   height: 100%;
 
   scroll-behavior: smooth;
+  z-index: -1;
 }
 
 *{
@@ -44,5 +45,8 @@ html {
 
 .main {
   flex-grow: 1;
-  // min-height: 100%;
+  z-index: 0;
+  background-image: url(../public/assets/svg/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

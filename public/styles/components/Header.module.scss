@@ -74,6 +74,25 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .background{
+    background-color: $blue;
+    width: 120vw;
+    height: 120vh;
+    position: fixed;
+    transition: 0.35s;
+  }
+  
+  .show_elementBg{
+    z-index: 1;
+    opacity: 1;
+  }
+  
+  .hide_elementBg{
+    transition: 0.35s;
+    z-index: 0;
+    opacity: 0;
+  }
+
   .toggle {
     user-select: none;
     display: block;
