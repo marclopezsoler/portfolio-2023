@@ -66,7 +66,7 @@
 
 .image {
   position: absolute;
-  width: 200px;
+  width: 350px;
   height: auto;
   opacity: 0;
   transition: 0.2s;
@@ -116,9 +116,6 @@
   font-weight: 800;
   font-size: 3rem;
   text-decoration: none;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px $green;
-  transform-origin: center right;
 
   width: fit-content;
   height: fit-content;
@@ -143,6 +140,8 @@
     font-size: 3.4rem;
     margin: 0;
     padding: 0;
+    transition: 0.35s ease-out;
+    
     span {
       font-size: 1rem;
       margin-bottom: 0.11rem;

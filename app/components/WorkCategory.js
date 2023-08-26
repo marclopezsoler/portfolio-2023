@@ -28,7 +28,7 @@ function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, lo
               height={100}
               className={styles.image}
               style={{
-                left: `${work.num % 2 !== 0 ? localX - 220 + 'px' : localX + 20 + 'px'}`,
+                left: `${work.num % 2 !== 0 ? localX - 375 + 'px' : localX + 20 + 'px'}`,
                 top: `${localY - 50}px`,
               }}
               alt={work.title}
