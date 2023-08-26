@@ -46,7 +46,7 @@ html {
 .main {
   flex-grow: 1;
   z-index: 0;
-  background-image: url(../public/assets/svg/background.svg);
+  background-image: url(../public/assets/images/background.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
