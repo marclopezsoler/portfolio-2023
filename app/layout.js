@@ -39,8 +39,8 @@ const RootLayout = ({ children }) => {
       </Head>
       <body>
         <section className="content">
-          {loads >= 1 ? <IntroTitle /> : <></>}
-          {loads >= 1 ? (
+          {loads === 1 ? <IntroTitle /> : <></>}
+          {loads === 1 ? (
             <div className="header_late">
               <Header />
             </div>

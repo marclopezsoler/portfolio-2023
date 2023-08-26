@@ -44,37 +44,25 @@ const HomePage = () => {
         <link rel="icon" href="./icon.ico" type="image/x-icon" />
       </Head>
       <main className={styles.main}>
-        {loads >= 1 ? (
+        {loads === 1 ? (
           <section className={styles.home_section_1}>
             <div className={styles.title_parent}>
-              <h1
-                className={`${styles.home_title} ${
-                  loads >= 1 ? styles.animate_titleY : ""
-                }`}
-              >
+              <h1 className={`${styles.home_title} ${styles.animate_titleY}`}>
                 creative
               </h1>
               <div className={styles.title_parent2}>
                 <h1
-                  className={`${styles.home_title} ${
-                    loads >= 1 ? styles.animate_titleX2 : ""
-                  }`}
+                  className={`${styles.home_title} ${styles.animate_titleX2}`}
                 >
                   digital{" "}
                 </h1>
-                <h1
-                  className={`${styles.home_title} ${
-                    loads >= 1 ? styles.animate_titleX : ""
-                  }`}
-                >
+                <h1 className={`${styles.home_title} ${styles.animate_titleX}`}>
                   artist
                 </h1>
               </div>
             </div>
             <h2
-              className={`${styles.home_subtitle} ${
-                loads >= 1 ? styles.animate_subtitle : ""
-              }`}
+              className={`${styles.home_subtitle} ${styles.animate_subtitle}`}
             >
               marc lópez is a digital artist and developer from Barcelona, he's
               keen on creating cool and simple stuff
