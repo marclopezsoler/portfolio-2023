@@ -35,10 +35,31 @@ const works = [
     class: "photography",
   },
   {
-    num: "4",
+    num: "6",
     id: "work6",
     title: "work project 2",
     type: "work",
+    class: "seo",
+  },
+  {
+    num: "7",
+    id: "work7",
+    title: "work project 3",
+    type: "work",
+    class: "seo",
+  },
+  {
+    num: "8",
+    id: "work8",
+    title: "personal project 3",
+    type: "personal",
+    class: "seo",
+  },
+  {
+    num: "9",
+    id: "work9",
+    title: "uni project 3",
+    type: "uni",
     class: "seo",
   },
 

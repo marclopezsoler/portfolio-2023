@@ -21,13 +21,13 @@ const WorkPage = () => {
   const [loads, setLoads] = useState(0);
 
   useEffect(() => {
-    let count = sessionStorage.getItem("count");
+    let count = sessionStorage.getItem("countWork");
     if (count === null) {
       count = 1;
     } else {
       count = Number(count) + 1;
     }
-    sessionStorage.setItem("count", count);
+    sessionStorage.setItem("countWork", count);
 
     setLoads(count);
   }, []);
