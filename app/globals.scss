@@ -47,6 +47,7 @@ html {
   flex-grow: 1;
   z-index: 0;
   background-image: url(../public/assets/images/background.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: contain;
+  background-position: center;
 }
