@@ -24,6 +24,28 @@ body {
   cursor: none;
 }
 
+.header_late{
+  animation: header_late 2s forwards;
+}
+
+@keyframes header_late {
+  0%{
+    z-index: -99999999999999;
+    display: none;
+  }
+  
+  50%{
+    z-index: -99999999999999;
+    display: block;
+    opacity: 1;
+  }
+
+  100%{
+    z-index: 99999999999999999;
+    opacity: 1;
+  }
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

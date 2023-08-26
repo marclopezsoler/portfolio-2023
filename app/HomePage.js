@@ -44,41 +44,57 @@ const HomePage = () => {
         <link rel="icon" href="./icon.ico" type="image/x-icon" />
       </Head>
       <main className={styles.main}>
-        <section className={styles.home_section_1}>
-          <div className={styles.title_parent}>
-            <h1
-              className={`${styles.home_title} ${
-                loads === 1 ? styles.animate_titleY : ""
+        {loads >= 1 ? (
+          <section className={styles.home_section_1}>
+            <div className={styles.title_parent}>
+              <h1
+                className={`${styles.home_title} ${
+                  loads >= 1 ? styles.animate_titleY : ""
+                }`}
+              >
+                creative
+              </h1>
+              <div className={styles.title_parent2}>
+                <h1
+                  className={`${styles.home_title} ${
+                    loads >= 1 ? styles.animate_titleX2 : ""
+                  }`}
+                >
+                  digital{" "}
+                </h1>
+                <h1
+                  className={`${styles.home_title} ${
+                    loads >= 1 ? styles.animate_titleX : ""
+                  }`}
+                >
+                  artist
+                </h1>
+              </div>
+            </div>
+            <h2
+              className={`${styles.home_subtitle} ${
+                loads >= 1 ? styles.animate_subtitle : ""
               }`}
             >
-              creative
-            </h1>
-            <div className={styles.title_parent2}>
-              <h1
-                className={`${styles.home_title} ${
-                  loads === 1 ? styles.animate_titleX2 : ""
-                }`}
-              >
-                digital{" "}
-              </h1>
-              <h1
-                className={`${styles.home_title} ${
-                  loads === 1 ? styles.animate_titleX : ""
-                }`}
-              >
-                artist
-              </h1>
+              marc lópez is a digital artist and developer from Barcelona, he's
+              keen on creating cool and simple stuff
+            </h2>
+          </section>
+        ) : (
+          <section className={styles.home_section_1}>
+            <div className={styles.title_parent}>
+              <h1 className={styles.home_title}>creative</h1>
+              <div className={styles.title_parent2}>
+                <h1 className={styles.home_title}>digital </h1>
+                <h1 className={styles.home_title}>artist</h1>
+              </div>
             </div>
-          </div>
-          <h2
-            className={`${styles.home_subtitle} ${
-              loads === 1 ? styles.animate_subtitle : ""
-            }`}
-          >
-            marc lópez is a digital artist and developer from Barcelona, he's
-            keen on creating cool and simple stuff
-          </h2>
-        </section>
+            <h2 className={styles.home_subtitle}>
+              marc lópez is a digital artist and developer from Barcelona, he's
+              keen on creating cool and simple stuff
+            </h2>
+          </section>
+        )}
       </main>
     </motion.div>
   );

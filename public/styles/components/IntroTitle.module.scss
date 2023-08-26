@@ -1,0 +1,90 @@
+@import "/public/styles/utilities/variables.scss";
+
+.title_parent_first {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue;
+  z-index: 999999999999999999999;
+
+  h1 {
+    font-family: $font-titles;
+    text-align: center;
+    color: $green;
+    max-width: 1080px;
+    padding: 0;
+    margin: 0;
+    font-size: 8em;
+    opacity: 0;
+  }
+}
+
+.animate_bg {
+  animation: animate_bg 3s forwards;
+}
+
+.animate_title_first_1 {
+  animation: animate_title_first_1 3s forwards;
+}
+
+.animate_title_first_2 {
+  animation: animate_title_first_2 3s forwards;
+}
+
+@keyframes animate_title_first_1 {
+  0% {
+    transform: translateX(-1400px);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate_title_first_2 {
+  0% {
+    transform: translateX(1400px);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate_bg {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
