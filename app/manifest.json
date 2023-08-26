@@ -1,10 +1,10 @@
 {
    "theme_color": "#020b55",
-   "background_color": "#3aff49",
+   "background_color": "#020b55",
    "display": "standalone",
    "scope": "/",
    "start_url": "/",
-   "name": "marc lópez portfolio website",
+   "name": "marc lópez portfolio",
    "short_name": "marc_lopez_portfolio",
    "description": "This is Marc López's portfolio website, where you can check all his projects and experience.",
    "icons": {
