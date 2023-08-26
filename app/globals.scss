@@ -25,20 +25,25 @@ body {
 }
 
 .header_late{
-  animation: header_late 2s forwards;
+  animation: header_late 5s forwards;
 }
 
 @keyframes header_late {
   0%{
     display: none;
+    z-index: -999;
   }
-
-  50%{
+  
+  10%{
     display: block;
     opacity: 1;
   }
-
+  
+  90%{
+    z-index: -999;
+  }
   100%{
+    z-index: 99999999999999999999999;
     opacity: 1;
   }
 }
