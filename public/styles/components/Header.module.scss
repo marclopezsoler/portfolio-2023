@@ -76,8 +76,8 @@
 @media only screen and (max-width: 900px) {
   .background{
     background-color: $blue;
-    width: 120vw;
-    height: 120vh;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     transition: 0.35s;
   }

@@ -44,7 +44,7 @@ const HomePage = () => {
         <link rel="icon" href="./icon.ico" type="image/x-icon" />
       </Head>
       <main className={styles.main}>
-        {loads === 1 ? (
+        {loads >= 1 ? (
           <section className={styles.home_section_1}>
             <div className={styles.title_parent}>
               <h1 className={`${styles.home_title} ${styles.animate_titleY}`}>
