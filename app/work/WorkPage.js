@@ -72,7 +72,7 @@ const WorkPage = () => {
               </div>
             </section>
             <section className={`${styles.work_items} ${
-                loads === 1 ? styles.animate_content: ""
+                loads >= 1 ? styles.animate_content: ""
               }`}>
               <WorkCategory works={works} categoryType="uni" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
               <WorkCategory works={works} categoryType="personal" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>

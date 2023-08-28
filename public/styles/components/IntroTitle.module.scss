@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   background-color: $blue;
+  top: 0;
   z-index: 999999999999999999999;
 
   overflow: hidden;
@@ -89,19 +90,16 @@
 
 @keyframes animate_bg {
   0% {
-    opacity: 1;
+    background-color: $blue;
   }
 
-  66% {
-    opacity: 1;
-  }
-
-  95% {
+  55% {
+    background-color: $blue;
     z-index: 0;
   }
-
+  
   100% {
-    opacity: 0;
+    background-color: transparent;
     z-index: -99999;
   }
 }

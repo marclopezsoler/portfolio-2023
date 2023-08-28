@@ -3,6 +3,7 @@ import { animate, motion } from "framer-motion";
 import styles from "@/public/styles/Home.module.scss";
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import IntroTitle from "./components/IntroTitle";
 
 export const metadata = {
   title: "marc lópez portfolio",
@@ -45,7 +46,8 @@ const HomePage = () => {
         <link rel="icon" href="./icon.ico" type="image/x-icon" />
       </Head>
       <main className={styles.main}>
-        {Homeloads === 1 ? (
+      {Homeloads >= 1 ? <IntroTitle /> : <></>}
+        {Homeloads >= 1 ? (
           <section className={styles.home_section_1}>
             <div className={styles.title_parent}>
               <h1 className={`${styles.home_title} ${styles.animate_titleY}`}>
