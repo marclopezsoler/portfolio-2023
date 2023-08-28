@@ -5,6 +5,18 @@
 
   width: 100vw;
 
+  margin: 0;
+
+  top: 0;
+
+  flex-shrink: 0;
+
+  z-index: 99999;
+
+  opacity: 0;
+}
+
+.header{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,12 +25,35 @@
 
   margin: 0;
   padding: 1em 0;
+}
 
-  top: 0;
+.header_normal{
+  opacity: 1;
+}
 
-  flex-shrink: 0;
+.header_late{
+  animation: header_late 5s forwards;
+}
 
-  z-index: 99999;
+@keyframes header_late {
+  0%{
+    display: none;
+    z-index: -999;
+    opacity: 0;
+  }
+  
+  10%{
+    display: block;
+  }
+  
+  90%{
+    z-index: -999;
+    opacity: 0;
+  }
+  100%{
+    z-index: 99999999999999999999999;
+    opacity: 1;
+  }
 }
 
 .nav_menu {

@@ -27,6 +27,8 @@
   height: calc(100vh - (1em + 2em + 1.4rem + 1vw + 0.2em));
   margin-top: calc(-1 * ((3em + 4vw) / 3));
   padding-bottom: calc((3em + 4vw) / 3);
+
+  overflow: hidden;
 }
 
 .title_parent,
@@ -70,19 +72,19 @@
 }
 
 .animate_titleY {
-  animation: animateTitleY 5çs;
+  animation: animateTitleY 5s;
 }
 
 .animate_titleX {
-  animation: animateTitleX 5çs;
+  animation: animateTitleX 5s;
 }
 
 .animate_titleX2 {
-  animation: animateTitleX2 5çs;
+  animation: animateTitleX2 5s;
 }
 
 .animate_subtitle {
-  animation: animateSubtitle 5çs;
+  animation: animateSubtitle 5s;
 }
 
 @keyframes animateTitleY {

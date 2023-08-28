@@ -11,6 +11,8 @@
   background-color: $blue;
   z-index: 999999999999999999999;
 
+  overflow: hidden;
+
   h1 {
     font-family: $font-titles;
     text-align: center;
@@ -46,7 +48,7 @@
     opacity: 1;
   }
 
-  65%{
+  65% {
     transform: translateX(0);
   }
 
@@ -56,7 +58,7 @@
 
   100% {
     opacity: 0;
-    transform: translateX(1400px)
+    transform: translateX(1400px);
   }
 }
 
@@ -71,7 +73,7 @@
     opacity: 1;
   }
 
-  65%{
+  65% {
     transform: translateX(0);
   }
 
@@ -81,7 +83,7 @@
 
   100% {
     opacity: 0;
-    transform: translateX(-1400px)
+    transform: translateX(-1400px);
   }
 }
 
@@ -94,11 +96,12 @@
     opacity: 1;
   }
 
-  99% {
-    opacity: 0;
+  95% {
+    z-index: 0;
   }
 
-  100%{
-    display: none;
+  100% {
+    opacity: 0;
+    z-index: -99999;
   }
 }
