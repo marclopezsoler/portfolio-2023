@@ -42,7 +42,7 @@ export default function WorkDetailPage({ params }) {
         <p>Title: {work.title}</p>
         <p>ID: {work.id}</p>
         <Image
-          src={`/assets/images/work/${work.id}/image1.jpg`}
+          src={`/assets/images/work/${work.id}/image1.webp`}
           width={200}
           height={100}
           alt={`Image for ${work.title}`}
