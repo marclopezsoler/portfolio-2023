@@ -18,6 +18,11 @@ body {
 
   scroll-behavior: smooth;
   z-index: -1;
+
+  ::selection {
+    color: $blue;
+    background: $green;
+  }
 }
 
 *{
