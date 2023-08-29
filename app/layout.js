@@ -39,8 +39,7 @@ const RootLayout = ({ children }) => {
       </Head>
       <body>
         <section className="content">
-          
-          {loads >= 1 ? <Header late={true} /> : <Header late={false} />}
+          {loads === 1 ? <Header late={true} /> : <Header late={false} />}
           {isMobile ? <></> : <Cursor />}
           {isMobile ? <Popup /> : <></>}
           <div className="main">{children}</div>
