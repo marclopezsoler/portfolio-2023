@@ -1,16 +1,23 @@
-import React from "react";
 import styles from "@/public/styles/Work.module.scss";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-function WorkCategory({
-  works,
-  categoryType,
-  hoveredItemId,
-  setHoveredItemId,
-  localX,
-  localY,
-}) {
+function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, localX, localY }) {
+  const [relation, setRelation] = useState(0);
+
+  let windowHeight = document.body.scrollHeight;
+  
+  onmousemove = function (e) {
+    document.body.style.setProperty('--y',e.clientY+'px');
+    let totalUserY = e.clientY + this.scrollY;
+    let scrollRelation = totalUserY/windowHeight;
+    console.log(scrollRelation);
+    setRelation(scrollRelation);
+  };  
+
+  
+
   return (
     <div id={categoryType} className={styles.work_type}>
       <h2 className={styles.category_type}>{categoryType}</h2>
@@ -37,8 +44,8 @@ function WorkCategory({
               height={100}
               className={styles.image}
               style={{
-                left: `${localX - 375}px`,
-                top: `${localY - 50}px`,
+                left: `${localX}px`,
+                top: `${localY - (relation * 250)}px`,
               }}
               alt={work.title}
             />

@@ -66,11 +66,12 @@
 
 .image {
   position: absolute;
-  width: 350px;
-  height: auto;
+  width: auto;
+  height: 250px;
   opacity: 0;
   transition: 0.2s;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .workItem.opacity .image {
