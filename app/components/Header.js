@@ -3,7 +3,7 @@ import styles from "@/public/styles/components/Header.module.scss";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Header({late}) {
+export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,7 +16,7 @@ export default function Header({late}) {
 
   return (
     <>
-    <nav className={`${styles.nav_extended} ${late ? styles.header_late : styles.header_normal}`}>
+    <nav className={`${styles.nav_extended}`}>
       <div className={styles.header}>
         <button className={styles.toggle} onClick={toggleMenu}>m</button>
         <div className={` ${isMenuOpen ? styles.show_element : styles.hide_element} ${styles.nav_menu_parent}`}>

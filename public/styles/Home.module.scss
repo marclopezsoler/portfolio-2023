@@ -74,32 +74,28 @@
 .animate_titleY {
   font-family: $font-titles;
   font-weight: 800;
-  animation: animateTitleY 5s;
+  animation: animateTitleY 1.25s;
 }
 
 .animate_titleX {
   font-family: $font-titles;
   font-weight: 800;
-  animation: animateTitleX 5s;
+  animation: animateTitleX 1.25s;
 }
 
 .animate_titleX2 {
   font-family: $font-titles;
   font-weight: 800;
-  animation: animateTitleX2 5s;
+  animation: animateTitleX2 1.25s;
 }
 
 .animate_subtitle {
-  animation: animateSubtitle 5s;
+  animation: animateSubtitle 1.25s;
 }
 
 @keyframes animateTitleY {
   0% {
     opacity: 0;
-    transform: translateY(-400px);
-  }
-
-  55% {
     transform: translateY(-400px);
   }
   100% {
@@ -113,9 +109,6 @@
     transform: translateX(800px);
   }
 
-  55% {
-    transform: translateX(800px);
-  }
   100% {
     transform: translateX(0);
   }
@@ -127,9 +120,6 @@
     transform: translateX(-800px);
   }
 
-  55% {
-    transform: translateX(-800px);
-  }
   100% {
     transform: translateX(0);
   }
@@ -140,9 +130,6 @@
     opacity: 0;
   }
 
-  55% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
