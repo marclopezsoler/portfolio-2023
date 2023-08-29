@@ -32,7 +32,7 @@ function WorkCategory({
               </p>
             </Link>
             <Image
-              src={`/assets/images/work/${work.id}/image1.webp`}
+              src={`/assets/images/work/${work.id}/image1.jpg`}
               width={100}
               height={100}
               className={styles.image}
