@@ -17,6 +17,19 @@ const WorkPage = () => {
   const [localX, setLocalX] = useState(0);
   const [localY, setLocalY] = useState(0);
   const [hoveredItemId, setHoveredItemId] = useState(null);
+  const [workLoads, setWorkLoads] = useState(0);
+
+  useEffect(() => {
+    let count = sessionStorage.getItem("workLoads");
+    if (count === null) {
+      count = 1;
+    } else {
+      count = Number(count) + 1;
+    }
+    sessionStorage.setItem("workLoads", count);
+
+    setWorkLoads(count);
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (ev) => {
@@ -57,7 +70,7 @@ const WorkPage = () => {
                 <a href="#work">work</a>
               </div>
             </section>
-            <section className={`${styles.work_items}`}>
+            <section className={`${styles.work_items} ${workLoads === 1 ? styles.animate_content : ""}`}>
               <WorkCategory works={works} categoryType="uni" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
               <WorkCategory works={works} categoryType="personal" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
               <WorkCategory works={works} categoryType="work" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
