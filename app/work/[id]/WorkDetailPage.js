@@ -45,7 +45,6 @@ export default function WorkDetailPage({ params }) {
           src={`/assets/images/work/${work.id}/image1.jpg`}
           width={200}
           height={100}
-          priority
           alt={`Image for ${work.title}`}
         />
       </div>

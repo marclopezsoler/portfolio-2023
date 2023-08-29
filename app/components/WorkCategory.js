@@ -36,7 +36,6 @@ function WorkCategory({
               width={100}
               height={100}
               className={styles.image}
-              priority
               style={{
                 left: `${localX - 375}px`,
                 top: `${localY - 50}px`,
