@@ -70,9 +70,7 @@ const WorkPage = () => {
               <a href="#personal">personal</a>
               <a href="#work">work</a>
             </section>
-            <section className={`${styles.work_items_mobile} ${
-                loads === 1 ? styles.animate_content: ""
-              }`}>
+            <section className={styles.work_items_mobile}>
               <WorkCategoryMobile works={works} categoryType="uni" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
               <WorkCategoryMobile works={works} categoryType="personal" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
               <WorkCategoryMobile works={works} categoryType="work" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
