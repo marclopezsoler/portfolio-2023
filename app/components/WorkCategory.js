@@ -1,7 +1,7 @@
 import styles from "@/public/styles/Work.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, localX, localY }) {
   const [relation, setRelation] = useState(0);
