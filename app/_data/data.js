@@ -8,9 +8,11 @@ const works = [
     class: "3d",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      roles: "design, modelling, photography",
-      date: "2022",
-      client: "personal",
+    roles: "design, modelling, photography",
+    date: "2022",
+    client: "personal",
+    image1_alt: "",
+    image2_alt: "alt for image 2",
   },
   {
     num: "2",
@@ -21,9 +23,11 @@ const works = [
     class: "design",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      roles: "design, modelling, photography",
-      date: "2022",
-      client: "personal",
+    roles: "design, modelling, photography",
+    date: "2022",
+    client: "personal",
+    image1_alt: "",
+    image2_alt: "alt for image 2",
   },
   {
     num: "3",
@@ -34,9 +38,11 @@ const works = [
     class: "photography",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      roles: "design, modelling, photography",
-      date: "2022",
-      client: "personal",
+    roles: "design, modelling, photography",
+    date: "2022",
+    client: "personal",
+    image1_alt: "",
+    image2_alt: "alt for image 2",
   },
   {
     num: "4",
@@ -47,9 +53,11 @@ const works = [
     class: "seo",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      roles: "design, modelling, photography",
-      date: "2022",
-      client: "personal",
+    roles: "design, modelling, photography",
+    date: "2022",
+    client: "personal",
+    image1_alt: "",
+    image2_alt: "alt for image 2",
   },
   {
     num: "5",
@@ -60,9 +68,11 @@ const works = [
     class: "photography",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      roles: "design, modelling, photography",
-      date: "2022",
-      client: "personal",
+    roles: "design, modelling, photography",
+    date: "2022",
+    client: "personal",
+    image1_alt: "",
+    image2_alt: "alt for image 2",
   },
   {
     num: "6",
@@ -73,9 +83,11 @@ const works = [
     class: "seo",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      roles: "design, modelling, photography",
-      date: "2022",
-      client: "personal",
+    roles: "design, modelling, photography",
+    date: "2022",
+    client: "personal",
+    image1_alt: "",
+    image2_alt: "alt for image 2",
   },
   {
     num: "7",
@@ -86,10 +98,13 @@ const works = [
     class: "seo",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      roles: "design, modelling, photography",
-      date: "2022",
-      client: "personal",
+    roles: "design, modelling, photography",
+    date: "2022",
+    client: "personal",
+    image1_alt: "",
+    image2_alt: "alt for image 2",
   },
+
   {
     num: "8",
     id: "work8",
@@ -99,10 +114,13 @@ const works = [
     class: "seo",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      roles: "design, modelling, photography",
-      date: "2022",
-      client: "personal",
+    roles: "design, modelling, photography",
+    date: "2022",
+    client: "personal",
+    image1_alt: "",
+    image2_alt: "alt for image 2",
   },
+
   {
     num: "9",
     id: "work9",
@@ -112,9 +130,11 @@ const works = [
     class: "seo",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      roles: "design, modelling, photography",
-      date: "2022",
-      client: "personal",
+    roles: "design, modelling, photography",
+    date: "2022",
+    client: "personal",
+    image1_alt: "",
+    image2_alt: "alt for image 2",
   },
 ];
 

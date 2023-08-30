@@ -67,6 +67,9 @@ export default function WorkDetailPage({ params }) {
               </div>
             </div>
           </div>
+          <div className={styles.image2_parent}>
+            <Image src={`/assets/images/work/${work.id}/image2.jpg`} width={100} height={100} className={styles.image2} alt={work.image2_alt}/>
+          </div>
         </section>
       </div>
     </motion.div>
