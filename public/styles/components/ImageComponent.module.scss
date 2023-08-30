@@ -1,0 +1,13 @@
+@import "/public/styles/utilities/variables.scss";
+
+.image{
+  width: 100%;
+  padding: 1.5em;
+  height: auto;
+  color: $green;
+  font-family: $font-texts;
+}
+
+.hide_img{
+  display: none;
+}

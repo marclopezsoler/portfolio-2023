@@ -27,7 +27,7 @@ const works = [
     date: "2022",
     client: "personal",
     image1_alt: "",
-    image2_alt: "alt for image 2",
+    image2_alt: "",
   },
   {
     num: "3",
@@ -42,7 +42,7 @@ const works = [
     date: "2022",
     client: "personal",
     image1_alt: "",
-    image2_alt: "alt for image 2",
+    image2_alt: "",
   },
   {
     num: "4",
@@ -57,7 +57,7 @@ const works = [
     date: "2022",
     client: "personal",
     image1_alt: "",
-    image2_alt: "alt for image 2",
+    image2_alt: "",
   },
   {
     num: "5",
@@ -72,7 +72,7 @@ const works = [
     date: "2022",
     client: "personal",
     image1_alt: "",
-    image2_alt: "alt for image 2",
+    image2_alt: "",
   },
   {
     num: "6",
@@ -87,7 +87,7 @@ const works = [
     date: "2022",
     client: "personal",
     image1_alt: "",
-    image2_alt: "alt for image 2",
+    image2_alt: "",
   },
   {
     num: "7",
@@ -102,7 +102,7 @@ const works = [
     date: "2022",
     client: "personal",
     image1_alt: "",
-    image2_alt: "alt for image 2",
+    image2_alt: "",
   },
 
   {
@@ -118,7 +118,7 @@ const works = [
     date: "2022",
     client: "personal",
     image1_alt: "",
-    image2_alt: "alt for image 2",
+    image2_alt: "",
   },
 
   {
@@ -134,7 +134,7 @@ const works = [
     date: "2022",
     client: "personal",
     image1_alt: "",
-    image2_alt: "alt for image 2",
+    image2_alt: "",
   },
 ];
 

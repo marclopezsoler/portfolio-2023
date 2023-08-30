@@ -1,8 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
 import works from "@/app/_data/data";
+import ImageComponent from "@/app/components/ImageComponent";
 import styles from "@/public/styles/WorkDetail.module.scss";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import Head from "next/head";
 
 export async function generateMetadata({ params }) {
@@ -68,7 +68,7 @@ export default function WorkDetailPage({ params }) {
             </div>
           </div>
           <div className={styles.image2_parent}>
-            <Image src={`/assets/images/work/${work.id}/image2.jpg`} width={100} height={100} className={styles.image2} alt={work.image2_alt}/>
+            <ImageComponent workId={work.id} image_alt={work.image2_alt} numberImg={2}/>
           </div>
         </section>
       </div>
