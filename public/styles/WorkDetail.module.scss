@@ -14,7 +14,6 @@
   padding: 0;
   top: 0;
   background-color: $blue;
-  // overflow-x: hidden;
 
   scroll-behavior: smooth;
 }
@@ -140,14 +139,27 @@
 
     padding: 1.5em;
 
-    .description {
-      font-family: $font-texts;
-      color: $green;
-      font-size: calc(0.8rem + 0.6vh);
-      margin: 0;
-      padding: 0;
+    div {
+      .subtitle {
+        font-family: $font-titles;
+        color: $green;
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+        font-style: bold;
+        font-size: calc(1.6rem + 0.6vh);
+        padding-bottom: 0.4em;
+      }
 
-      width: 70%;
+      .description {
+        font-family: $font-texts;
+        color: $green;
+        font-size: calc(0.8rem + 0.6vh);
+        margin: 0;
+        padding: 0;
+
+        width: 100%;
+      }
     }
 
     .details {
@@ -177,13 +189,103 @@
     }
   }
 
-  .image2_parent{
+  .image2_parent {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+}
+
+//SECOND CONTENT SECTION
+
+.second_content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: flex-start;
+  justify-content: center;
+  grid-gap: 1.5em;
+  color: $green;
+
+  div {
+    padding: 1.5em;
+
+    h2 {
+      font-family: $font-texts;
+      font-weight: 700;
+      text-decoration: overline;
+      font-size: calc(1.2rem + 0.6vh);
+    }
+
+    p {
+      font-family: $font-texts;
+      font-weight: 400;
+      font-size: calc(0.8rem + 0.6vh);
+    }
+  }
+}
+
+//THIRD CONTENT
+
+.third_content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  color: $green;
+  font-family: $font-texts;
+  padding: 1em 0;
+  gap: 0.6em;
+
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+//IMAGES GROUP
+
+.images_group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding-bottom: 20vh;
+
+  .floating_image_1 {
+    position: relative;
+    top: -20vh;
+    z-index: 2;
+    width: 60%;
+  }
+}
+
+.floating_image_2{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: -50vh;
+  margin-bottom: -50vh;
 }
 
 //RESPONSIVE

@@ -22,6 +22,7 @@ body {
   ::selection {
     color: $blue;
     background: $green;
+    -webkit-text-fill-color: $blue;
   }
 }
 

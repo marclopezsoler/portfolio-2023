@@ -1,6 +1,7 @@
 "use client";
 import works from "@/app/_data/data";
 import ImageComponent from "@/app/components/ImageComponent";
+import NextWork from "@/app/components/NextWork";
 import styles from "@/public/styles/WorkDetail.module.scss";
 import { motion } from "framer-motion";
 import Head from "next/head";
@@ -16,6 +17,19 @@ export async function generateMetadata({ params }) {
 
 export default function WorkDetailPage({ params }) {
   const work = works.find((work) => work.id === params.id);
+
+  let nextWorkNum = 1;
+
+  const highestNum = works.reduce(
+    (max, work) => (work.num > max ? work.num : max),
+    0
+  );
+
+  if (highestNum === work.num) {
+    nextWorkNum = 1;
+  } else {
+    nextWorkNum = work.num + 1;
+  }
 
   if (!work) {
     return <div>Work not found</div>;
@@ -40,18 +54,27 @@ export default function WorkDetailPage({ params }) {
       </Head>
       <div className={styles.work_detail}>
         <section className={styles.landing_container}>
-            <div className={styles.bg_image} style={{backgroundImage: `url(/assets/images/work/${work.id}/image1.jpg)`}}>
+          <div
+            className={styles.bg_image}
+            style={{
+              backgroundImage: `url(/assets/images/work/${work.id}/image1.jpg)`,
+            }}
+          >
             <div className={styles.main_gradient}></div>
             <div className={styles.landing_text}>
               <h1>{work.title}</h1>
-              <h2>{work.subtitle}</h2>
             </div>
           </div>
         </section>
         <section className={styles.first_section}>
-          <div className={styles.work_type}><span>{work.type}</span></div>
+          <div className={styles.work_type}>
+            <span>{work.type}</span>
+          </div>
           <div className={styles.detail_content}>
-            <p className={styles.description}>{work.description}</p>
+            <div>
+              <h2 className={styles.subtitle}>{work.subtitle}</h2>
+              <p className={styles.description}>{work.description}</p>
+            </div>
             <div className={styles.details}>
               <div>
                 <span>roles</span>
@@ -68,9 +91,50 @@ export default function WorkDetailPage({ params }) {
             </div>
           </div>
           <div className={styles.image2_parent}>
-            <ImageComponent workId={work.id} image_alt={work.image2_alt} numberImg={2}/>
+            <ImageComponent
+              workId={work.id}
+              image_alt={work.image2_alt}
+              numberImg={2}
+            />
+          </div>
+          <div className={styles.second_content}>
+            <ImageComponent
+              workId={work.id}
+              image_alt={work.image3_alt}
+              numberImg={3}
+            />
+            <div>
+              <h2>{work.subtitle2}</h2>
+              <p>{work.description2}</p>
+            </div>
+          </div>
+          <div className={styles.third_content}>
+            <h2>{work.subtitle3}</h2>
+            <p>{work.description3}</p>
+          </div>
+          <div className={styles.images_group}>
+            <ImageComponent
+              workId={work.id}
+              image_alt={work.image4_alt}
+              numberImg={4}
+            />
+            <div className={styles.floating_image_1}>
+              <ImageComponent
+                workId={work.id}
+                image_alt={work.image4_alt}
+                numberImg={5}
+              />
+            </div>
+          </div>
+          <div className={styles.floating_image_2}>
+            <ImageComponent
+              workId={work.id}
+              image_alt={work.image4_alt}
+              numberImg={6}
+            />
           </div>
         </section>
+        <NextWork nextWork={nextWorkNum} />
       </div>
     </motion.div>
   );

@@ -1,0 +1,35 @@
+@import "/public/styles/utilities/variables.scss";
+
+.main {
+  width: 100%;
+  max-width: calc(1080px * 0.75);
+  border-top: 1.5px solid $green;
+  font-family: $font-texts;
+  color: $green;
+  text-align: center;
+}
+
+.text {
+  font-weight: 300;
+}
+
+.link_parent{
+
+   &:hover {
+      .finger {
+         opacity: 1;
+      }
+   }
+}
+
+.link {
+  font-family: $font-titles;
+  font-weight: 600;
+  text-decoration: underline;
+  color: $green;
+}
+
+.finger {
+  opacity: 0;
+  transition: 0.2s;
+}
