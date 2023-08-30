@@ -36,17 +36,38 @@ export default function WorkDetailPage({ params }) {
           content="Check out {work.title}, and the rest of my works here!"
         />
         <meta name="theme-color" content="#020b55" />
-        <link rel="icon" href="../../icon.ico" type="image/x-icon"/>
+        <link rel="icon" href="../../icon.ico" type="image/x-icon" />
       </Head>
-      <div className={styles.main}>
-        <p>Title: {work.title}</p>
-        <p>ID: {work.id}</p>
-        <Image
-          src={`/assets/images/work/${work.id}/image1.jpg`}
-          width={100}
-          height={100}
-          alt={`Image for ${work.title}`}
-        />
+      <div className={styles.work_detail}>
+        <section className={styles.landing_container}>
+            <div className={styles.bg_image} style={{backgroundImage: `url(/assets/images/work/${work.id}/image1.jpg)`}}>
+            <div className={styles.main_gradient}></div>
+            <div className={styles.landing_text}>
+              <h1>{work.title}</h1>
+              <h2>{work.subtitle}</h2>
+            </div>
+          </div>
+        </section>
+        <section className={styles.first_section}>
+          <div className={styles.work_type}><span>{work.type}</span></div>
+          <div className={styles.detail_content}>
+            <p className={styles.description}>{work.description}</p>
+            <div className={styles.details}>
+              <div>
+                <span>roles</span>
+                <p>{work.roles}</p>
+              </div>
+              <div>
+                <span>date</span>
+                <p>{work.date}</p>
+              </div>
+              <div>
+                <span>client</span>
+                <p>{work.client}</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </motion.div>
   );

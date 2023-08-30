@@ -1,14 +1,195 @@
 @import "/public/styles/utilities/variables.scss";
 
-.main {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: center;
-   min-height: 100%;
-   color: white;
-   flex: 1 0 auto;
-   width: 100%;
- 
-   padding-top: calc(1em + 2em + 1.4rem + 1vw + 0.2em);
- }
+//MAIN
+
+.work_detail {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  background-color: $blue;
+
+  scroll-behavior: smooth;
+}
+
+//LANDING CONTAINER
+
+.landing_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100%;
+  color: white;
+  flex: 1 0 auto;
+  width: 100vw;
+  height: calc(100vh - (1em + 2em + 1.4rem + 1vw + 0.2em));
+
+  position: relative;
+}
+
+.bg_image {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - (1em + 2em + 1.4rem + 1vw + 0.2em));
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin: 0;
+  padding: 0;
+  top: 0;
+
+  padding-top: calc(1em + 2em + 1.4rem + 1vw + 0.2em);
+}
+
+.main_gradient {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - (1em + 2em + 1.4rem + 1vw + 0.2em));
+
+  background: -webkit-linear-gradient($blue, $blue, $greenop2);
+
+  margin: 0;
+  padding: 0;
+
+  opacity: 0.75;
+
+  top: 0;
+  padding-top: calc(1em + 2em + 1.4rem + 1vw + 0.2em);
+}
+
+.landing_text {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+      h1 {
+        -webkit-text-fill-color: $green;
+        -webkit-text-stroke: 0;
+      }
+    }
+  }
+
+  h1,
+  h2 {
+    font-family: $font-titles;
+    color: $green;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 3.4rem;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px $green;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  bottom: 15vh;
+}
+
+//FIRST CONTENT SECTION
+
+.first_section {
+  padding-top: calc(1em + 2em + 1.4rem + 1vw + 0.2em);
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .work_type {
+    border-top: 2px solid $green;
+    border-bottom: 2px solid $green;
+    width: 100vw;
+    z-index: 1;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      color: $green;
+      font-family: $font-titles;
+      font-weight: 500;
+      font-size: 22px;
+    }
+  }
+
+  .detail_content {
+    max-width: 1080px;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 10%;
+
+    padding: 1em;
+
+    .description {
+      font-family: $font-texts;
+      color: $green;
+      font-size: 1em;
+      margin: 0;
+      padding: 0;
+
+      width: 70%;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      color: $green;
+      font-size: 1em;
+      gap: 0.5em;
+
+      span, p{
+        margin: 0;
+        padding: 0;
+      }
+
+      span {
+        font-family: $font-titles;
+        font-weight: 800;
+      }
+
+      p {
+        // width: 75%;
+        font-family: $font-texts;
+      }
+    }
+  }
+}
