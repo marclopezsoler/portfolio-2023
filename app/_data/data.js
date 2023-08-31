@@ -23,6 +23,7 @@ const works = [
     image4_alt: "alt for image 4",
     image5_alt: "alt for image 5",
     image6_alt: "alt for image 6",
+    image7_alt: "alt for image 7",
   },
   {
     num: 2,

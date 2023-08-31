@@ -1,5 +1,11 @@
 @import "/public/styles/utilities/variables.scss";
 
+.image_parent{
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
 .image{
   width: 100%;
   height: auto;
@@ -9,4 +15,10 @@
 
 .hide_img{
   display: none;
+}
+
+.full_width{
+  width: auto;
+  height: 100vw;
+  background-color: red;
 }

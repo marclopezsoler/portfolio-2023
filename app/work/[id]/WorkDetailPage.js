@@ -118,19 +118,22 @@ export default function WorkDetailPage({ params }) {
               image_alt={work.image4_alt}
               numberImg={4}
             />
-            <div className={styles.floating_image_1}>
+            <div className={styles.second_image}>
               <ImageComponent
                 workId={work.id}
                 image_alt={work.image5_alt}
                 numberImg={5}
               />
+              <ImageComponent
+                workId={work.id}
+                image_alt={work.image6_alt}
+                numberImg={6}
+              />
             </div>
-          </div>
-          <div className={styles.floating_image_2}>
             <ImageComponent
               workId={work.id}
-              image_alt={work.image6_alt}
-              numberImg={6}
+              image_alt={work.image7_alt}
+              numberImg={7}
             />
           </div>
         </section>

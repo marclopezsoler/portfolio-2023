@@ -11,7 +11,7 @@ function Cursor() {
     const handleMouseMove = (ev) => {
       let path = ev.composedPath();
 
-      if (path.some((x) => x.tagName === "A" || x.tagName === "BUTTON")) {
+      if (path.some((x) => x.tagName === "A" || x.tagName === "BUTTON" || x.tagName === "IMG")) {
         size = 15;
         sizeSmall = 0;
         cursor.classList.add(`${styles.hovering}`);
