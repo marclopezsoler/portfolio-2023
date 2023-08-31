@@ -15,11 +15,13 @@ export default function ImageComponent({ workId, image_alt, numberImg }) {
   useEffect(() => {
     if (imageSrc) {
       setHideImg(false);
+    } else{
+      alert('image does not exist');
     }
   }, [imageSrc]);
 
   return (
-    // <div className={styles.image_parent}>
+    <div className={styles.image_parent}>
       <Image
         id="image"
         src={imageSrc}
@@ -28,6 +30,6 @@ export default function ImageComponent({ workId, image_alt, numberImg }) {
         className={`${styles.image} ${hideImg ? styles.hide_img : ""}`}
         alt={image_alt}
       />
-    // </div>
+    </div>
   );
 }
