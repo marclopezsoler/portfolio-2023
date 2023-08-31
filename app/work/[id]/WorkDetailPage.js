@@ -93,9 +93,15 @@ export default function WorkDetailPage({ params }) {
                 <span>client</span>
                 <p>{work.client}</p>
               </div>
-              <div className={work.link ? "" : styles.hide}>
-                <span>link</span>
-                <a href={work.link} target="_blank">
+              <div>
+                <span className={work.link === "" ? styles.hide : ""}>
+                  link
+                </span>
+                <a
+                  href={work.link}
+                  target="_blank"
+                  className={work.link === "" ? styles.hide : ""}
+                >
                   {work.short_link}
                 </a>
               </div>
@@ -114,15 +120,13 @@ export default function WorkDetailPage({ params }) {
               image_alt={work.image3_alt}
               numberImg={3}
             />
-            <div className={styles.second_detail}>
-              <div className={styles.second_content_text}>
-                <h2>{work.subtitle2}</h2>
-                <p>{work.description2}</p>
-              </div>
-            </div>
           </div>
-          <div className={styles.third_content}>
-            <h2>{work.subtitle3}</h2>
+          <div className={styles.second_detail}>
+            <h2>{work.subtitle2}</h2>
+            <br></br>
+
+            <p>{work.description2}</p>
+            <br></br>
             <p>{work.description3}</p>
           </div>
           <div className={styles.images_group}>

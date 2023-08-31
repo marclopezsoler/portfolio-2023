@@ -99,16 +99,17 @@
   h1 {
     font-weight: 800;
     font-size: 3.4rem;
+    max-width: 1080px;
+    padding: 0.75em;
 
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px $green;
+    -webkit-text-fill-color: $green;
+    // -webkit-text-stroke: 1px $green;
   }
 
   h2 {
     font-weight: 600;
     font-size: 1.5rem;
   }
-  bottom: 5vh;
 }
 
 //FIRST CONTENT SECTION
@@ -210,7 +211,6 @@
       a {
         font-family: $font-texts;
         font-size: calc(0.8rem + 0.8vh);
-        text-decoration: none;
         color: $green;
       }
     }
@@ -232,60 +232,34 @@
 .second_content {
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  align-items: flex-start;
-  justify-content: center;
-  grid-gap: 1.5em;
   color: $green;
   padding: 0;
   margin: 0;
-
-  .second_detail {
-    padding: 0;
-    margin: 0;
-
-    .second_content_text {
-      padding-top: 1.5em;
-      padding-right: 1.5em;
-
-      h2 {
-        font-family: $font-texts;
-        font-weight: 700;
-        text-decoration: overline;
-        font-size: calc(1.2rem + 0.6vh);
-      }
-
-      p {
-        font-family: $font-texts;
-        font-weight: 400;
-        font-size: calc(0.8rem + 0.6vh);
-      }
-    }
-  }
 }
 
-//THIRD CONTENT
-
-.third_content {
-  width: 100%;
-  height: 100%;
+.second_detail {
+  padding: 2em;
+  color: $green;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 80%;
-  color: $green;
-  font-family: $font-texts;
-  padding: 3em 1.5em 1.5em 1.5em;
-  gap: 0.6em;
-  font-size: calc(0.8rem + 0.6vh);
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0;
 
-  h2,
-  p {
-    margin: 0;
+  h2 {
+    font-family: $font-texts;
+    font-weight: 700;
+    font-size: calc(1.2rem + 0.6vh);
     padding: 0;
-    text-align: center;
+    margin: 0;
+  }
+
+  p {
+    font-family: $font-texts;
+    font-weight: 400;
+    font-size: calc(0.8rem + 0.6vh);
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -313,7 +287,6 @@
 //RESPONSIVE
 
 @media only screen and (max-width: 800px) {
-
   .second_content {
     width: 100%;
 
@@ -324,21 +297,21 @@
     align-items: center;
     justify-content: center;
     grid-gap: 0;
-  
+
     .second_detail {
       padding: 0;
       margin: 0;
-  
+
       .second_content_text {
         padding: 1.5em;
-  
+
         h2 {
           font-family: $font-texts;
           font-weight: 700;
           text-decoration: overline;
           font-size: calc(1.2rem + 0.6vh);
         }
-  
+
         p {
           font-family: $font-texts;
           font-weight: 400;
@@ -346,10 +319,6 @@
         }
       }
     }
-  }
-
-  .third_content {
-    text-align: center;
   }
 }
 
@@ -371,9 +340,9 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
-  .landing_text{
-    h1{
+@media only screen and (max-width: 550px) {
+  .landing_text {
+    h1 {
       font-size: calc(2rem + 2vw);
     }
   }
