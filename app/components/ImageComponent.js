@@ -19,10 +19,22 @@ export default function ImageComponent({ workId, image_alt, numberImg }) {
     } else {
       alert("Image does not exist");
     }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [imageSrc]);
 
   const toggleFullImage = () => {
     setShowFullImage(!showFullImage);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape") {
+      setShowFullImage(false);
+    }
   };
 
   return (

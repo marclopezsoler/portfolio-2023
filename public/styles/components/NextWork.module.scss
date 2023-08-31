@@ -6,6 +6,7 @@
   font-family: $font-texts;
   color: $green;
   text-align: center;
+  z-index: 1;
 }
 
 .text {
@@ -31,4 +32,8 @@
 .finger {
   opacity: 0;
   transition: 0.2s;
+}
+
+.hide{
+  display: none;
 }

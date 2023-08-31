@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "@/public/styles/components/NextWork.module.scss";
+import { isMobile } from "react-device-detect";
 
 export default function NextWork({ nextWork, short_slug }) {
   return (
@@ -13,7 +14,7 @@ export default function NextWork({ nextWork, short_slug }) {
           >
             here
           </Link>
-          !<span className={styles.finger}>👈</span>
+          !<span className={`${styles.finger} ${isMobile ? styles.hide : ""}`}>👈</span>
         </span>
       </p>
     </div>
