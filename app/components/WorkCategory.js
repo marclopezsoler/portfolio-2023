@@ -8,7 +8,7 @@ function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, lo
     <div id={categoryType} className={styles.work_type}>
       <h2 className={styles.category_type}>{categoryType}</h2>
       {works.map((work) =>
-        work.type === categoryType ? (
+        work.category === categoryType ? (
           <button
             className={`${styles.workItem} ${
               hoveredItemId === work.id ? styles.opacity : ""
@@ -19,7 +19,7 @@ function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, lo
           >
             <Link href={`/work/${work.id}`} className={styles.link}>
               <p className={styles.title}>
-                <span>{work.class}</span>
+                <span>{work.type}</span>
                 <span className={styles.space}>/</span>
                 {work.title}
               </p>

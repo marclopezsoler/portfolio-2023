@@ -72,7 +72,7 @@ export default function WorkDetailPage({ params }) {
           </div>
           <div className={styles.detail_content}>
             <div>
-              <h2 className={styles.subtitle}>{work.subtitle}</h2>
+              <h2 className={styles.subtitle}>{work.subtitle1}</h2>
               <p className={styles.description}>{work.description}</p>
             </div>
             <div className={styles.details}>
@@ -121,7 +121,7 @@ export default function WorkDetailPage({ params }) {
             <div className={styles.floating_image_1}>
               <ImageComponent
                 workId={work.id}
-                image_alt={work.image4_alt}
+                image_alt={work.image5_alt}
                 numberImg={5}
               />
             </div>
@@ -129,7 +129,7 @@ export default function WorkDetailPage({ params }) {
           <div className={styles.floating_image_2}>
             <ImageComponent
               workId={work.id}
-              image_alt={work.image4_alt}
+              image_alt={work.image6_alt}
               numberImg={6}
             />
           </div>

@@ -65,28 +65,28 @@ const WorkPage = () => {
           <section className={styles.work_content}>
             <section className={styles.tags_parent}>
               <div className={styles.work_tags}>
-                <a href="#uni">uni</a>
-                <a href="#personal">personal</a>
-                <a href="#work">work</a>
+                <a href="#developing">dev</a>
+                <a href="#design">design</a>
+                <a href="#other">other</a>
               </div>
             </section>
             <section className={`${styles.work_items} ${workLoads === 1 ? styles.animate_content : ""}`}>
-              <WorkCategory works={works} categoryType="uni" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-              <WorkCategory works={works} categoryType="personal" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-              <WorkCategory works={works} categoryType="work" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategory works={works} categoryType="developing" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategory works={works} categoryType="design" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategory works={works} categoryType="other" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
             </section>
           </section>
         ) : (
           <section className={styles.work_content_mobile}>
             <section className={styles.tags_parent_mobile}>
-              <a href="#uni">uni</a>
-              <a href="#personal">personal</a>
-              <a href="#work">work</a>
+              <a href="#developing">dev</a>
+              <a href="#design">design</a>
+              <a href="#other">other</a>
             </section>
             <section className={styles.work_items_mobile}>
-              <WorkCategoryMobile works={works} categoryType="uni" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-              <WorkCategoryMobile works={works} categoryType="personal" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-              <WorkCategoryMobile works={works} categoryType="work" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategoryMobile works={works} categoryType="developing" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategoryMobile works={works} categoryType="design" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <WorkCategoryMobile works={works} categoryType="other" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
             </section>
           </section>
         )}

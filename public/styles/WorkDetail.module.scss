@@ -1,5 +1,20 @@
 @import "/public/styles/utilities/variables.scss";
 
+//NOTFOUND
+
+.notfound{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100%;
+  color: white;
+  flex: 1 0 auto;
+  width: 100%;
+
+  padding-top: calc(1em + 2em + 1.4rem + 1vw + 0.2em);
+}
+
 //MAIN
 
 .work_detail {
@@ -138,6 +153,8 @@
     gap: 10%;
 
     padding: 1.5em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
 
     div {
       .subtitle {
@@ -240,7 +257,7 @@
   max-width: 80%;
   color: $green;
   font-family: $font-texts;
-  padding: 1em 0;
+  padding: 3em 1.5em 1.5em 1.5em;
   gap: 0.6em;
   font-size: calc(0.8rem + 0.6vh);
 
