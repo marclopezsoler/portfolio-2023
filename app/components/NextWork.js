@@ -6,7 +6,7 @@ export default function NextWork({ nextWork, short_slug }) {
   return (
     <div className={styles.main}>
       <p className={styles.text}>
-        like what you're seeing?<br></br>take a look to another work{" "}
+        like what you're seeing?<br></br>take a look at another work{" "}
         <span className={styles.link_parent}>
           <Link
             href={`/work/work${nextWork}`}

@@ -5,6 +5,7 @@ import NextWork from "@/app/components/NextWork";
 import styles from "@/public/styles/WorkDetail.module.scss";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { useEffect } from "react";
 
 export async function generateMetadata({ params }) {
   const work = works.find((work) => work.id === params.id);
@@ -16,6 +17,10 @@ export async function generateMetadata({ params }) {
 }
 
 export default function WorkDetailPage({ params }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const work = works.find((work) => work.id === params.id);
 
   let nextWorkNum = 1;

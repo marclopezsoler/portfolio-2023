@@ -20,6 +20,10 @@ const WorkPage = () => {
   const [workLoads, setWorkLoads] = useState(0);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     let count = sessionStorage.getItem("workLoads");
     if (count === null) {
       count = 1;

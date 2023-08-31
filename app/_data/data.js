@@ -47,10 +47,6 @@ const works = [
     client: "personal",
     image1_alt: "alt for image 1",
     image2_alt: "alt for image 2",
-    image3_alt: "alt for image 3",
-    image4_alt: "alt for image 4",
-    image5_alt: "alt for image 5",
-    image6_alt: "alt for image 6",
   },
   {
     num: 3,

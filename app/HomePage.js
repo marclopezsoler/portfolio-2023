@@ -11,6 +11,10 @@ export const metadata = {
 };
 
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const [homeLoads, setHomeLoads] = useState(0);
 
   useEffect(() => {

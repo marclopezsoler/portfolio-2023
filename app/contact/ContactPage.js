@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import styles from "@/public/styles/Contact.module.scss";
 import Head from "next/head";
+import { useEffect } from "react";
 
 export const metadata = {
   title: "contact | marc lópez portfolio",
@@ -10,6 +11,10 @@ export const metadata = {
 };
 
 const ContactPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.div
       className="container text-center  bg-black"
