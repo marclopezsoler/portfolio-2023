@@ -4,34 +4,27 @@
   width: inherit;
   max-width: 100%;
   position: relative;
-
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-  margin: 0;
-  padding: 0;
-
   margin: auto;
   overflow: hidden;
 
   &:hover {
-    .image {
+    .image_hover {
       transform: scale(1.025);
     }
   }
+}
+
+.image_hover{
+  transform: scale(1);
+  transition: 0.35s;
 }
 
 .image {
   display: block;
   width: 100%;
   height: auto;
-  transform: scale(1);
   color: $green;
   font-family: $font-texts;
-  transition: 0.35s;
 
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -44,53 +37,35 @@
   display: none;
 }
 
-.noselect{
-  user-select: none;
-  pointer-events: none;
-}
-
-.full_width{
+.full_width {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(25, 25, 25, 0.71);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   top: 0;
   left: 0;
-  user-select: none;
-  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+  z-index: 99999;
 
-  // display: none;
+  .cross {
+    position: absolute;
+    color: $green;
+    top: 25px;
+    right: 25px;
+  }
 
-  .cross{
-    font-family: $font-texts;
-    font-weight: 500;
+  .full_image {
+    max-height: 95vh;
+    max-width: 95vw;
+    object-fit: contain;
   }
 }
 
-.show{
-  display: block;
-
-  *{
-    user-select: none;
-    pointer-events: none;
-  }
-}
-
-.image_zoom {
-  display: block;
-  width: auto;
-  height: 95vh;
-  transform: scale(1);
-  color: $green;
-  font-family: $font-texts;
-  transition: 0.35s;
-
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.show {
+  display: flex;
 }

@@ -17,7 +17,6 @@ body {
   min-height: 120vh;
 
   scroll-behavior: smooth;
-  z-index: -1;
 
   ::selection {
     color: $blue;
@@ -54,5 +53,4 @@ html {
 
 .main {
   flex-grow: 1;
-  z-index: 0;
 }
