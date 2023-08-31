@@ -26,12 +26,12 @@ function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, lo
             </Link>
             <Image
               src={`/assets/images/work/${work.id}/image1.jpg`}
-              width={100}
-              height={100}
+              width={600}
+              height={600}
               className={styles.image}
               style={{
-                left: `${localX - 400}px`,
-                top: `${localY - 250}px`,
+                left: `${localX - 300}px`,
+                top: `${localY - 300}px`,
               }}
               alt={work.title}
             />

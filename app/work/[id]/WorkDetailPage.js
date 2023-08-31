@@ -71,22 +71,26 @@ export default function WorkDetailPage({ params }) {
             <span>{work.type}</span>
           </div>
           <div className={styles.detail_content}>
-            <div>
+            <div className={styles.info}>
               <h2 className={styles.subtitle}>{work.subtitle1}</h2>
               <p className={styles.description}>{work.description}</p>
             </div>
             <div className={styles.details}>
-              <div>
+              <div className={work.roles ? "" : styles.hide}>
                 <span>roles</span>
                 <p>{work.roles}</p>
               </div>
-              <div>
+              <div className={work.date ? "" : styles.hide}>
                 <span>date</span>
                 <p>{work.date}</p>
               </div>
-              <div>
+              <div className={work.client ? "" : styles.hide}>
                 <span>client</span>
                 <p>{work.client}</p>
+              </div>
+              <div className={work.link ? "" : styles.hide}>
+                <span>link</span>
+                <a href={work.link} target="_blank">{work.short_link}</a>
               </div>
             </div>
           </div>

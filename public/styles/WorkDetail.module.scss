@@ -115,7 +115,7 @@
 
 .first_section {
   width: 100%;
-  max-width: 1080px;
+  max-width: 800px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -142,12 +142,12 @@
   }
 
   .detail_content {
-    max-width: 1080px;
+    max-width: 800px;
     width: fit-content;
     height: fit-content;
 
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
     align-items: flex-start;
 
     gap: 10%;
@@ -156,7 +156,8 @@
     padding-top: 2.5em;
     padding-bottom: 2.5em;
 
-    div {
+    .info {
+      width: 100%;
       .subtitle {
         font-family: $font-titles;
         color: $green;
@@ -174,21 +175,27 @@
         font-size: calc(0.8rem + 0.6vh);
         margin: 0;
         padding: 0;
-
-        width: 100%;
       }
     }
 
     .details {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: flex-start;
       justify-content: flex-start;
       color: $green;
       gap: 0.5em;
+      width: 100%;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+      }
 
       span,
-      p {
+      p,
+      a {
         margin: 0;
         padding: 0;
       }
@@ -199,9 +206,12 @@
         font-size: calc(0.8rem + 0.8vh);
       }
 
-      p {
+      p,
+      a {
         font-family: $font-texts;
         font-size: calc(0.8rem + 0.8vh);
+        text-decoration: none;
+        color: $green;
       }
     }
   }
@@ -212,6 +222,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -279,20 +291,23 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  max-width: 1080px;
+  max-width: 800px;
   z-index: 1;
-  padding-bottom: 20vh;
 
   .second_image {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0;
+    margin: 0;
   }
 }
 
 //RESPONSIVE
 
 @media only screen and (max-width: 800px) {
+  .first_section {
+  }
   .second_content {
     width: 100%;
 
@@ -352,6 +367,7 @@
 @media only screen and (max-width: 600px) {
   .first_section {
     .detail_content {
+      display: flex;
       flex-direction: column;
       gap: 2em;
 
@@ -360,8 +376,23 @@
       }
 
       .details {
-        flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr;
       }
     }
   }
+}
+
+@media only screen and (max-width: 400px) {
+  .first_section {
+    .detail_content {
+      .details {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
 }

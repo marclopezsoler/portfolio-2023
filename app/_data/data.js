@@ -17,6 +17,8 @@ const works = [
     roles: "design, modelling, photography",
     date: "2022",
     client: "personal",
+    short_link: "marclopez.xyz",
+    link: "https://marclopez.oddsolutionslab.com",
     image1_alt: "alt for image 1",
     image2_alt: "alt for image 2",
     image3_alt: "alt for image 3",

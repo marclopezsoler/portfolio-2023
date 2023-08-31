@@ -5,39 +5,29 @@ import "../globals.scss";
 import { useEffect, useState } from "react";
 
 export default function ImageComponent({ workId, image_alt, numberImg }) {
-  const [hideImg, setHideImg] = useState();
-  const [full, setFull] = useState();
+  const [hideImg, setHideImg] = useState(true);
+
+  const jpgImagePath = `/assets/images/work/${workId}/image${numberImg}.jpg`;
+  const gifImagePath = `/assets/images/work/${workId}/image${numberImg}.gif`;
+
+  let imageSrc = jpgImagePath || gifImagePath;
 
   useEffect(() => {
-    if (image_alt === "" || !image_alt) {
-      setHideImg(true);
-    } else {
+    if (imageSrc) {
       setHideImg(false);
     }
-  }, []);
-
-  const fullWidth = () => {
-    const image = document.getElementById("image");
-    if (full) {
-      setFull(false);
-      image.classList.remove(styles.full_width);
-    } else {
-      setFull(true);
-      image.classList.add(styles.full_width);
-    }
-  };
+  }, [imageSrc]);
 
   return (
-    <div className={styles.image_parent}>
+    // <div className={styles.image_parent}>
       <Image
         id="image"
-        src={`/assets/images/work/${workId}/image${numberImg}.jpg`}
-        width={100}
-        height={100}
+        src={imageSrc}
+        width={1000}
+        height={1000}
         className={`${styles.image} ${hideImg ? styles.hide_img : ""}`}
         alt={image_alt}
-        onClick={fullWidth}
       />
-    </div>
+    // </div>
   );
 }
