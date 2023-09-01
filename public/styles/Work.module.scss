@@ -67,11 +67,12 @@
 .image {
   position: absolute;
   width: auto;
-  height: 300px;
+  height: 250px;
   opacity: 0;
   transition: 0.2s;
   pointer-events: none;
   overflow: hidden;
+  z-index: 9999999;
 }
 
 .workItem.opacity .image {
@@ -85,7 +86,6 @@
   align-items: flex-end;
   justify-content: center;
   background-color: transparent;
-  z-index: 0;
   pointer-events: auto;
   padding-right: 5%;
 }
