@@ -3,6 +3,7 @@ import styles from "@/public/styles/Home.module.scss";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import Highlight from "./components/Highlight";
 
 export const metadata = {
   title: "marc lópez portfolio",
@@ -14,7 +15,7 @@ const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const [homeLoads, setHomeLoads] = useState(0);
 
   useEffect(() => {
@@ -50,22 +51,47 @@ const HomePage = () => {
       <main className={styles.main}>
         <section className={styles.home_section_1}>
           <div className={styles.title_parent}>
-            <h1 className={`${styles.home_title} ${homeLoads === 1 ? styles.animate_titleY : ""}`}>
+            <h1
+              className={`${styles.home_title} ${
+                homeLoads === 1 ? styles.animate_titleY : ""
+              }`}
+            >
               creative
             </h1>
             <div className={styles.title_parent2}>
-              <h1 className={`${styles.home_title} ${homeLoads === 1 ? styles.animate_titleX2 : ""}`}>
+              <h1
+                className={`${styles.home_title} ${
+                  homeLoads === 1 ? styles.animate_titleX2 : ""
+                }`}
+              >
                 digital{" "}
               </h1>
-              <h1 className={`${styles.home_title} ${homeLoads === 1 ? styles.animate_titleX : ""}`}>
+              <h1
+                className={`${styles.home_title} ${
+                  homeLoads === 1 ? styles.animate_titleX : ""
+                }`}
+              >
                 artist
               </h1>
             </div>
           </div>
-          <h2 className={`${styles.home_subtitle} ${homeLoads === 1 ? styles.animate_subtitle : ""}`}>
+          <h2
+            className={`${styles.home_subtitle} ${
+              homeLoads === 1 ? styles.animate_subtitle : ""
+            }`}
+          >
             marc lópez is a digital artist and developer from Barcelona, he's
             keen on creating cool and simple stuff
           </h2>
+        </section>
+        <section className={styles.home_section_2}>
+          <h2 className={styles.h2}>
+            higlighted projects
+          </h2>
+          <div className={styles.highlight_parent}>
+            <Highlight title={`generative splatter paintings`} filename_small={`work1.gif`} filename_big={`work1.gif`} subtitle={`Final degree project`} link={`work5`} selected={1}/>
+            <Highlight title={`happenin' app`} filename_small={`work1.gif`} filename_big={`work1.gif`} subtitle={`events mobile app`} link={`work4`} selected={2}/>
+          </div>
         </section>
       </main>
     </motion.div>
