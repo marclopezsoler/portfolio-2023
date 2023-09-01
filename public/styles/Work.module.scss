@@ -88,6 +88,10 @@
   background-color: transparent;
   pointer-events: auto;
   padding-right: 5%;
+
+  :nth-child(1) {
+    padding-top: calc(4em + 1.4rem + 1vw + 0.2em);
+  }
 }
 
 .work_type {
@@ -97,7 +101,7 @@
   gap: 1em;
   width: 90%;
 
-  padding-top: calc(4em + 1.4rem + 1vw + 0.2em);
+  padding-top: calc(4rem);
 
   .category_type {
     font-family: $font-titles;
@@ -143,7 +147,7 @@
     margin: 0;
     padding: 0;
     transition: 0.35s ease-out;
-    
+
     span {
       font-size: $span;
       margin-bottom: 0.11rem;
@@ -170,7 +174,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  // max-width: 1080px;
 }
 
 .tags_parent_moile {
@@ -197,7 +200,7 @@
   a {
     font-family: $font-titles;
     color: $blue;
-    font-size: 1.4em;
+    font-size: $mobile_h3;
     text-decoration: none;
     pointer-events: auto;
     padding: 0.2em 0.5em;
@@ -220,6 +223,15 @@
   z-index: 0;
   pointer-events: auto;
   padding: 15% 0 5% 0;
+
+  :nth-child(1) {
+    padding-top: calc(6em + 1vw);
+  }
+
+  :nth-child(3) {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 .work_type_mobile {
@@ -229,12 +241,14 @@
   gap: 1em;
   width: 100%;
 
-  padding-top: calc(6em + 1.8rem + 1vw + 0.2em);
-  
+  padding-bottom: 2rem;
+  border-bottom: 2px solid $green;
+  padding-top: calc(1rem);
+
   .category_type {
     font-family: $font-titles;
     font-weight: 800;
-    font-size: 1.4em;
+    font-size: $mobile_h3;
     margin: 0;
     padding: 0;
     padding-right: 0.375em;
@@ -248,7 +262,6 @@
 
   font-family: $font-titles;
   font-weight: 800;
-  font-size: 2rem;
   text-decoration: none;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px $green;
@@ -265,12 +278,12 @@
     -webkit-text-fill-color: $green;
     -webkit-text-stroke: 0;
     font-weight: 500;
-    font-size: 3.4rem;
+    font-size: $mobile_h2;
     margin: 0;
     padding: 0;
 
     span {
-      font-size: 1rem;
+      font-size: $span;
       margin-bottom: 0.11rem;
       font-weight: 500;
       -webkit-text-fill-color: $green;
@@ -356,12 +369,12 @@
 
     .title {
       text-decoration: none;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0.8px $green;
-    font-weight: 500;
-    font-size: 3.4rem;
-    margin: 0;
-    padding: 0;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 0.8px $green;
+      font-weight: 500;
+      font-size: 3.4rem;
+      margin: 0;
+      padding: 0;
 
       span {
         font-size: 1rem;
@@ -382,16 +395,16 @@
   }
 }
 
-.animate_content{
+.animate_content {
   animation: animate 1s cubic-bezier(0, 0, 0.05, 1.03);
 }
 
 @keyframes animate {
-  from{
+  from {
     transform: translateY(-125vh);
   }
 
-  to{
+  to {
     transform: translateY(0);
   }
 }

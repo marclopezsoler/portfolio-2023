@@ -16,11 +16,28 @@ $h1: calc(3rem + 3.4vw);
 $h2: calc(2.8rem + 1vw);
 $h3: calc(2rem + 0.8vw);
 $h4: calc(1rem + 0.4vw);
-$h5: calc(1.6rem + 0.6vw);
+$h5: calc(1.6rem + 0.2vw);
 $h6: calc(1.2rem + 0.6vh);
-$p: calc(0.5rem + 0.5vw);
+$p: 0.85rem;
 $span: 1rem;
 $tags: 0.85rem;
+
+//MOBILE FONT SIZES
+
+//LESS THAN 900PX
+
+$mobile_h1_900: calc(2.5em + 2.5vw);
+
+//LESS THAN 400PX
+
+$mobile_h1_450: calc(2em + 1.5vw);
+$mobile_h2: calc(2.5rem + 0.6vw);
+$mobile_h3: 1.4rem;
+$mobile_h4_450: 1rem;
+$mobile_h5: 1.8rem;
+$mobile_p: 1.15rem;
+$mobile_span: 1.25rem;
+
 
 //FONTS
 

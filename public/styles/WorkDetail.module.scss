@@ -73,15 +73,11 @@
   justify-content: center;
   text-align: center;
 
-  h1,
-  h2 {
+  h1 {
     font-family: $font-titles;
     color: $green;
     margin: 0;
     padding: 0;
-  }
-
-  h1 {
     font-weight: 800;
     font-size: $h2;
     max-width: 1080px;
@@ -119,7 +115,7 @@
       color: $green;
       font-family: $font-titles;
       font-weight: 500;
-      font-size: $p;
+      font-size: $span;
     }
   }
 
@@ -209,42 +205,6 @@
   }
 }
 
-//SECOND CONTENT SECTION
-
-.second_content {
-  width: 100%;
-  height: 100%;
-  color: $green;
-  padding: 0;
-  margin: 0;
-}
-
-.second_detail {
-  padding: 2em;
-  color: $green;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 0;
-
-  h2 {
-    font-family: $font-texts;
-    font-weight: 700;
-    font-size: $h6;
-    padding: 0;
-    margin: 0;
-  }
-
-  p {
-    font-family: $font-texts;
-    font-weight: 400;
-    font-size: $p;
-    padding: 0;
-    margin: 0;
-  }
-}
-
 //IMAGES GROUP
 
 .images_group {
@@ -257,7 +217,7 @@
   height: 100%;
   max-width: 800px;
 
-  .second_image {
+  .two_images {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -269,35 +229,38 @@
 //RESPONSIVE
 
 @media only screen and (max-width: 800px) {
-  .second_content {
-    width: 100%;
+  #subtitle {
+    font-size: $mobile_h5;
+  }
 
-    overflow: hidden;
+  #p {
+    font-size: $mobile_p;
+  }
 
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 0;
+  #span {
+    font-size: $mobile_span;
+  }
 
-    .second_detail {
-      padding: 0;
-      margin: 0;
+  .landing_text {
+    h1 {
+      font-size: $mobile_h2;
+    }
+  }
 
-      .second_content_text {
-        padding: 1.5em;
+  .first_section {
+    .detail_content {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
 
-        h2 {
-          font-family: $font-texts;
-          font-weight: 700;
-          text-decoration: overline;
-          font-size: calc(1.2rem + 0.6vh);
-        }
+      .details {
+        grid-template-columns: 3fr 2fr 2fr 2fr;
 
-        p {
-          font-family: $font-texts;
-          font-weight: 400;
-          font-size: calc(0.8rem + 0.6vh);
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
         }
       }
     }
@@ -311,21 +274,9 @@
       flex-direction: column;
       gap: 2em;
 
-      .description {
-        width: 100%;
-      }
-
       .details {
         grid-template-columns: 1fr 1fr;
       }
-    }
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .landing_text {
-    h1 {
-      font-size: calc(2rem + 2vw);
     }
   }
 }

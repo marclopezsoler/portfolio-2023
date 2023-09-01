@@ -72,44 +72,35 @@ export default function WorkDetailPage({ params }) {
           </div>
           <div className={styles.detail_content}>
             <div className={styles.info}>
-              <h2 className={styles.subtitle}>{work.subtitle1}</h2>
-              <p className={styles.description}>{work.description}</p>
+              <h2 id={styles.subtitle} className={styles.subtitle}>{work.subtitle1}</h2>
+              <p className={styles.description} id={styles.p}>{work.description}</p>
             </div>
             <div className={styles.details}>
               <div className={work.roles ? "" : styles.hide}>
-                <span>roles</span>
-                <p>{work.roles}</p>
+                <span id={styles.span}>roles</span>
+                <p id={styles.p}>{work.roles}</p>
               </div>
               <div className={work.date ? "" : styles.hide}>
-                <span>date</span>
-                <p>{work.date}</p>
+                <span id={styles.span}>date</span>
+                <p id={styles.p}>{work.date}</p>
               </div>
               <div className={work.client ? "" : styles.hide}>
-                <span>client</span>
-                <p>{work.client}</p>
+                <span id={styles.span}>client</span>
+                <p id={styles.p}>{work.client}</p>
               </div>
               <div>
-                <span className={work.link === "" ? styles.hide : ""}>link</span>
-                <a href={work.link} target="_blank" className={work.link === "" ? styles.hide : ""}>
+                <span id={styles.span} className={work.link === "" ? styles.hide : ""}>link</span>
+                <a href={work.link} id={styles.p} target="_blank" className={work.link === "" ? styles.hide : ""}>
                   {work.short_link}
                 </a>
               </div>
             </div>
           </div>
-          <div className={styles.image2_parent}>
+          <div className={styles.images_group}>
             <ImageComponent workId={work.id} image_alt={work.image2_alt} numberImg={2}/>
             <ImageComponent workId={work.id} image_alt={work.image3_alt} numberImg={3}/>
-          </div>
-          <div className={styles.second_detail}>
-            <h2>{work.subtitle2}</h2>
-            <br></br>
-            <p>{work.description2}</p>
-            <br></br>
-            <p>{work.description3}</p>
-          </div>
-          <div className={styles.images_group}>
             <ImageComponent workId={work.id} image_alt={work.image4_alt} numberImg={4}/>
-            <div className={styles.second_image}>
+            <div className={styles.two_images}>
               <ImageComponent workId={work.id} image_alt={work.image5_alt} numberImg={5}/>
               <ImageComponent workId={work.id} image_alt={work.image6_alt} numberImg={6}/>
             </div>
