@@ -53,6 +53,33 @@ const works = [
     image6_alt: "stories game recap 2",
     image7_alt: "player of the week design 2",
   },
+  {
+    num: 3,
+    id: "work3",
+    title: "lattelab",
+    subtitle1: "simulation of a real life project",
+    subtitle2: "minimal and useful design",
+    category: "developing",
+    type: "frontend",
+    description:
+      "Lattelab is a project that simulates a client need that goes fromm brand design to website developing. This single page website was done using React and shows all the features from the ficticious brand, such as their products, their mission, their locations and contact.",
+    description2:
+      "This site is a good example of a new brand that has a need and wants to have an impact online.",
+      description3:
+      "By having all the content in the same page, everything is easier to find. Also, by using React, page load times are faster.",
+    roles: "frontend, ui, logo design",
+    date: "2023",
+    client: "personal",
+    short_link: "lattelab site",
+    link: "https://lattelab.oddsolutionslab.com/",
+    image1_alt: "lattelab landing",
+    image2_alt: "about us",
+    image3_alt: "",
+    image4_alt: "landing video",
+    image5_alt: "our mission",
+    image6_alt: "find us",
+    image7_alt: "",
+  },
 ];
 
 export default works;
