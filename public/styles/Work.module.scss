@@ -52,7 +52,7 @@
   a {
     font-family: $font-titles;
     color: $green;
-    font-size: 3em;
+    font-size: $h3;
     text-decoration: none;
     pointer-events: auto;
     background-color: $blue;
@@ -102,7 +102,7 @@
   .category_type {
     font-family: $font-titles;
     font-weight: 800;
-    font-size: 1.4em;
+    font-size: $h4;
     margin: 0;
     padding: 0;
     padding-right: 0.375em;
@@ -116,7 +116,7 @@
 
   font-family: $font-titles;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: $h2;
   text-decoration: none;
 
   width: fit-content;
@@ -139,13 +139,13 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0.8px $green;
     font-weight: 500;
-    font-size: 3.4rem;
+    font-size: $h2;
     margin: 0;
     padding: 0;
     transition: 0.35s ease-out;
     
     span {
-      font-size: 1rem;
+      font-size: $span;
       margin-bottom: 0.11rem;
       font-weight: 500;
       -webkit-text-fill-color: $green;

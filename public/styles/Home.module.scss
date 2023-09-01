@@ -51,7 +51,7 @@
 
 .home_title {
   font-family: $font-titles;
-  font-size: calc(3em + 3.4vw);
+  font-size: $h1;
   text-align: center;
   color: $green;
   max-width: 1080px;
@@ -62,7 +62,7 @@
 
 .home_subtitle {
   font-family: $font-titles;
-  font-size: calc(1em + 0.6vw);
+  font-size: $h4;
   text-align: center;
   color: $green;
   font-weight: 600;

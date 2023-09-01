@@ -18,7 +18,7 @@
 
   flex-shrink: 0;
 
-  z-index: 999;
+  z-index: 99999;
 }
 
 .nav_menu {
@@ -44,12 +44,12 @@
   text-decoration: none;
   font-family: $font-titles, sans-serif;
   font-weight: 800;
-  font-size: calc(1.6rem + 2vw);
+  font-size: $menu_toggle;
   padding: 0.2em;
   transition: 0.25s;
   border: 0;
 
-  z-index: 9999;
+  z-index: 99999;
 
   &:hover {
     color: $greenhv;
@@ -62,7 +62,7 @@
   text-decoration: none;
   font-family: $font-titles, sans-serif;
   font-weight: 800;
-  font-size: calc(1.2rem + 1vw);
+  font-size: $menu_keys;
   padding: 0.2em;
   transition: 0.25s;
 
@@ -80,16 +80,17 @@
     height: 100vh;
     position: fixed;
     transition: 0.35s;
+    z-index: -999;
   }
   
   .show_elementBg{
-    z-index: 1;
+    z-index: 9999;
     opacity: 1;
   }
   
   .hide_elementBg{
     transition: 0.35s;
-    z-index: 0;
+    z-index: -999;
     opacity: 0;
   }
 
@@ -111,7 +112,7 @@
     background-color: $green;
     color: $blue;
     cursor: none;
-    font-size: calc(1.6rem + 1.6vw);
+    font-size: $menu_toggle;
 
     &:hover {
       color: $bluehv;

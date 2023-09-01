@@ -1,12 +1,30 @@
-$blue: #020B55;
+//COLOR PALETTE
+
+$blue: #020b55;
 $bluehv: rgba(23, 36, 139, 0.763);
 $blueop: #020c556b;
-$green: #3AFF49;
+$green: #3aff49;
 $greenop2: #3aff4a72;
 $greenhv: #aeffb4;
 $greenop: rgba(174, 255, 179, 0.743);
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+//FONT SIZES
+
+$menu_keys: calc(1.2rem + 1vw);
+$menu_toggle: calc(1.6rem + 2vw);
+$h1: calc(3rem + 3.4vw);
+$h2: calc(2.8rem + 1vw);
+$h3: calc(2rem + 0.8vw);
+$h4: calc(1rem + 0.4vw);
+$h5: calc(1.6rem + 0.6vw);
+$h6: calc(1.2rem + 0.6vh);
+$p: calc(0.5rem + 0.5vw);
+$span: 1rem;
+$tags: 0.85rem;
+
+//FONTS
+
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 $font-titles: "Syne", sans-serif;
-$font-texts: 'Inter', sans-serif;
+$font-texts: "Inter", sans-serif;

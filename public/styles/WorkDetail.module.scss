@@ -1,20 +1,5 @@
 @import "/public/styles/utilities/variables.scss";
 
-//NOTFOUND
-
-.notfound {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 100%;
-  color: white;
-  flex: 1 0 auto;
-  width: 100%;
-
-  padding-top: calc(1em + 2em + 1.4rem + 1vw + 0.2em);
-}
-
 //MAIN
 
 .work_detail {
@@ -98,17 +83,12 @@
 
   h1 {
     font-weight: 800;
-    font-size: 3.4rem;
+    font-size: $h2;
     max-width: 1080px;
     padding: 0.75em;
 
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px $green;
-  }
-
-  h2 {
-    font-weight: 600;
-    font-size: 1.5rem;
   }
 }
 
@@ -129,7 +109,7 @@
     border-bottom: 2px solid $green;
     width: 100vw;
     z-index: 1;
-    height: 35px;
+    height: 25px;
 
     display: flex;
     align-items: center;
@@ -139,7 +119,7 @@
       color: $green;
       font-family: $font-titles;
       font-weight: 500;
-      font-size: 22px;
+      font-size: $p;
     }
   }
 
@@ -167,14 +147,14 @@
         padding: 0;
         font-weight: 500;
         font-style: bold;
-        font-size: calc(1.6rem + 0.6vh);
+        font-size: $h5;
         padding-bottom: 0.4em;
       }
 
       .description {
         font-family: $font-texts;
         color: $green;
-        font-size: calc(0.8rem + 0.6vh);
+        font-size: $p;
         margin: 0;
         padding: 0;
       }
@@ -205,13 +185,13 @@
       span {
         font-family: $font-titles;
         font-weight: 800;
-        font-size: calc(0.8rem + 0.8vh);
+        font-size: $p;
       }
 
       p,
       a {
         font-family: $font-texts;
-        font-size: calc(0.8rem + 0.8vh);
+        font-size: $p;
         color: $green;
       }
     }
@@ -251,7 +231,7 @@
   h2 {
     font-family: $font-texts;
     font-weight: 700;
-    font-size: calc(1.2rem + 0.6vh);
+    font-size: $h6;
     padding: 0;
     margin: 0;
   }
@@ -259,7 +239,7 @@
   p {
     font-family: $font-texts;
     font-weight: 400;
-    font-size: calc(0.8rem + 0.6vh);
+    font-size: $p;
     padding: 0;
     margin: 0;
   }
