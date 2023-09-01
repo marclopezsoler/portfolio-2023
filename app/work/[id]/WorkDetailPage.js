@@ -59,12 +59,7 @@ export default function WorkDetailPage({ params }) {
       </Head>
       <div className={styles.work_detail}>
         <section className={styles.landing_container}>
-          <div
-            className={styles.bg_image}
-            style={{
-              backgroundImage: `url(/assets/images/work/${work.id}/image1.jpg)`,
-            }}
-          >
+          <div className={styles.bg_image} style={{backgroundImage: `url(/assets/images/work/${work.id}/image1.jpg)`}}>
             <div className={styles.main_gradient}></div>
             <div className={styles.landing_text}>
               <h1>{work.title}</h1>
@@ -94,64 +89,31 @@ export default function WorkDetailPage({ params }) {
                 <p>{work.client}</p>
               </div>
               <div>
-                <span className={work.link === "" ? styles.hide : ""}>
-                  link
-                </span>
-                <a
-                  href={work.link}
-                  target="_blank"
-                  className={work.link === "" ? styles.hide : ""}
-                >
+                <span className={work.link === "" ? styles.hide : ""}>link</span>
+                <a href={work.link} target="_blank" className={work.link === "" ? styles.hide : ""}>
                   {work.short_link}
                 </a>
               </div>
             </div>
           </div>
           <div className={styles.image2_parent}>
-            <ImageComponent
-              workId={work.id}
-              image_alt={work.image2_alt}
-              numberImg={2}
-            />
-          </div>
-          <div className={styles.second_content}>
-            <ImageComponent
-              workId={work.id}
-              image_alt={work.image3_alt}
-              numberImg={3}
-            />
+            <ImageComponent workId={work.id} image_alt={work.image2_alt} numberImg={2}/>
+            <ImageComponent workId={work.id} image_alt={work.image3_alt} numberImg={3}/>
           </div>
           <div className={styles.second_detail}>
             <h2>{work.subtitle2}</h2>
             <br></br>
-
             <p>{work.description2}</p>
             <br></br>
             <p>{work.description3}</p>
           </div>
           <div className={styles.images_group}>
-            <ImageComponent
-              workId={work.id}
-              image_alt={work.image4_alt}
-              numberImg={4}
-            />
+            <ImageComponent workId={work.id} image_alt={work.image4_alt} numberImg={4}/>
             <div className={styles.second_image}>
-              <ImageComponent
-                workId={work.id}
-                image_alt={work.image5_alt}
-                numberImg={5}
-              />
-              <ImageComponent
-                workId={work.id}
-                image_alt={work.image6_alt}
-                numberImg={6}
-              />
+              <ImageComponent workId={work.id} image_alt={work.image5_alt} numberImg={5}/>
+              <ImageComponent workId={work.id} image_alt={work.image6_alt} numberImg={6}/>
             </div>
-            <ImageComponent
-              workId={work.id}
-              image_alt={work.image7_alt}
-              numberImg={7}
-            />
+            <ImageComponent workId={work.id} image_alt={work.image7_alt} numberImg={7}/>
           </div>
         </section>
         <NextWork nextWork={nextWorkNum} />
