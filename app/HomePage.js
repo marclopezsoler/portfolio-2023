@@ -85,12 +85,26 @@ const HomePage = () => {
           </h2>
         </section>
         <section className={styles.home_section_2}>
-          <h2 className={styles.h2}>
-            higlighted projects
-          </h2>
-          <div className={styles.highlight_parent}>
-            <Highlight title={`generative splatter paintings`} filename_small={`work1.gif`} filename_big={`work1.gif`} subtitle={`Final degree project`} link={`work5`} selected={1}/>
-            <Highlight title={`happenin' app`} filename_small={`work1.gif`} filename_big={`work1.gif`} subtitle={`events mobile app`} link={`work4`} selected={2}/>
+          <div className={styles.highlight_container}>
+            <h2 className={styles.h2}>highlighted projects</h2>
+            <div className={styles.highlight_parent}>
+              <Highlight
+                title={`generative splatter paintings`}
+                filename_small={`work1.gif`}
+                filename_big={`work1.gif`}
+                subtitle={`Final degree project`}
+                link={`work5`}
+                selected={1}
+              />
+              <Highlight
+                title={`happenin' app`}
+                filename_small={`work1.gif`}
+                filename_big={`work1.gif`}
+                subtitle={`events mobile app`}
+                link={`work4`}
+                selected={2}
+              />
+            </div>
           </div>
         </section>
       </main>
