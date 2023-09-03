@@ -91,7 +91,7 @@ const HomePage = () => {
               <Highlight
                 title={`generative splatter paintings`}
                 filename_small={`pollock.jpg`}
-                filename_big={`pollock.jpg`}
+                filename_big={`video_tfg.gif`}
                 subtitle={`final degree project`}
                 link={`work5`}
                 selected={1}
