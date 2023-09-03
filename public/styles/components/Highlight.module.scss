@@ -3,38 +3,49 @@
 .highlight_box {
   max-width: 1080px;
   width: 100vw;
-  height: 50vh;
+  height: 65vh;
   color: $green;
   border: 1px solid $green;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
+  display: flex;
+  flex-direction: row;
   position: relative;
-  order: 1;
 }
 
 .first_part {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2em;
 
   font-family: $font-titles;
   text-decoration: none;
 
   border-right: 1px solid $green;
+  width: 50vw;
 
-  .title {
+  .first_part_child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    text-align: center;
-  }
+    height: 100%;
+    padding: 2em;
 
-  .subtitle {
-    width: 35%;
-    text-align: right;
-    font-weight: 500;
+    .title {
+      width: 100%;
+      font-family: $font-titles;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .subtitle {
+      width: 35%;
+      text-align: center;
+      font-family: $font-texts;
+      font-weight: 400;
+      font-size: $p;
+    }
   }
 }
 
@@ -44,6 +55,7 @@
 }
 
 .second_part {
+  width: 50vw;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -67,24 +79,45 @@
   font-weight: bold;
 }
 
-.highlight_parent {
-  :nth-child(2) {
-    .highlight_box {
-      grid-column-start: -1;
-    }
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .highlight_box {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .highlight_box {
     flex-direction: column;
+    height: 80vh;
+  }
+
+  .first_part,
+  .second_part {
+    width: 100vw;
+  }
+
+  .first_part {
+    height: 20vh;
+    border-radius: 0;
+    border-bottom: 1px solid $green;
+
+    .first_part_child {
+      padding: 1em;
+      gap: 0.75em;
+
+      .title {
+        padding: 0;
+        margin: 0;
+      }
+
+      .subtitle {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        font-size: $mobile_p;
+      }
+    }
+  }
+
+  .highlight_small_image {
+    display: none;
+  }
+
+  .second_part {
+    height: 100vh;
   }
 }

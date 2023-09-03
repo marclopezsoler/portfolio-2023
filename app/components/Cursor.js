@@ -38,7 +38,7 @@ function Cursor() {
       setTimeout(() => {
         cursor.classList.remove(`${styles.clickBig}`);
         cursorSmall.classList.remove(`${styles.clickSmall}`);
-      }, 400);
+      }, 300);
     }
     
 
