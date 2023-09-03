@@ -61,8 +61,8 @@
   }
 
   .full_image {
-    max-height: 95vh;
-    max-width: 95vw;
+    height: calc(50vh + 20vw);
+    width: auto;
     object-fit: contain;
   }
 }
@@ -74,4 +74,14 @@
 .hide{
   display: none;
   opacity: 0;
+}
+
+@media only screen and (max-width: 1000px){
+  .full_width {  
+    .full_image {
+      height: auto;
+      width: calc(60vw + 10vh);
+      object-fit: contain;
+    }
+  }
 }

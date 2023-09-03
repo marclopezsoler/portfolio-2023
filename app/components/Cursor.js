@@ -31,10 +31,23 @@ function Cursor() {
       cursorSmall.style.height = sizeSmall + "px";
     };
 
+    const handleClick = () => {
+      cursor.classList.add(`${styles.clickBig}`);
+      cursorSmall.classList.add(`${styles.clickSmall}`);
+    
+      setTimeout(() => {
+        cursor.classList.remove(`${styles.clickBig}`);
+        cursorSmall.classList.remove(`${styles.clickSmall}`);
+      }, 400);
+    }
+    
+
     document.body.addEventListener("mousemove", handleMouseMove);
+    document.body.addEventListener("click", handleClick);
 
     return () => {
       document.body.removeEventListener("mousemove", handleMouseMove);
+      document.body.removeEventListener("click", handleClick);
     };
   }, []);
 

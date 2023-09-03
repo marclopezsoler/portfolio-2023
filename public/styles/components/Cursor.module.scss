@@ -26,3 +26,51 @@
   background: $green;
   border: 2px solid $green;
 }
+
+.clickBig {
+  animation: doClickBig 0.4s forwards;
+}
+
+@keyframes doClickBig {
+  0% {
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(0.5);
+    background: $green;
+    border: 2px solid $green;
+  }
+
+  66% {
+    transform: scale(0.5);
+    background: $green;
+    border: 2px solid $green;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.clickSmall {
+  animation: doClickSmall 0.4s forwards;
+}
+
+@keyframes doClickSmall {
+  0% {
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(0);
+  }
+
+  66% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
