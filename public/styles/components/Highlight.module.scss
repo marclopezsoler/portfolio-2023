@@ -8,12 +8,13 @@
   border: 1px solid $green;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
 }
 
 .first_part {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -21,6 +22,7 @@
   text-decoration: none;
 
   border-right: 1px solid $green;
+  border-left: 1px solid $green;
   width: 50vw;
 
   .first_part_child {
@@ -28,9 +30,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 2em;
+    width: 98%;
+    height: 98%;
+    padding: 1%;
 
     .title {
       width: 100%;
@@ -82,7 +84,7 @@
 @media only screen and (max-width: 600px) {
   .highlight_box {
     flex-direction: column;
-    height: 80vh;
+    height: 100vh;
   }
 
   .first_part,
@@ -91,12 +93,15 @@
   }
 
   .first_part {
-    height: 20vh;
+    height: 25vh;
     border-radius: 0;
+    border: 0;
     border-bottom: 1px solid $green;
 
     .first_part_child {
-      padding: 1em;
+      width: 92%;
+      height: 92%;
+      padding: 4%;
       gap: 0.75em;
 
       .title {

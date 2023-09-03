@@ -98,8 +98,8 @@ const HomePage = () => {
               />
               <Highlight
                 title={`happenin' app`}
-                filename_small={`work1.gif`}
-                filename_big={`work1.gif`}
+                filename_small={`happenin.jpg`}
+                filename_big={`happenin_video.gif`}
                 subtitle={`events mobile app`}
                 link={`work4`}
                 selected={2}
