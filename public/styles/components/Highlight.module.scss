@@ -1,0 +1,90 @@
+@import "/public/styles/utilities/variables.scss";
+
+.highlight_box {
+  max-width: 1080px;
+  width: 100vw;
+  height: 50vh;
+  color: $green;
+  border: 1px solid $green;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  position: relative;
+  order: 1;
+}
+
+.first_part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+
+  font-family: $font-titles;
+  text-decoration: none;
+
+  border-right: 1px solid $green;
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subtitle {
+    width: 35%;
+    text-align: right;
+    font-weight: 500;
+  }
+}
+
+.highlight_small_image {
+  width: 35%;
+  height: auto;
+}
+
+.second_part {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.selected {
+  font-family: $font-titles;
+  font-weight: 500;
+  font-size: $p;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+
+  transform: scale(1.5);
+  transform-origin: right;
+}
+
+.selected_num {
+  font-size: $span;
+  font-weight: bold;
+}
+
+.highlight_parent {
+  :nth-child(2) {
+    .highlight_box {
+      grid-column-start: -1;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .highlight_box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .highlight_box {
+    flex-direction: column;
+  }
+}

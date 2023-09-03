@@ -90,9 +90,9 @@ const HomePage = () => {
             <div className={styles.highlight_parent}>
               <Highlight
                 title={`generative splatter paintings`}
-                filename_small={`work1.gif`}
-                filename_big={`work1.gif`}
-                subtitle={`Final degree project`}
+                filename_small={`pollock.jpg`}
+                filename_big={`pollock.jpg`}
+                subtitle={`final degree project`}
                 link={`work5`}
                 selected={1}
               />
