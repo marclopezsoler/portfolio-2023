@@ -150,6 +150,7 @@
   gap: 20px;
 
   .subtitle_part2 {
+    text-align: center;
     margin: 0;
     padding: 0;
     font-family: $font-titles;
@@ -159,6 +160,7 @@
   }
 
   .p {
+    text-align: center;
     margin: 0;
     padding: 0;
     font-family: $font-texts;
@@ -231,6 +233,7 @@
   gap: 20px;
 
   .section4_title {
+    text-align: center;
     font-family: $font-titles;
     font-weight: 600;
     font-size: $h2;
@@ -239,6 +242,7 @@
   }
 
   .section4_subtitle {
+    text-align: center;
     margin: 0;
     padding: 0;
     font-family: $font-texts;
