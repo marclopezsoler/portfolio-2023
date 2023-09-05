@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Highlight from "./components/Highlight";
+import MyBest from "./components/MyBest";
 
 export const metadata = {
   title: "marc lópez portfolio",
@@ -85,6 +86,13 @@ const HomePage = () => {
           </h2>
         </section>
         <section className={styles.home_section_2}>
+          <h2 className={styles.subtitle_part2}>what I do best</h2>
+          <div>
+            <MyBest title={'This'}/>
+            <MyBest title={'That'}/>
+          </div>
+        </section>
+        <section className={styles.home_section_3}>
           <div className={styles.highlight_container}>
             <h2 className={styles.h2}>highlighted projects</h2>
             <div className={styles.highlight_parent}>
