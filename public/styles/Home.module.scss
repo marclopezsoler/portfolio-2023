@@ -143,10 +143,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 98%;
+  width: 92%;
   max-width: 1080px;
-  padding: 4%;
+  padding: 4% 4% 12% 4%;
   color: $green;
+  gap: 20px;
 
   .subtitle_part2 {
     margin: 0;
@@ -156,6 +157,15 @@
     font-weight: 800;
     padding: 0 0.6em;
   }
+}
+
+.best_parent{
+  width: 100%;
+  display: grid;
+  align-items: center;
+  align-self: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 15px;
 }
 
 //SECTION 3

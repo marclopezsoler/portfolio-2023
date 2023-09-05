@@ -87,9 +87,11 @@ const HomePage = () => {
         </section>
         <section className={styles.home_section_2}>
           <h2 className={styles.subtitle_part2}>what I do best</h2>
-          <div>
-            <MyBest title={'This'}/>
-            <MyBest title={'That'}/>
+          <div className={styles.best_parent}>
+            <MyBest title={"Front End Developing"} subtitle={"Using React or NextJS"} />
+            <MyBest title={"Responsive Web & Apps"} subtitle={"Developing mobile first projects"} />
+            <MyBest title={"UI Design"} subtitle={"Designing of websites using Figma"} />
+            <MyBest title={"Graphic Design"} subtitle={"Branding and design for social media"} />
           </div>
         </section>
         <section className={styles.home_section_3}>
