@@ -74,11 +74,14 @@ const WorkPage = () => {
                 <a href="#other">other</a>
               </div>
             </section>
-            <section className={`${styles.work_items} ${workLoads === 1 ? styles.animate_content : ""}`}>
-              <WorkCategory works={works} categoryType="developing" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-              <WorkCategory works={works} categoryType="design" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-              <WorkCategory works={works} categoryType="other" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-            </section>
+            <div className={styles.work_container}>
+              <p className={styles.intro_text}>discover a variety of projects, based on category<br></br>click on them for futher detail</p>
+              <section className={`${styles.work_items} ${workLoads === 1 ? styles.animate_content : ""}`}>
+                <WorkCategory works={works} categoryType="developing" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+                <WorkCategory works={works} categoryType="design" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+                <WorkCategory works={works} categoryType="other" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              </section>
+            </div>
           </section>
         ) : (
           <section className={styles.work_content_mobile}>
