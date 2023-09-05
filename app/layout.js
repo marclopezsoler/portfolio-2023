@@ -20,6 +20,18 @@ const RootLayout = ({ children }) => {
         <meta name="theme-color" content="#020b55" />
         <link rel="manifest" href="./manifest.webmanifest" />
         <link rel="icon" href="./icon.ico" type="image/x-icon" />
+
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap" as="style" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap" media="print" onload="this.media='all'" />
+        <noscript>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap" />
+        </noscript>
+
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" as="style" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+        <noscript>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" />
+        </noscript>
       </Head>
       <body>
         <section className="content">
