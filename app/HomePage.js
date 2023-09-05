@@ -87,16 +87,20 @@ const HomePage = () => {
         </section>
         <section className={styles.home_section_2}>
           <h2 className={styles.subtitle_part2}>what I do best</h2>
+          <p className={styles.p}>These are some aspects I excel at, for further detail, go to the about section!</p>
           <div className={styles.best_parent}>
-            <MyBest title={"Front End Developing"} subtitle={"Using React or NextJS"} />
-            <MyBest title={"Responsive Web & Apps"} subtitle={"Developing mobile first projects"} />
-            <MyBest title={"UI Design"} subtitle={"Designing of websites using Figma"} />
-            <MyBest title={"Graphic Design"} subtitle={"Branding and design for social media"} />
+            <MyBest title={"Front End Developing"} />
+            <MyBest title={"Responsive Web & Apps"} />
+            <MyBest title={"SEO Google Analytics and MyBusiness"} />
+            <MyBest title={"UI Design"} />
+            <MyBest title={"Graphic Design"} />
+            <MyBest title={"Social Media managing"} />
           </div>
         </section>
         <section className={styles.home_section_3}>
           <div className={styles.highlight_container}>
             <h2 className={styles.h2}>highlighted projects</h2>
+            <p className={styles.p}>Check out a few highlighted projects, if you want to explore more of them, go to the work section!</p>
             <div className={styles.highlight_parent}>
               <Highlight
                 title={`generative splatter paintings`}
@@ -116,6 +120,10 @@ const HomePage = () => {
               />
             </div>
           </div>
+        </section>
+        <section className={styles.home_section_4}>
+          <h2 className={styles.section4_title}>hey! you got to the bottom</h2>
+          <p className={styles.section4_subtitle}>feel free to explore the other sections</p>
         </section>
       </main>
     </motion.div>
