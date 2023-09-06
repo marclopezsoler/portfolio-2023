@@ -3,21 +3,30 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 540px;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
 
   ::placeholder {
     color: $greenop;
+  }
+
+  div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
   }
 
   .name,
   .email,
   .message {
     width: 100%;
-    border: 1.5px solid $green;
+    border: none;
+    border-bottom: 1.5px solid $green;
     font-family: $font-texts;
     color: $green;
     font-weight: 400;
@@ -26,27 +35,26 @@
     background-color: transparent;
     resize: none;
     outline: none;
-    min-height: 30%;
-    padding: 0.3% 1.2%;
     font-size: $p;
   }
-}
 
-.name {
-}
-
-.email {
-}
-
-.message {
-  min-height: 50%;
+  label {
+    width: 100%;
+    border: none;
+    font-family: $font-texts;
+    color: $green;
+    font-weight: 600;
+    font-size: $span;
+  }
 }
 
 .button_parent {
   border: 0;
   background-color: transparent;
-  width: 100%;
-  height: 100%;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
 }
 
 .button {
@@ -56,12 +64,22 @@
   font-family: $font-texts;
   font-weight: 600;
   font-size: $span;
-  padding: 0.3% 1.2%;
+  padding: 3% 12%;
   transition: 0.25s;
 
   &:hover {
     color: $green;
     background-color: $blue;
     border: 1.5px solid $green;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    &:hover {
+      border: 1.5px solid $green;
+      background-color: $green;
+      color: $blue;
+    }
   }
 }

@@ -3,7 +3,7 @@ import styles from "@/public/styles/Contact.module.scss";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { useEffect } from "react";
-import ContactForm from "./ContactForm";
+import ContactForm from "../components/ContactForm";
 
 export const metadata = {
   title: "contact | marc lópez portfolio",
@@ -35,11 +35,12 @@ const ContactPage = () => {
       </Head>
       <div className={styles.main}>
         <div className={styles.contact_page}>
-          <section>
+          <section className={styles.first_part}>
             <h1 className={styles.title}>get in touch</h1>
-            <p>let's transform your ideas into reality together!</p>
+            <h3 className={styles.subtitle}>let's transform your ideas into reality together!</h3>
+            <a href="mailto:marcls.arbucies@gmail.com" target="_blank" className={styles.mail}>marcls.arbucies@gmail.com</a>
           </section>
-          <section>
+          <section  className={styles.second_part}>
             <ContactForm />
           </section>
         </div>
