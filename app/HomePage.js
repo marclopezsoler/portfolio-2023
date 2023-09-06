@@ -104,7 +104,7 @@ const HomePage = () => {
             <div className={styles.highlight_parent}>
               <Highlight
                 title={`generative splatter paintings`}
-                filename_small={`pollock.jpg`}
+                filename_small={`pollock.png`}
                 filename_big={`video_tfg.gif`}
                 subtitle={`final degree project`}
                 link={`work5`}
