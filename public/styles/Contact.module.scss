@@ -2,10 +2,10 @@
 
 .main {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-height: 100%;
+  height: calc(100vh - (1em + 8em + 1.4rem + 1vw + 0.2em));
   color: white;
   flex: 1 0 auto;
   width: 100%;
@@ -14,4 +14,22 @@
 
   flex: 1;
   flex-grow: 1;
+}
+
+.contact_page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1080px;
+  width: 92%;
+  padding: 4%;
+}
+
+.title {
+  font-family: $font-titles;
+  font-weight: 800;
+  font-size: $h3;
+  color: $green;
+  text-align: center;
 }

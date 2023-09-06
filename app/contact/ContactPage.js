@@ -3,6 +3,7 @@ import styles from "@/public/styles/Contact.module.scss";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { useEffect } from "react";
+import ContactForm from "./ContactForm";
 
 export const metadata = {
   title: "contact | marc lópez portfolio",
@@ -33,7 +34,15 @@ const ContactPage = () => {
         <link rel="icon" href="../icon.ico" type="image/x-icon" />
       </Head>
       <div className={styles.main}>
-        <p>CONTACT</p>
+        <div className={styles.contact_page}>
+          <section>
+            <h1 className={styles.title}>get in touch</h1>
+            <p>let's transform your ideas into reality together!</p>
+          </section>
+          <section>
+            <ContactForm />
+          </section>
+        </div>
       </div>
     </motion.div>
   );
