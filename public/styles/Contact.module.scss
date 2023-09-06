@@ -71,8 +71,34 @@
   text-align: left;
 }
 
+.animateLeft {
+  animation: animateLeft 1.5s forwards;
+}
+
+@keyframes animateLeft {
+  from {
+    transform: translateX(-150vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animateRight {
+  animation: animateRight 1.5s forwards;
+}
+
+@keyframes animateRight {
+  from {
+    transform: translateX(150vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 @media only screen and (max-width: 750px) {
-  .contact_page{
+  .contact_page {
     flex-direction: column;
     align-items: center;
   }

@@ -2,7 +2,7 @@
 import styles from "@/public/styles/Contact.module.scss";
 import { motion } from "framer-motion";
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ContactForm from "../components/ContactForm";
 
 export const metadata = {
@@ -14,6 +14,20 @@ export const metadata = {
 const ContactPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  const [contactLoads, setContactLoads] = useState(0);
+
+  useEffect(() => {
+    let count = sessionStorage.getItem("contactLoads");
+    if (count === null) {
+      count = 1;
+    } else {
+      count = Number(count) + 1;
+    }
+    sessionStorage.setItem("contactLoads", count);
+
+    setContactLoads(count);
   }, []);
 
   return (
@@ -35,12 +49,12 @@ const ContactPage = () => {
       </Head>
       <div className={styles.main}>
         <div className={styles.contact_page}>
-          <section className={styles.first_part}>
+          <section className={`${styles.first_part} ${contactLoads === 1 ? styles.animateLeft : ""}`}>
             <h1 className={styles.title}>get in touch</h1>
             <h3 className={styles.subtitle}>let's transform your ideas into reality together!</h3>
             <a href="mailto:marcls.arbucies@gmail.com" target="_blank" className={styles.mail}>marcls.arbucies@gmail.com</a>
           </section>
-          <section  className={styles.second_part}>
+          <section  className={`${styles.second_part} ${contactLoads === 1 ? styles.animateRight : ""}`}>
             <ContactForm />
           </section>
         </div>

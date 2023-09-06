@@ -7,6 +7,7 @@
   justify-content: flex-start;
   width: 100%;
   gap: 2rem;
+  position: relative;
 
   ::placeholder {
     color: $greenop;
@@ -72,6 +73,21 @@
     background-color: $blue;
     border: 1.5px solid $green;
   }
+}
+
+.sent {
+  font-family: $font-texts;
+  font-weight: 400;
+  font-size: $p;
+  color: $green;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  transition: 0.25s;
+}
+
+.show{
+   opacity: 1;
 }
 
 @media only screen and (max-width: 600px) {
