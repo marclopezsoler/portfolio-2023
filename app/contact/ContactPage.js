@@ -52,7 +52,6 @@ const ContactPage = () => {
           <section className={`${styles.first_part} ${contactLoads === 1 ? styles.animateLeft : ""}`}>
             <h1 className={styles.title}>get in touch</h1>
             <h3 className={styles.subtitle}>let's transform your ideas into reality together!</h3>
-            <a href="mailto:marcls.arbucies@gmail.com" target="_blank" className={styles.mail}>marcls.arbucies@gmail.com</a>
           </section>
           <section  className={`${styles.second_part} ${contactLoads === 1 ? styles.animateRight : ""}`}>
             <ContactForm />

@@ -74,7 +74,7 @@ export default function ContactForm() {
         />
       </div>
       <button className={styles.button_parent}>
-        <input type="submit" value="Send message" className={styles.button} />
+        <input type="submit" value="SEND MESSAGE" className={styles.button} />
       </button>
       <p className={`${styles.sent} ${sent ? styles.show : ""}`}>Your message has been successfully sent!</p>
     </form>

@@ -47,15 +47,6 @@
     font-weight: 400;
     font-size: $big_p;
   }
-
-  .mail {
-    color: $green;
-    text-decoration: underline;
-    text-decoration-color: white;
-    font-family: $font-texts;
-    font-weight: 400;
-    font-size: $big_p;
-  }
 }
 
 .second_part {
@@ -101,5 +92,19 @@
   .contact_page {
     flex-direction: column;
     align-items: center;
+  }
+
+  .title {
+    font-size: $mobile_h2;
+  }
+
+  .first_part {
+    .subtitle {
+      font-size: $mobile_span;
+    }
+  }
+
+  .first_part, .second_part{
+    width: 80%;
   }
 }
