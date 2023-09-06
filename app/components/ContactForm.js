@@ -41,7 +41,6 @@ export default function ContactForm() {
       <div>
         <label>Name *</label>
         <input
-          id="form"
           type="text"
           name="user_name"
           value={name}
@@ -54,7 +53,6 @@ export default function ContactForm() {
       <div>
         <label>Email *</label>
         <input
-          id="form"
           type="email"
           name="user_email"
           value={email}
@@ -67,7 +65,6 @@ export default function ContactForm() {
       <div>
         <label>Message *</label>
         <textarea
-          id="form"
           name="message"
           value={message}
           className={styles.message}
