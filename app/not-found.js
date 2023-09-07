@@ -14,8 +14,9 @@ export default function NotFound() {
       transition={{ duration: 0.35 }}
     >
       <div className={styles.main}>
-        <p>NotFound</p>
-        <Link href="/">BACK HOME</Link>
+        <h2 className={styles.h2}>Ooops...</h2>
+        <h3 className={styles.h3}>can't find that page</h3>
+        <Link href="/" className={styles.link}>BACK TO HOME</Link>
       </div>
     </motion.div>
   );

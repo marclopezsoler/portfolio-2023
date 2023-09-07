@@ -1,15 +1,9 @@
 "use client";
 import styles from "@/public/styles/Contact.module.scss";
 import { motion } from "framer-motion";
-import Head from "next/head";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import ContactForm from "../components/ContactForm";
-
-export const metadata = {
-  title: "contact | marc lópez portfolio",
-  description:
-    "Contact if you would like to work with me or have any question.",
-};
 
 const ContactPage = () => {
   useEffect(() => {
@@ -38,22 +32,25 @@ const ContactPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35 }}
     >
-      <Head>
-        <title>contact | marc lópez portfolio</title>
-        <meta
-          name="description"
-          content="Contact if you would like to work with me or have any question."
-        />
-        <meta name="theme-color" content="#020b55" />
-        <link rel="icon" href="../icon.ico" type="image/x-icon" />
-      </Head>
+      <Helmet title="contact | marc lópez portfolio" />
       <div className={styles.main}>
         <div className={styles.contact_page}>
-          <section className={`${styles.first_part} ${contactLoads === 1 ? styles.animateLeft : ""}`}>
+          <section
+            className={`${styles.first_part} ${
+              contactLoads === 1 ? styles.animateLeft : ""
+            }`}
+          >
             <h1 className={styles.title}>let's get in touch</h1>
-            <h3 className={styles.subtitle}>have something in mind?<br></br>let's transform your ideas into reality together!</h3>
+            <h3 className={styles.subtitle}>
+              have something in mind?<br></br>let's transform your ideas into
+              reality together!
+            </h3>
           </section>
-          <section  className={`${styles.second_part} ${contactLoads === 1 ? styles.animateRight : ""}`}>
+          <section
+            className={`${styles.second_part} ${
+              contactLoads === 1 ? styles.animateRight : ""
+            }`}
+          >
             <ContactForm />
           </section>
         </div>

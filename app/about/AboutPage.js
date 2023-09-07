@@ -1,13 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
 import styles from "@/public/styles/About.module.scss";
-import Head from "next/head";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
-
-export const metadata = {
-  title: "about | marc lópez portfolio",
-  description: "Get to know me better and discover my experience and passions.",
-};
+import { Helmet } from "react-helmet";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -22,15 +17,7 @@ const AboutPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35 }}
     >
-      <Head>
-        <title>about | marc lópez portfolio</title>
-        <meta
-          name="description"
-          content="Get to know me better and discover my experience and passions."
-        />
-        <meta name="theme-color" content="#020b55" />
-        <link rel="icon" href="../icon.ico" type="image/x-icon"/>
-      </Head>
+      <Helmet title="about | marc lópez portfolio" />
       <div className={styles.main}>
         <p>ABOUT</p>
       </div>

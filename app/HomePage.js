@@ -5,13 +5,14 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import Highlight from "./components/Highlight";
 import MyBest from "./components/MyBest";
+import { Helmet } from "react-helmet";
 
-const HomePage = ({title}) => {
+const HomePage = () => {
+  const [homeLoads, setHomeLoads] = useState(0);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const [homeLoads, setHomeLoads] = useState(0);
 
   useEffect(() => {
     let count = sessionStorage.getItem("homeLoads");
@@ -33,16 +34,7 @@ const HomePage = ({title}) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35 }}
     >
-      <Head>
-        <title>{title}</title>
-        <meta
-          name="description"
-          content="This is Marc López's portfolio website, where you can check all his
-          projects and experience."
-        />
-        <meta name="theme-color" content="#020b55" />
-        <link rel="icon" href="./icon.ico" type="image/x-icon" />
-      </Head>
+      <Helmet title="marc lópez portfolio" />
       <main className={styles.main}>
         <section className={styles.home_section_1}>
           <div className={styles.title_parent}>

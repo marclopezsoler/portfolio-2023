@@ -4,16 +4,11 @@ import ImageComponent from "@/app/components/ImageComponent";
 import NextWork from "@/app/components/NextWork";
 import styles from "@/public/styles/WorkDetail.module.scss";
 import { motion } from "framer-motion";
-import Head from "next/head";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export async function generateMetadata({ params }) {
   const work = works.find((work) => work.id === params.id);
-
-  return {
-    title: `${work.title} | marc lópez portfolio`,
-    description: `Check out ${work.title}, and the rest of my works here!`,
-  };
 }
 
 export default function WorkDetailPage({ params }) {
@@ -48,18 +43,15 @@ export default function WorkDetailPage({ params }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35 }}
     >
-      <Head>
-        <title>{work.title} | marc lópez portfolio</title>
-        <meta
-          name="description"
-          content="Check out {work.title}, and the rest of my works here!"
-        />
-        <meta name="theme-color" content="#020b55" />
-        <link rel="icon" href="../../icon.ico" type="image/x-icon" />
-      </Head>
+      <Helmet title={`${work.title} | marc lópez portfolio `} />
       <div className={styles.work_detail}>
         <section className={styles.landing_container}>
-          <div className={styles.bg_image} style={{backgroundImage: `url(/assets/images/work/${work.id}/image1.jpg)`}}>
+          <div
+            className={styles.bg_image}
+            style={{
+              backgroundImage: `url(/assets/images/work/${work.id}/image1.jpg)`,
+            }}
+          >
             <div className={styles.main_gradient}></div>
             <div className={styles.landing_text}>
               <h1>{work.title}</h1>
@@ -72,8 +64,12 @@ export default function WorkDetailPage({ params }) {
           </div>
           <div className={styles.detail_content}>
             <div className={styles.info}>
-              <h2 id={styles.subtitle} className={styles.subtitle}>{work.subtitle1}</h2>
-              <p className={styles.description} id={styles.p}>{work.description}</p>
+              <h2 id={styles.subtitle} className={styles.subtitle}>
+                {work.subtitle1}
+              </h2>
+              <p className={styles.description} id={styles.p}>
+                {work.description}
+              </p>
             </div>
             <div className={styles.details}>
               <div className={work.roles ? "" : styles.hide}>
@@ -89,22 +85,56 @@ export default function WorkDetailPage({ params }) {
                 <p id={styles.p}>{work.client}</p>
               </div>
               <div>
-                <span id={styles.span} className={work.link === "" ? styles.hide : ""}>link</span>
-                <a href={work.link} id={styles.p} target="_blank" className={work.link === "" ? styles.hide : ""}>
+                <span
+                  id={styles.span}
+                  className={work.link === "" ? styles.hide : ""}
+                >
+                  link
+                </span>
+                <a
+                  href={work.link}
+                  id={styles.p}
+                  target="_blank"
+                  className={work.link === "" ? styles.hide : ""}
+                >
                   {work.short_link}
                 </a>
               </div>
             </div>
           </div>
           <div className={styles.images_group}>
-            <ImageComponent workId={work.id} image_alt={work.image2_alt} numberImg={2}/>
-            <ImageComponent workId={work.id} image_alt={work.image3_alt} numberImg={3}/>
-            <ImageComponent workId={work.id} image_alt={work.image4_alt} numberImg={4}/>
+            <ImageComponent
+              workId={work.id}
+              image_alt={work.image2_alt}
+              numberImg={2}
+            />
+            <ImageComponent
+              workId={work.id}
+              image_alt={work.image3_alt}
+              numberImg={3}
+            />
+            <ImageComponent
+              workId={work.id}
+              image_alt={work.image4_alt}
+              numberImg={4}
+            />
             <div className={styles.two_images}>
-              <ImageComponent workId={work.id} image_alt={work.image5_alt} numberImg={5}/>
-              <ImageComponent workId={work.id} image_alt={work.image6_alt} numberImg={6}/>
+              <ImageComponent
+                workId={work.id}
+                image_alt={work.image5_alt}
+                numberImg={5}
+              />
+              <ImageComponent
+                workId={work.id}
+                image_alt={work.image6_alt}
+                numberImg={6}
+              />
             </div>
-            <ImageComponent workId={work.id} image_alt={work.image7_alt} numberImg={7}/>
+            <ImageComponent
+              workId={work.id}
+              image_alt={work.image7_alt}
+              numberImg={7}
+            />
           </div>
         </section>
         <NextWork nextWork={nextWorkNum} />

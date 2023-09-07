@@ -1,17 +1,12 @@
 "use client";
 import styles from "@/public/styles/Work.module.scss";
 import { motion } from "framer-motion";
-import Head from "next/head";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
+import { Helmet } from "react-helmet";
 import works from "../_data/data";
 import WorkCategory from "../components/WorkCategory";
 import WorkCategoryMobile from "../components/WorkCategoryMobile";
-
-export const metadata = {
-  title: "work | marc lópez portfolio",
-  description: "Check out all my works here!",
-};
 
 const WorkPage = () => {
   const [localX, setLocalX] = useState(0);
@@ -58,12 +53,7 @@ const WorkPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35 }}
     >
-      <Head>
-        <title>work | marc lópez portfolio</title>
-        <meta name="description" content="Check out all my works here!" />
-        <meta name="theme-color" content="#020b55" />
-        <link rel="icon" href="../icon.ico" type="image/x-icon" />
-      </Head>
+      <Helmet title="work | marc lópez portfolio" />
       <div className={styles.main}>
         {!isMobile ? (
           <section className={styles.work_content}>
@@ -75,11 +65,30 @@ const WorkPage = () => {
               </div>
             </section>
             <div className={styles.work_container}>
-              <p className={styles.intro_text}>discover a variety of projects, based on category<br></br>click on them for futher detail</p>
-              <section className={`${styles.work_items} ${workLoads === 1 ? styles.animate_content : ""}`}>
-                <WorkCategory works={works} categoryType="developing" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-                <WorkCategory works={works} categoryType="design" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-                <WorkCategory works={works} categoryType="other" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+              <p className={styles.intro_text}>
+                discover a variety of projects, based on category<br></br>click
+                on them for futher detail
+              </p>
+              <section
+                className={`${styles.work_items} ${
+                  workLoads === 1 ? styles.animate_content : ""
+                }`}
+              >
+                <WorkCategory
+                  works={works}
+                  categoryType="developing"
+                  {...{ hoveredItemId, setHoveredItemId, localX, localY }}
+                />
+                <WorkCategory
+                  works={works}
+                  categoryType="design"
+                  {...{ hoveredItemId, setHoveredItemId, localX, localY }}
+                />
+                <WorkCategory
+                  works={works}
+                  categoryType="other"
+                  {...{ hoveredItemId, setHoveredItemId, localX, localY }}
+                />
               </section>
             </div>
           </section>
@@ -90,10 +99,26 @@ const WorkPage = () => {
               <a href="#design">design</a>
               <a href="#other">other</a>
             </section>
-            <section className={`${styles.work_items_mobile} ${workLoads === 1 ? styles.animate_content : ""}`}>
-              <WorkCategoryMobile works={works} categoryType="developing" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-              <WorkCategoryMobile works={works} categoryType="design" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
-              <WorkCategoryMobile works={works} categoryType="other" {...{hoveredItemId, setHoveredItemId, localX, localY}}/>
+            <section
+              className={`${styles.work_items_mobile} ${
+                workLoads === 1 ? styles.animate_content : ""
+              }`}
+            >
+              <WorkCategoryMobile
+                works={works}
+                categoryType="developing"
+                {...{ hoveredItemId, setHoveredItemId, localX, localY }}
+              />
+              <WorkCategoryMobile
+                works={works}
+                categoryType="design"
+                {...{ hoveredItemId, setHoveredItemId, localX, localY }}
+              />
+              <WorkCategoryMobile
+                works={works}
+                categoryType="other"
+                {...{ hoveredItemId, setHoveredItemId, localX, localY }}
+              />
             </section>
           </section>
         )}
