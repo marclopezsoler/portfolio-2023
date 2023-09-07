@@ -6,7 +6,6 @@
   margin: 0 5%;
   height: 65vh;
   color: $green;
-  border: 1px solid $green;
 
   display: flex;
   flex-direction: column;
@@ -22,9 +21,9 @@
   font-family: $font-titles;
   text-decoration: none;
 
-  border-right: 1px solid $green;
-  border-left: 1px solid $green;
   width: 50vw;
+  border: 1px solid $green;
+
 
   .first_part_child {
     display: flex;
@@ -63,6 +62,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border: 1px solid $green;
 }
 
 .selected {
@@ -103,10 +103,11 @@
     height: 25vh;
     border-radius: 0;
     padding: 0;
+    border: 0;
     
     .first_part_child {
-      border-bottom: 1px solid $green;
-      width: 89%;
+      border: 1px solid $green;
+      width: 88%;
       gap: 0.75em;
 
       .title {
