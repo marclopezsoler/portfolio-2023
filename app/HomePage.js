@@ -6,13 +6,7 @@ import { useEffect, useState } from "react";
 import Highlight from "./components/Highlight";
 import MyBest from "./components/MyBest";
 
-export const metadata = {
-  title: "marc lópez portfolio",
-  description:
-    "This is Marc López's portfolio website, where you can check all his projects and experience.",
-};
-
-const HomePage = () => {
+const HomePage = ({title}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,7 +34,7 @@ const HomePage = () => {
       transition={{ duration: 0.35 }}
     >
       <Head>
-        <title>marc lópez portfolio</title>
+        <title>{title}</title>
         <meta
           name="description"
           content="This is Marc López's portfolio website, where you can check all his
