@@ -7,11 +7,11 @@
   color: $green;
   text-align: center;
   z-index: 1;
-  font-size: $p;
 }
 
 .text {
   font-weight: 300;
+  font-size: $span;
 }
 
 .link_parent{
@@ -39,4 +39,8 @@
   .finger{
     display: none;
   }
+
+.text{
+  font-size: $mobile_span;
+}
 }
