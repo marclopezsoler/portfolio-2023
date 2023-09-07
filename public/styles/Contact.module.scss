@@ -49,17 +49,17 @@
   }
 }
 
-.second_part {
-  max-width: 100%;
-  width: 60%;
-}
-
 .title {
   font-family: $font-titles;
   font-weight: 800;
   font-size: $h3;
   color: $green;
   text-align: left;
+}
+
+.second_part {
+  max-width: 100%;
+  width: 60%;
 }
 
 .animateLeft {

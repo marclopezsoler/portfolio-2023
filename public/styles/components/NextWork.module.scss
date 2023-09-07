@@ -34,3 +34,9 @@
   opacity: 0;
   transition: 0.2s;
 }
+
+@media only screen and (max-width: 600px) {
+  .finger{
+    display: none;
+  }
+}

@@ -50,8 +50,8 @@ const ContactPage = () => {
       <div className={styles.main}>
         <div className={styles.contact_page}>
           <section className={`${styles.first_part} ${contactLoads === 1 ? styles.animateLeft : ""}`}>
-            <h1 className={styles.title}>get in touch</h1>
-            <h3 className={styles.subtitle}>let's transform your ideas into reality together!</h3>
+            <h1 className={styles.title}>let's get in touch</h1>
+            <h3 className={styles.subtitle}>have something in mind?<br></br>let's transform your ideas into reality together!</h3>
           </section>
           <section  className={`${styles.second_part} ${contactLoads === 1 ? styles.animateRight : ""}`}>
             <ContactForm />

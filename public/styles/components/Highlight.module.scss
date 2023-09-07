@@ -2,7 +2,8 @@
 
 .highlight_box {
   max-width: 1080px;
-  width: 100vw;
+  width: 90%;
+  margin: 0 5%;
   height: 65vh;
   color: $green;
   border: 1px solid $green;
@@ -85,23 +86,27 @@
   .highlight_box {
     flex-direction: column;
     height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
+  
   .first_part,
   .second_part {
     width: 100vw;
+    padding: 0;
+    margin: 0;
   }
-
+  
   .first_part {
     height: 25vh;
     border-radius: 0;
-    border: 0;
-    border-bottom: 1px solid $green;
-
+    padding: 0;
+    
     .first_part_child {
-      width: 92%;
-      height: 92%;
-      padding: 4%;
+      border-bottom: 1px solid $green;
+      width: 89%;
       gap: 0.75em;
 
       .title {
@@ -124,5 +129,6 @@
 
   .second_part {
     height: 100vh;
+    width: 100%;
   }
 }
