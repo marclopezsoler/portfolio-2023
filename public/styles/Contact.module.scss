@@ -14,6 +14,7 @@
 
   flex: 1;
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .contact_page {
@@ -26,6 +27,7 @@
   padding: 4%;
   gap: 2em;
   transition: 0.25s;
+  overflow: hidden;
 }
 
 .first_part {
