@@ -16,7 +16,7 @@ export default function NotFound() {
       <div className={styles.main}>
         <h2 className={styles.h2}>Ooops...</h2>
         <h3 className={styles.h3}>can't find that page</h3>
-        <Link href="/" className={styles.link}>BACK TO HOME</Link>
+        <Link href="https://marclopez.xyz/" className={styles.link}>BACK TO HOME</Link>
       </div>
     </motion.div>
   );
