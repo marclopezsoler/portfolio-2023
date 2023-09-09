@@ -9,11 +9,11 @@ export default function Footer() {
         <Link href="/work" className={styles.footer_link}>Work</Link>
         <Link href="/about" className={styles.footer_link}>About</Link>
         <Link href="/contact" className={styles.footer_link}>Contact</Link>
-        <a href="https://www.linkedin.com/in/marc-l%C3%B3pez-soler-aab6b81a3/" target="_blank" className={styles.footer_link}>Linkedin</a>
+        <a href="https://www.linkedin.com/in/marc-lopez-soler/" target="_blank" className={styles.footer_link}>Linkedin</a>
         <a href="https://github.com/marclopezsoler" target="_blank" className={styles.footer_link}>Github</a>
         <a href="https://www.instagram.com/lopezsmarc/" target="_blank" className={styles.footer_link}>Instagram</a>
         <a href="https://twitter.com/marclopezsoler" target="_blank" className={styles.footer_link}>Twitter</a>
-        <a href="https://marclopez.oddsolutionslab.com/CV_2023_MarcLopez.pdf" target="_blank" className={styles.footer_link}>CV</a>
+        <a href="https://marclopez.xyz/CV_2023_MarcLopez.pdf" target="_blank" className={styles.footer_link}>CV</a>
       </section>
       <section className={styles.footer_row}>
         <span className={styles.footer_copy}>© 2023 Portfolio by Marc López</span>

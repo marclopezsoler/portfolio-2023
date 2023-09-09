@@ -77,9 +77,9 @@ const HomePage = () => {
           <div className={styles.best_parent}>
             <MyBest title={"Front End Developing"} />
             <MyBest title={"Responsive Web & Apps"} />
-            <MyBest title={"SEO Google Analytics and MyBusiness"} />
-            <MyBest title={"UI Design"} />
+            <MyBest title={"SEO, Google Analytics and MyBusiness"} />
             <MyBest title={"Graphic Design"} />
+            <MyBest title={"UI Design"} />
             <MyBest title={"Social Media managing"} />
           </div>
         </section>
