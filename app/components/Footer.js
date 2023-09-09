@@ -13,7 +13,7 @@ export default function Footer() {
         <a href="https://github.com/marclopezsoler" target="_blank" className={styles.footer_link}>Github</a>
         <a href="https://www.instagram.com/lopezsmarc/" target="_blank" className={styles.footer_link}>Instagram</a>
         <a href="https://twitter.com/marclopezsoler" target="_blank" className={styles.footer_link}>Twitter</a>
-          <a href="https://files.marclopez.xyz/CV_2023_MarcLopez.pdf" target="_blank" className={styles.footer_link}>CV</a>
+          <a href="https://files.marclopez.xyz/CV_MarcLopez.pdf" target="_blank" className={styles.footer_link}>CV</a>
       </section>
       <section className={styles.footer_row}>
         <span className={styles.footer_copy}>© 2023 Portfolio by Marc López</span>
