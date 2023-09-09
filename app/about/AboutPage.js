@@ -1,6 +1,7 @@
 "use client";
 import styles from "@/public/styles/About.module.scss";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
@@ -19,7 +20,12 @@ const AboutPage = () => {
     >
       <Helmet title="about | marc lópez portfolio" />
       <div className={styles.main}>
-        <p>ABOUT</p>
+        <h1 className={styles.title}>
+          This page is still under development, stay tuned!
+        </h1>
+        <Link href="https://marclopez.xyz/" className={styles.link}>
+          BACK TO HOME
+        </Link>
       </div>
     </motion.div>
   );
