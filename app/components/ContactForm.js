@@ -14,10 +14,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        "_orKLMljXleg5Zowm",
-        "template_7md5g0t",
+        "service_ua12rmb",
+        "template_hwsazmg",
         form.current,
-        "CUY4jVnqshJghYu16"
+        "IVyl79FWzv6X0FHkY"
       )
       .then(
         (result) => {
