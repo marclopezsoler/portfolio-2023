@@ -65,12 +65,12 @@
 }
 
 .animateLeft {
-  animation: animateLeft 1.5s forwards;
+  animation: animateLeft 1.25s forwards;
 }
 
 @keyframes animateLeft {
   from {
-    transform: translateX(-150vw);
+    transform: translateX(-100vw);
   }
   to {
     transform: translateX(0);
@@ -78,12 +78,12 @@
 }
 
 .animateRight {
-  animation: animateRight 1.5s forwards;
+  animation: animateRight 1.25s forwards;
 }
 
 @keyframes animateRight {
   from {
-    transform: translateX(150vw);
+    transform: translateX(100vw);
   }
   to {
     transform: translateX(0);

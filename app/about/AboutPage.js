@@ -3,10 +3,32 @@ import styles from "@/public/styles/About.module.scss";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
 const AboutPage = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const height = window.innerHeight;
+      const y = window.scrollY - height;
+      setScrollY(y);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const combinedTop = `calc(40% + ${0.15*scrollY}px)`;
+
+  const styleBg = {
+    top: combinedTop,
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -47,8 +69,8 @@ const AboutPage = () => {
         <Link href="https://marclopez.xyz/" className={styles.link}>
           BACK TO HOME
         </Link> */}
-        <section className={styles.content}>
-          <div className={styles.first_content}>
+        <div className={styles.content}>
+          <section className={styles.first_content}>
             <div className={styles.text_parent}>
               <h1 className={styles.title}>
                 IT'S ME,<br></br>
@@ -64,8 +86,24 @@ const AboutPage = () => {
               height={300}
               className={styles.image}
             />
-          </div>
-        </section>
+          </section>
+          <section
+            className={styles.second_content}
+            style={{
+              backgroundImage: 'url("/assets/images/about/profile_bg.jpg")',
+            }}
+          >
+            <p style={styleBg}>
+              living in the area of Barcelona, has given me opportunity to be
+              surrounded and close to major landmarks and artistic and cultural
+              exhibitions. During my univeristy period, I assisted to talks
+              about tech, AI, generative art and much more. I consider my
+              professional career started when I stopped just looking at these
+              people, but I started to try to do what they were doing.
+            </p>
+          </section>
+          <section className={styles.third_section}></section>
+        </div>
       </div>
     </motion.div>
   );
