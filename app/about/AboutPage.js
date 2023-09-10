@@ -41,12 +41,12 @@ const AboutPage = () => {
       <Helmet title="about | marc lópez portfolio" />
       <div className={styles.main}>
         {/* UNDER DEVELOPMENT */}
-        <h1 className={styles.title}>
+        {/* <h1 className={styles.title}>
           This page is still under development, stay tuned!
         </h1>
         <Link href="https://marclopez.xyz/" className={styles.link}>
           BACK TO HOME
-        </Link>
+        </Link> */}
         <section className={styles.content}>
           <div className={styles.first_content}>
             <div className={styles.text_parent}>
