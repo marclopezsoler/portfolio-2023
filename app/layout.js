@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Popup from "./components/Popup";
 import "./globals.scss";
+import Script from "next/script"
 
 const RootLayout = ({ children }) => {
   return (
@@ -32,11 +33,8 @@ const RootLayout = ({ children }) => {
         <noscript>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" />
         </noscript>
-
-        <script href="components/gtag.js"></script>
-        <script src="components/ga-config.js"></script>
-
       </Head>
+
       <body>
         <section className="content">
           {isMobile ? <Popup /> : <Cursor />}
