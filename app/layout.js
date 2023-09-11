@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Popup from "./components/Popup";
 import "./globals.scss";
-import Script from "next/script"
+import Script from "next/script";
 
 const RootLayout = ({ children }) => {
   return (
@@ -22,32 +22,53 @@ const RootLayout = ({ children }) => {
         <link rel="manifest" href="./manifest.webmanifest" />
         <link rel="icon" href="./icon.ico" type="image/x-icon" />
 
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap" as="style" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap" media="print" onload="this.media='all'" />
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap"
+          as="style"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap"
+          media="print"
+          onload="this.media='all'"
+        />
         <noscript>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap"
+          />
         </noscript>
 
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" as="style" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
-        <noscript>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" />
-        </noscript>
-        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-CYPLVVSN8B"/>
-        <Script
-          id='google-analytics'
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-CYPLVVSN8B', {
-                page_path: window.location.pathname,
-              });
-            `,
-            }}
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+          as="style"
+          crossorigin="anonymous"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+          media="print"
+          onload="this.media='all'"
+        />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+          />
+        </noscript>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-CYPLVVSN8B" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-CYPLVVSN8B');
+        `}
+        </Script>
       </Head>
 
       <body>
