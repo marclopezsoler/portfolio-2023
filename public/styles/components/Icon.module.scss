@@ -1,0 +1,40 @@
+@import "/public/styles/utilities/variables.scss";
+
+.icon_parent {
+  border: 1px solid $green;
+  height: 90px;
+  width: 90px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    position: absolute;
+    color: white;
+    font-family: $font-texts;
+    font-weight: 400;
+    font-size: $p;
+    opacity: 0;
+    text-align: center;
+  }
+
+  &:hover {
+    .icon {
+      opacity: 0.25;
+      z-index: 0;
+    }
+
+    p {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+}
+
+.icon {
+  height: 90px;
+  width: 90px;
+  background-color: white;
+  transition: 0.25s;
+}

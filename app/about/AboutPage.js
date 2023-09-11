@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import Skills from "../components/Skills";
+import Icon from "../components/Icon";
 
 const AboutPage = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -122,8 +123,52 @@ const AboutPage = () => {
                 <Skills title={"social media"} num="90%" />
               </div>
             </div>
-            <div>
-              <h2></h2>
+            <div className={styles.tools}>
+              <h2>tools</h2>
+              <div className={styles.tools_child}>
+                <h3 className={styles.h3}>front and back end</h3>
+                <div className={styles.tools_icon}>
+                  <Icon url={"javascript.png"} name="javascript" />
+                  <Icon url={"sass.png"} name="sass" />
+                  <Icon url={"php.svg"} name="php" />
+                  <Icon url={"mysql.svg"} name="mysql" />
+                  <Icon url={"reactjs.png"} name="react.js" />
+                  <Icon url={"nextjs.png"} name="next.js" />
+                  <Icon url={"nodejs.png"} name="node.js" />
+                  <Icon url={"npm.png"} name="npm" />
+                  <Icon url={"git.png"} name="git" />
+                </div>
+              </div>
+              <div className={styles.tools_child}>
+                <h3 className={styles.h3}>design & photography</h3>
+                <div className={styles.tools_icon}>
+                  <Icon url={"figma.png"} name="figma" />
+                  <Icon url={"illustrator.png"} name="illustrator" />
+                  <Icon url={"lightroom.png"} name="lightroom" />
+                  <Icon url={"photoshop.png"} name="photoshop" />
+                  <Icon url={"xd.png"} name="adobe xd" />
+                </div>
+              </div>
+              <div className={styles.tools_child}>
+                <h3 className={styles.h3}>cms & plugins</h3>
+                <div className={styles.tools_icon}>
+                  <Icon url={"drupal.png"} name="drupal" />
+                  <Icon url={"wordpress.png"} name="wordpress" />
+                  <Icon url={"divi.png"} name="divi" />
+                  <Icon url={"elementor.png"} name="elementor" />
+                  <Icon url={"salient.png"} name="salient" />
+                  <Icon url={"yoast.png"} name="yoast seo" />
+                </div>
+              </div>
+              <div className={styles.tools_child}>
+                <h3 className={styles.h3}>others</h3>
+                <div className={styles.tools_icon}>
+                  <Icon url={"processing.png"} name="processing" />
+                  <Icon url={"mailchimp.jpg"} name="mailchimp" />
+                  <Icon url={"analytics.png"} name="analytics" />
+                  <Icon url={"mybusiness.jpg"} name="my business" />
+                </div>
+              </div>
             </div>
           </section>
         </div>

@@ -19,7 +19,7 @@
 .title {
   color: $green;
   font-family: $font-texts;
-  font-size: 2rem;
+  font-size: $h3;
   text-align: center;
   font-weight: 400;
   width: 65%;
@@ -96,7 +96,7 @@
   h2 {
     color: $green;
     font-family: $font-titles;
-    font-size: $h4;
+    font-size: $h3;
   }
 }
 
@@ -176,6 +176,41 @@
   user-select: none;
   margin: 0;
   padding: 0;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    padding-top: 5vh;
+    margin-bottom: 0;
+  }
+
+  .h3 {
+    color: $green;
+    font-size: $h4;
+    font-family: $font-texts;
+    font-weight: 400;
+  }
+
+  .tools_child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vh;
+
+    .tools_icon {
+      width: 75%;
+      gap: 2vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }
 
 @media only screen and (max-width: 750px) {
