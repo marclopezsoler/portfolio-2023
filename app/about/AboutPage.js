@@ -90,9 +90,7 @@ const AboutPage = () => {
           </section>
           <section
             className={styles.second_content}
-            style={{
-              backgroundImage: 'url("/assets/images/about/profile_bg.jpg")',
-            }}
+            style={{backgroundImage: 'url("/public/assets/images/about/profile_bg.jpg")'}}
           >
             <p style={styleBg}>
               living in the area of Barcelona, has given me opportunity to be
