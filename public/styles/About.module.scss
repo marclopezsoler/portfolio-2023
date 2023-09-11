@@ -71,18 +71,15 @@
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  // align-items: center;
   justify-content: center;
-
-  background-image: url("/assets/images/about/profile_bg.jpg");
 
   p {
     position: absolute;
-    width: 65%;
+    width: 60%;
     color: white;
-    font-family: $font-texts;
+    font-family: $font-titles;
     font-weight: 400;
-    font-size: $big_p;
+    font-size: $h3_smaller;
   }
 }
 
@@ -91,8 +88,37 @@
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  h2 {
+    color: $green;
+    font-family: $font-titles;
+    font-size: $h4;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: $green;
+  gap: 2vh;
+  min-height: 30vh;
+  padding: 0 5%;
+  background-color: red;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-family: $font-texts;
+    font-size: $big_p;
+  }
 }
 
 .skills_parent {
@@ -104,11 +130,13 @@
   font-size: $h4;
 }
 
-.skills{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  // grid-template-columns: repeat(3, 1fr);
+.skills {
+  max-width: 1080px;
+  width: 50vw;
+  gap: 2.5vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .text_parent {
@@ -172,5 +200,39 @@
 
   .title {
     text-align: center;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .skills {
+    width: calc(50vw + 4rem);
+  }
+
+  .second_content {
+    p {
+      width: 75%;
+      font-size: $h5;
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .second_content {
+    p {
+      font-size: $h6;
+    }
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .second_content {
+    p {
+      font-size: $big_p;
+    }
   }
 }

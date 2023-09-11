@@ -24,7 +24,7 @@ const AboutPage = () => {
     };
   }, []);
 
-  const combinedTop = `calc(40% + ${0.15 * scrollY}px)`;
+  const combinedTop = `calc(20% + ${0.15 * scrollY}px)`;
 
   const styleBg = {
     top: combinedTop,
@@ -88,24 +88,42 @@ const AboutPage = () => {
               className={styles.image}
             />
           </section>
-          <section className={styles.second_content}>
+          <section
+            className={styles.second_content}
+            style={{
+              backgroundImage: 'url("/assets/images/about/profile_bg.jpg")',
+            }}
+          >
             <p style={styleBg}>
-              living in the area of Barcelona, has given me opportunity to be
-              surrounded and close to major landmarks and artistic and cultural
-              exhibitions. During my univeristy period, I assisted to talks
-              about tech, AI, generative art and much more. I consider my
-              professional career started when I stopped just looking at these
-              people, but I started to try to do what they were doing.
+              I use my passion and skills to create visually appealing products
+              and experiences.<br></br>
+              <br></br>national customers rely on my experience to design and
+              manage their digital products.
             </p>
           </section>
           <section className={styles.third_section}>
+            <div className={styles.about}>
+              <h2>who am I?</h2>
+              <p>
+                a recenlty graduated from the multimedia bachelor who is
+                passionate about the combination of coding and design.
+              </p>
+            </div>
             <div className={styles.skills_parent}>
-              {/* <h2>skills</h2> */}
+              <h2>skills</h2>
               <div className={styles.skills}>
-                {/* <Skills title={"frontend"} num={9} />
-                <Skills title={"seo"} num={1} />
-                <Skills title={"social media"} num={9} /> */}
+                <Skills title={"front-end"} num="90%" />
+                <Skills title={"back-end"} num="75%" />
+                <Skills title={"generative art"} num="80%" />
+                <Skills title={"image postprocessing"} num="90%" />
+                <Skills title={"graphic design"} num="85%" />
+                <Skills title={"UI design"} num="85%" />
+                <Skills title={"SEO"} num="80%" />
+                <Skills title={"social media"} num="90%" />
               </div>
+            </div>
+            <div>
+              <h2></h2>
             </div>
           </section>
         </div>

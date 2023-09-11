@@ -1,5 +1,33 @@
 @import "/public/styles/utilities/variables.scss";
 
-.skillsBar{
-   background-color: red;
+.bar {
+  height: 40px;
+  width: 100%;
+  background-color: $greenop;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+
+  .bar_full {
+    position: absolute;
+    height: 40px;
+    background-color: $green;
+  }
+
+  p {
+    padding: 0.4em 1.2em;
+    color: $blue;
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+   .bar{
+      height: 50px;
+
+      .bar_full{
+         height: 50px;
+      }
+   }
 }

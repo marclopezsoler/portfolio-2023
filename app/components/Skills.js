@@ -1,10 +1,10 @@
 import styles from "@/public/styles/components/Skills.module.scss";
-import { SkillBar } from 'react-skills';
 
-
-export default function Skills({title, num}){
-
-   return(
-      <SkillBar name={title} level={num*10} color="blue" classname={styles.skillsBar}/>
-   )
+export default function Skills({ title, num }) {
+  return (
+    <div className={styles.bar}>
+      <div className={styles.bar_full} style={{ width: num }}></div>
+      <p>{title}</p>
+    </div>
+  );
 }
