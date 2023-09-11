@@ -25,24 +25,6 @@
   width: 65%;
 }
 
-.link {
-  border: 1.5px solid $green;
-  background-color: $green;
-  color: $blue;
-  font-family: $font-titles;
-  font-weight: 600;
-  font-size: $span;
-  padding: 0.6% 2.4%;
-  margin-top: 1rem;
-  transition: 0.25s;
-
-  &:hover {
-    color: $green;
-    background-color: $blue;
-    border: 1.5px solid $green;
-  }
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -109,6 +91,7 @@
   gap: 2vh;
   min-height: 30vh;
   padding: 0 5%;
+  width: 80%;
 
   * {
     margin: 0;
@@ -183,6 +166,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 75%;
 
   h2 {
     padding-top: 5vh;
@@ -201,15 +185,59 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     padding-top: 3vh;
+    min-height: 20vh;
 
     .tools_icon {
       width: 75%;
-      gap: 2vw;
+      gap: 1vw;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
+  }
+}
+
+.contact {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    padding: 0 5%;
+    color: $green;
+    font-family: $font-titles;
+    font-weight: 500;
+    font-size: $h3_smaller;
+    text-align: center;
+  }
+}
+
+.link {
+  border: 1.5px solid $green;
+  background-color: $green;
+  color: $blue;
+  font-family: $font-titles;
+  font-weight: 600;
+  font-size: $span;
+  padding: 0.6% 2.4%;
+  margin-top: 1rem;
+  transition: 0.25s;
+
+  &:hover {
+    color: $green;
+    background-color: $blue;
+    border: 1.5px solid $green;
   }
 }
 

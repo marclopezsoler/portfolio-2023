@@ -107,7 +107,11 @@ const AboutPage = () => {
               <h2>who am I?</h2>
               <p>
                 a recenlty graduated from the multimedia bachelor who is
-                passionate about the combination of coding and design.
+                passionate about the combination of coding and design.<br></br>
+                <br></br>
+                professional experience as a graphic designer in The Sideline
+                football account and as a multimedia developer in local
+                communication agency Dfusió.
               </p>
             </div>
             <div className={styles.skills_parent}>
@@ -169,6 +173,12 @@ const AboutPage = () => {
                   <Icon url={"mybusiness.jpg"} name="my business" />
                 </div>
               </div>
+            </div>
+            <div className={styles.contact}>
+              <p>do you want to know more about me?<br></br>then, let's get in touch</p>
+              <Link href="/contact" className={styles.link}>
+                CONTACT ME
+              </Link>
             </div>
           </section>
         </div>
