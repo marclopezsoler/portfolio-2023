@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import Skills from "../components/Skills";
 
 const AboutPage = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -15,15 +16,15 @@ const AboutPage = () => {
       const y = window.scrollY - height;
       setScrollY(y);
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const combinedTop = `calc(40% + ${0.15*scrollY}px)`;
+  const combinedTop = `calc(40% + ${0.15 * scrollY}px)`;
 
   const styleBg = {
     top: combinedTop,
@@ -102,7 +103,16 @@ const AboutPage = () => {
               people, but I started to try to do what they were doing.
             </p>
           </section>
-          <section className={styles.third_section}></section>
+          <section className={styles.third_section}>
+            <div className={styles.skills_parent}>
+              {/* <h2>skills</h2> */}
+              <div className={styles.skills}>
+                {/* <Skills title={"frontend"} num={9} />
+                <Skills title={"seo"} num={1} />
+                <Skills title={"social media"} num={9} /> */}
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </motion.div>

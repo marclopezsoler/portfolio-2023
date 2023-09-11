@@ -84,9 +84,29 @@
   }
 }
 
-.third_section{
+.third_section {
+  padding-top: 5vh;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.skills_parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $green;
+  font-family: $font-titles;
+  font-size: $h4;
+}
+
+.skills{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // grid-template-columns: repeat(3, 1fr);
 }
 
 .text_parent {
