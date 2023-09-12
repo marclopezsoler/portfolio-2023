@@ -73,8 +73,8 @@ const RootLayout = ({ children }) => {
 
       <body>
         <section className="content">
-          {isMobile ? <Popup /> : <Cursor />}
           <Header />
+          {isMobile ? <Popup /> : <Cursor />}
           <div className="main">{children}</div>
           <Footer />
         </section>

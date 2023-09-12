@@ -21,7 +21,7 @@ export default function Popup() {
   return (
     <div className={styles.main}>
       {isMobile ? (
-        <div className={`${styles.popup} ${popup === 1 ? styles.animate : ""}`}>
+        <div className={`${styles.popup} ${popup >= 1 ? styles.animate : ""}`}>
           <p>
             For a better experience, use a desktop or laptop to explore this
             site.
