@@ -8,8 +8,17 @@ import Popup from "./components/Popup";
 import "./globals.scss";
 import Script from "next/script";
 import "@/public/styles/utilities/variables.scss";
+import ReactGA from 'react-ga';
 
 const RootLayout = ({ children }) => {
+  useEffect(() => {
+    ReactGA.initialize('G-CYPLVVSN8B');
+  }, []);
+
+  useEffect(() => {
+    ReactGA.pageview(router.pathname);
+  }, [router.pathname]);
+
   return (
     <html lang="en" className="main">
       <Head>
