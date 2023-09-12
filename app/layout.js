@@ -8,22 +8,11 @@ import Popup from "./components/Popup";
 import "./globals.scss";
 import Script from "next/script";
 import "@/public/styles/utilities/variables.scss";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import * as gtag from "gtag"
+import ReactGA from "react-ga";
 
 const RootLayout = ({ children }) => {
-  const router = useRouter()
-  useEffect(() => {
-    const handleRouteChange = url => {
-      gtag.pageview(url)
-    }
-    router.events.on("routeChangeComplete", handleRouteChange)
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange)
-    }
-  }, [router.events])
-  
+  ReactGA.initialize("G-CYPLVVSN8B", { standardImplementation: true });
+
   return (
     <html lang="en" className="main">
       <Head>
@@ -85,23 +74,33 @@ const RootLayout = ({ children }) => {
           />
         </noscript>
         <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-      />
-      <Script
-        id="gtag-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${gtag.GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
+          src="<%=htmlWebpackPlugin.options.analyticsURL%>"
+          strategy="afterInteractive"
+        >
+          {`
+        (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          (i[r] =
+            i[r] ||
+            function () {
+              (i[r].q = i[r].q || []).push(arguments);
+            }),
+            (i[r].l = 1 * new Date());
+          (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m);
+        })(
+          window,
+          document,
+          'script',
+          '<%=htmlWebpackPlugin.options.analyticsURL%>',
+          'ga'
+        );
+        ga('create', 'G-CYPLVVSN8B', 'auto');
+        ga('send', 'pageview');
+      `}
+        </Script>
       </Head>
 
       <body>
