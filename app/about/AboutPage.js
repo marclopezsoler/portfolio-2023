@@ -10,6 +10,7 @@ import Icon from "../components/Icon";
 
 const AboutPage = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [count, setContactLoads] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +55,18 @@ const AboutPage = () => {
     change();
   }, []);
 
+  useEffect(() => {
+    let count = sessionStorage.getItem("aboutLoads");
+    if (count === null) {
+      count = 1;
+    } else {
+      count = Number(count) + 1;
+    }
+    sessionStorage.setItem("aboutLoads", count);
+
+    setContactLoads(count);
+  }, []);
+
   return (
     <motion.div
       className="container text-center  bg-black"
@@ -64,14 +77,11 @@ const AboutPage = () => {
     >
       <Helmet title="about | marc lópez portfolio" />
       <div className={styles.main}>
-        {/* UNDER DEVELOPMENT */}
-        {/* <h1 className={styles.title}>
-          This page is still under development, stay tuned!
-        </h1>
-        <Link href="https://marclopez.xyz/" className={styles.link}>
-          BACK TO HOME
-        </Link> */}
-        <div className={styles.content}>
+        <div
+          className={`${styles.content} ${
+            count >= 1 ? styles.animate_page : ""
+          }`}
+        >
           <section className={styles.first_content}>
             <div className={styles.text_parent}>
               <h1 className={styles.title}>
@@ -174,8 +184,22 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
+            <div className={styles.hobbies}>
+              <h2>hobbies</h2>
+              <p>
+                aside from designing and developing there are two things I
+                really enjoy doing in my free time<br></br>
+                <br></br><b>photography (aerial photography too)</b><br></br>
+                <br></br>and...<br></br>
+                <br></br><b>basketball</b>
+                <br></br><br></br>I consider both hobbies help me disconnect from the daily routine, and also help me improve my creative skills (in photohtaphy) and show me how to be better while working with other people (basketball).
+              </p>
+            </div>
             <div className={styles.contact}>
-              <p>do you want to know more about me?<br></br>then, let's get in touch</p>
+              <p>
+                do you want to know more about me?<br></br>then, let's get in
+                touch
+              </p>
               <Link href="/contact" className={styles.link}>
                 CONTACT ME
               </Link>
