@@ -10,6 +10,8 @@ import Script from "next/script";
 import "@/public/styles/utilities/variables.scss";
 
 const RootLayout = ({ children }) => {
+  const NEXT_PUBLIC_GOOGLE_ANALYTICS = "G-CYPLVVSN8B";
+  
   return (
     <html lang="en" className="main">
       <Head>
@@ -70,15 +72,20 @@ const RootLayout = ({ children }) => {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
           />
         </noscript>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-CYPLVVSN8B" />
-        <Script id="google-analytics">
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+
+        <Script strategy="lazyOnload">
           {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
- 
-          gtag('config', 'G-CYPLVVSN8B');
-        `}
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
         </Script>
       </Head>
 
