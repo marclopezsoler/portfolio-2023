@@ -1,3 +1,10 @@
+//FONTS
+
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+$font-titles: "Syne", sans-serif;
+$font-texts: "Inter", sans-serif;
+
 //COLOR PALETTE
 
 $blue: #020b55;
@@ -39,11 +46,3 @@ $mobile_h4_450: 1rem;
 $mobile_h5: 1.8rem;
 $mobile_p: 1.15rem;
 $mobile_span: 1.25rem;
-
-
-//FONTS
-
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
-$font-titles: "Syne", sans-serif;
-$font-texts: "Inter", sans-serif;
