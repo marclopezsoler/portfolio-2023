@@ -53,6 +53,16 @@ const RootLayout = ({ children }) => {
           media="print"
           onload="this.media='all'"
         />
+        <link
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap"
+        />
+        <link
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        />
         <noscript>
           <link
             rel="stylesheet"
