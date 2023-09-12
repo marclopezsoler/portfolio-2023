@@ -15,7 +15,7 @@
   }
 }
 
-.image_hover{
+.image_hover {
   transform: scale(1);
   transition: 0.35s;
 }
@@ -61,8 +61,8 @@
   }
 
   .full_image {
-    height: calc(50vh + 20vw);
-    width: auto;
+    max-width: 95%;
+    max-height: 95%;
     object-fit: contain;
   }
 }
@@ -71,17 +71,7 @@
   display: flex;
 }
 
-.hide{
+.hide {
   display: none;
   opacity: 0;
-}
-
-@media only screen and (max-width: 1000px){
-  .full_width {  
-    .full_image {
-      height: auto;
-      width: calc(60vw + 10vh);
-      object-fit: contain;
-    }
-  }
 }

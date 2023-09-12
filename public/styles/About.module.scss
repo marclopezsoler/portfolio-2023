@@ -198,7 +198,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 75%;
+  width: 90%;
 
   h2 {
     padding-top: 5vh;
@@ -325,6 +325,31 @@
   .skills {
     display: flex;
     flex-direction: column;
+  }
+
+  .tag{
+    text-align: center;
+  }
+
+  .about{
+    p{
+      font-size: $mobile_p;
+    }
+  }
+
+  .hobbies{
+    p{
+      font-size: $mobile_p;
+    }
+  }
+
+  .button {
+    font-size: $mobile_p;
+    &:hover {
+      border: 1.5px solid $green;
+      background-color: $green;
+      color: $blue;
+    }
   }
 }
 
