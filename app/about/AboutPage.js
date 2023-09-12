@@ -26,7 +26,7 @@ const AboutPage = () => {
     };
   }, []);
 
-  const combinedTop = `calc(20% + ${0.15 * scrollY}px)`;
+  const combinedTop = `calc(20% + ${0.3 * scrollY}px)`;
 
   const styleBg = {
     top: combinedTop,
@@ -116,12 +116,36 @@ const AboutPage = () => {
             <div className={styles.about}>
               <h2>who am I?</h2>
               <p>
-                a recenlty graduated from the multimedia bachelor who is
-                passionate about the combination of coding and design.<br></br>
+                a multimedia bachelor graduated who is passionate about the
+                combination of <i>coding</i> and <i>design</i>.<br></br>
                 <br></br>
-                professional experience as a graphic designer in The Sideline
-                football account and as a multimedia developer in local
-                communication agency Dfusió.
+                <b id={styles.time}>during college</b>, I developed hard skills
+                on graphic design, where I created visually appealing graphics
+                and posters using Illustrator and Photoshop, while working as a
+                freelancer on Fiverr. Also, I obtained a good level at website
+                developing using React and React Native building many SPA.
+                <br></br>
+                <br></br>
+                <b id={styles.time}>after finishing college</b>, I kept
+                developing my front and back-end skills by learning new
+                frameworks such as Next.js, improving my skills on PHP and
+                databases, and also by understanding all the process of a
+                hosting, deploying and maintaining the website.
+                <br></br>
+                <br></br>
+                <b id={styles.time}>my professional experience</b> began by
+                being a graphic designer and community manager of The Sideline
+                football account (no more existing) in Instagram and Twitter. I
+                was responsible for the creation of the brand image, designing
+                and posting the daily posts and stories and also managing all
+                the files on a efficient way.<br></br>
+                <br></br>during this period, I also designed some posters on
+                Fiverr for various clients, where I specially learned how to
+                create a budget and meet deadlines.<br></br>
+                <br></br>after that, I started as a video editor on my first
+                internship where I developed video editing skills and managing
+                large amounts of files.<br></br>
+                <br></br>finally, I started my last intership in 2022, on a local communication agency called Dfusió. There I learned and gained experience as a multimedia developer, where my main tasks where developing websites from scratch and maintaining them using different CMS like Wordpress or Drupal, designing banners, roll-ups, billboards, flyers...
               </p>
             </div>
             <div className={styles.skills_parent}>
@@ -189,10 +213,17 @@ const AboutPage = () => {
               <p>
                 aside from designing and developing there are two things I
                 really enjoy doing in my free time<br></br>
-                <br></br><b>photography (aerial photography too)</b><br></br>
+                <br></br>
+                <b>photography (aerial photography too)</b>
+                <br></br>
                 <br></br>and...<br></br>
-                <br></br><b>basketball</b>
-                <br></br><br></br>I consider both hobbies help me disconnect from the daily routine, and also help me improve my creative skills (in photohtaphy) and show me how to be better while working with other people (basketball).
+                <br></br>
+                <b>basketball</b>
+                <br></br>
+                <br></br>I consider both hobbies help me disconnect from the
+                daily routine, and also help me improve my creative skills (in
+                photohtaphy) and show me how to be better while working with
+                other people (basketball).
               </p>
             </div>
             <div className={styles.contact}>
