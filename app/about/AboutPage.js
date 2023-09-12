@@ -79,26 +79,28 @@ const AboutPage = () => {
       <div className={styles.main}>
         <div
           className={`${styles.content} ${
-            count >= 1 ? styles.animate_page : ""
+            count === 1 ? styles.animate_page : ""
           }`}
         >
-          <section className={styles.first_content}>
-            <div className={styles.text_parent}>
-              <h1 className={styles.title}>
-                IT'S ME,<br></br>
-                <b>marc lópez</b>
-              </h1>
-              <p className={styles.tag} id="word">
-                full stack developer
-              </p>
-            </div>
-            <Image
-              src={require(`/public/assets/images/about/profile_pic.png`)}
-              width={300}
-              height={300}
-              className={styles.image}
-            />
-          </section>
+          <div className={styles.first_content_parent}>
+            <section className={styles.first_content}>
+              <div className={styles.text_parent}>
+                <h1 className={styles.title}>
+                  IT'S ME,<br></br>
+                  <b>marc lópez</b>
+                </h1>
+                <p className={styles.tag} id="word">
+                  full stack developer
+                </p>
+              </div>
+              <Image
+                src={require(`/public/assets/images/about/profile_pic.png`)}
+                width={300}
+                height={300}
+                className={styles.image}
+              />
+            </section>
+          </div>
           <section
             className={styles.second_content}
             style={{
@@ -116,36 +118,36 @@ const AboutPage = () => {
             <div className={styles.about}>
               <h2>who am I?</h2>
               <p>
-                a multimedia bachelor graduated who is passionate about the
-                combination of <i>coding</i> and <i>design</i>.<br></br>
+                a multimedia bachelor graduate with a strong passion for
+                combining <i>coding</i> and <i>design</i>.<br></br>
                 <br></br>
-                <b id={styles.time}>during college</b>, I developed hard skills
-                on graphic design, where I created visually appealing graphics
-                and posters using Illustrator and Photoshop, while working as a
-                freelancer on Fiverr. Also, I obtained a good level at website
-                developing using React and React Native building many SPA.
-                <br></br>
-                <br></br>
-                <b id={styles.time}>after finishing college</b>, I kept
-                developing my front and back-end skills by learning new
-                frameworks such as Next.js, improving my skills on PHP and
-                databases, and also by understanding all the process of a
-                hosting, deploying and maintaining the website.
+                <b id={styles.time}>during my college years</b>, I honed my
+                graphic design skills, creating captivating visuals and posters
+                using Illustrator and Photoshop. I also freelanced on platforms
+                like Fiverr. Additionally, I mastered website development with
+                React and React Native, building numerous single-page
+                applications.
                 <br></br>
                 <br></br>
-                <b id={styles.time}>my professional experience</b> began by
-                being a graphic designer and community manager of The Sideline
-                football account (no more existing) in Instagram and Twitter. I
-                was responsible for the creation of the brand image, designing
-                and posting the daily posts and stories and also managing all
-                the files on a efficient way.<br></br>
-                <br></br>during this period, I also designed some posters on
-                Fiverr for various clients, where I specially learned how to
-                create a budget and meet deadlines.<br></br>
-                <br></br>after that, I started as a video editor on my first
-                internship where I developed video editing skills and managing
-                large amounts of files.<br></br>
-                <br></br>finally, I started my last intership in 2022, on a local communication agency called Dfusió. There I learned and gained experience as a multimedia developer, where my main tasks where developing websites from scratch and maintaining them using different CMS like Wordpress or Drupal, designing banners, roll-ups, billboards, flyers...
+                <b id={styles.time}>after graduating</b>, I continued to enhance
+                my front and back-end skills. I delved into frameworks like
+                Next.js, improved my proficiency in PHP and databases, and
+                became well-versed in website hosting, deployment, and
+                maintenance.
+                <br></br>
+                <br></br>
+                <b id={styles.time}>my professional journey</b> began as a
+                graphic designer and community manager for The Sideline football
+                account, responsible for daily brand designs and social media
+                content management.<br></br>
+                <br></br>a year later, I embarked on an internship as a video
+                editor, gaining expertise in video editing and file management.
+                <br></br>
+                <br></br>currently, I'm with Dfusió, a local communication
+                agency, where I've evolved into a multimedia developer. Here, I
+                build websites from scratch, maintain them, design various
+                promotional materials, manage social media accounts, and analyze
+                website and social media traffic using various analytics tools.
               </p>
             </div>
             <div className={styles.skills_parent}>
@@ -164,7 +166,7 @@ const AboutPage = () => {
             <div className={styles.tools}>
               <h2>tools</h2>
               <div className={styles.tools_child}>
-                <h3 className={styles.h3}>front and back end</h3>
+                <h3 className={styles.h3}>developing</h3>
                 <div className={styles.tools_icon}>
                   <Icon url={"javascript.png"} name="javascript" />
                   <Icon url={"sass.png"} name="sass" />
@@ -175,6 +177,7 @@ const AboutPage = () => {
                   <Icon url={"nodejs.png"} name="node.js" />
                   <Icon url={"npm.png"} name="npm" />
                   <Icon url={"git.png"} name="git" />
+                  <Icon url={"processing.png"} name="processing" />
                 </div>
               </div>
               <div className={styles.tools_child}>
@@ -211,19 +214,26 @@ const AboutPage = () => {
             <div className={styles.hobbies}>
               <h2>hobbies</h2>
               <p>
-                aside from designing and developing there are two things I
-                really enjoy doing in my free time<br></br>
+                apart from designing and developing, there are three things I
+                truly love doing in my spare time<br></br>
                 <br></br>
-                <b>photography (aerial photography too)</b>
-                <br></br>
-                <br></br>and...<br></br>
+                <b>photography</b>,<br></br>
                 <br></br>
                 <b>basketball</b>
                 <br></br>
-                <br></br>I consider both hobbies help me disconnect from the
-                daily routine, and also help me improve my creative skills (in
+                <br></br>and...<br></br>
+                <br></br>
+                <b>generative art</b>
+                <br></br>
+                <br></br>the first two hobbies help me disconnect from the daily
+                routine, and also help me improve my creative skills (in
                 photohtaphy) and show me how to be better while working with
                 other people (basketball).
+                <br></br>
+                <br></br>finally, generative art is a hobby I discovered
+                recenlty, and helps me connect coding and design on a really
+                interesting way. I'm sure you'll hear about me soon talking more
+                and more about generative art!
               </p>
             </div>
             <div className={styles.contact}>

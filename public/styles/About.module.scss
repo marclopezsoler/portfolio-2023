@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
   min-height: 100%;
   color: white;
   flex: 1 0 auto;
@@ -16,13 +17,13 @@
   flex-grow: 1;
 }
 
-#time{
+#time {
   background-color: $green;
   color: $blue;
 }
 
 .animate_page {
-  animation: animate_page 1.25s forwards;
+  animation: animate_page 1s forwards;
 }
 
 @keyframes animate_page {
@@ -35,13 +36,32 @@
   }
 }
 
+.text_parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: fit-content;
+}
+
 .title {
+  font-family: $font-titles;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   color: $green;
-  font-family: $font-texts;
-  font-size: $h3;
+  font-size: $h3_smaller;
+}
+
+.tag {
+  color: $green;
   text-align: center;
-  font-weight: 400;
-  width: 65%;
+  font-family: $font-texts;
+  font-size: $big_p;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .content {
@@ -51,17 +71,30 @@
   justify-content: center;
   max-width: 1080px;
   width: 60%;
+  background-color: $blue;
+}
+
+.first_content_parent {
+  width: 100vw;
+  background-color: $blue;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: calc(1em + 1.4rem + 1vw + 0.2em);
+  height: calc(100vh - (1em + 1.4rem + 1vw + 0.2em));
 }
 
 .first_content {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  max-width: 1080px;
   width: 90%;
   gap: 5vw;
   padding: 0 5%;
-  padding-top: calc(1em + 1.4rem + 1vw + 0.2em);
-  height: calc(100vh - (1em + 1.4rem + 1vw + 0.2em));
   z-index: 2;
   background-color: $blue;
 }
@@ -76,6 +109,7 @@
   display: flex;
   justify-content: center;
   background-color: black;
+  z-index: 0;
 
   p {
     position: absolute;
@@ -147,33 +181,6 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.text_parent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-}
-
-.title {
-  font-family: $font-titles;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-size: $h3_smaller;
-}
-
-.tag {
-  color: $green;
-  text-align: center;
-  font-family: $font-texts;
-  font-size: $big_p;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
 .image {
   width: calc(150px + 10vw);
   height: calc(150px + 10vw);
@@ -224,7 +231,7 @@
   }
 }
 
-.hobbies{
+.hobbies {
   display: flex;
   flex-direction: column;
   align-items: center;
