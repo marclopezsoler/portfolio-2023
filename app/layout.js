@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Popup from "./components/Popup";
 import "./globals.scss";
 import Script from "next/script";
+import "@/public/styles/utilities/variables.scss";
 
 const RootLayout = ({ children }) => {
   return (
