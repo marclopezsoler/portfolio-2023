@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import styles from "@/public/styles/components/ContactForm.module.scss";
 
 export default function ContactForm() {
@@ -7,33 +6,38 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError(null);
+    setLoading(true);
 
-    emailjs
-      .sendForm(
-        "service_den3687",
-        "template_09dolbz",
-        form.current,
-        "_orKLMljXleg5Zowm"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setName("");
-          setEmail("");
-          setMessage("");
-          setSent(true);
-          setTimeout(() =>{
-            setSent(false);
-          }, 3000);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        setError(data.error ?? "Something went wrong. Please try again.");
+        return;
+      }
+
+      setName("");
+      setEmail("");
+      setMessage("");
+      setSent(true);
+      setTimeout(() => setSent(false), 3000);
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -57,7 +61,7 @@ export default function ContactForm() {
           name="user_email"
           value={email}
           className={styles.email}
-          placeholder="Enter yout email address"
+          placeholder="Enter your email address"
           required
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -73,10 +77,22 @@ export default function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
         />
       </div>
-      <button className={styles.button_parent}>
-        <input type="submit" value="SEND MESSAGE" className={styles.button} />
+      <button className={styles.button_parent} disabled={loading}>
+        <input
+          type="submit"
+          value={loading ? "SENDING..." : "SEND MESSAGE"}
+          className={styles.button}
+          disabled={loading}
+        />
       </button>
-      <p className={`${styles.sent} ${sent ? styles.show : ""}`}>Your message has been successfully sent!</p>
+      <p className={`${styles.sent} ${sent ? styles.show : ""}`}>
+        Your message has been successfully sent!
+      </p>
+      {error && (
+        <p className={`${styles.sent} ${styles.show}`} style={{ color: "red" }}>
+          {error}
+        </p>
+      )}
     </form>
   );
 }
