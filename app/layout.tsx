@@ -10,8 +10,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Popup from "./components/Popup";
 
-import "./notiflow.config";
-import { NotificationManager, NotificationsProvider } from "notiflow";
+import dynamic from "next/dynamic";
+
+const ClientNotifications = dynamic(() => import("./components/ClientNotifications"), { ssr: false });
 
 import "./globals.scss";
 
@@ -93,17 +94,14 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       </Head>
 
       <body>
-        <NotificationsProvider>
-          <div style={{ position: "relative", zIndex: 999999 }}>
-            <NotificationManager />
-          </div>
+        <ClientNotifications>
           <section className="content">
             <Header />
             {isMobile ? <Popup /> : <Cursor />}
             <div className="main">{children}</div>
             <Footer />
           </section>
-        </NotificationsProvider>
+        </ClientNotifications>
       </body>
     </html>
   );
