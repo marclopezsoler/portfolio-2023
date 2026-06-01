@@ -102,37 +102,18 @@ export default function WorkDetailPage({ params }: WorkDetailParams) {
             </div>
           </div>
           <div className={styles.images_group}>
-            <ImageComponent
-              workId={work.id}
-              image_alt={work.image2_alt}
-              numberImg={2}
-            />
-            <ImageComponent
-              workId={work.id}
-              image_alt={work.image3_alt}
-              numberImg={3}
-            />
-            <ImageComponent
-              workId={work.id}
-              image_alt={work.image4_alt}
-              numberImg={4}
-            />
+            <ImageComponent workId={work.id} image_alt={work.image2_alt} numberImg={2} imageExt={work.imageExt} />
+            <ImageComponent workId={work.id} image_alt={work.image3_alt} numberImg={3} imageExt={work.imageExt} />
+            <ImageComponent workId={work.id} image_alt={work.image4_alt} numberImg={4} imageExt={work.imageExt} />
             <div className={styles.two_images}>
-              <ImageComponent
-                workId={work.id}
-                image_alt={work.image5_alt}
-                numberImg={5}
-              />
-              <ImageComponent
-                workId={work.id}
-                image_alt={work.image6_alt}
-                numberImg={6}
-              />
+              <ImageComponent workId={work.id} image_alt={work.image5_alt} numberImg={5} imageExt={work.imageExt} />
+              <ImageComponent workId={work.id} image_alt={work.image6_alt} numberImg={6} imageExt={work.imageExt} />
             </div>
             <ImageComponent
               workId={work.id}
               image_alt={work.image7_alt}
               numberImg={7}
+              imageExt={work.imageExt}
             />
           </div>
         </section>

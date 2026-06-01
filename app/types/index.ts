@@ -20,6 +20,7 @@ export interface Work {
   image5_alt: string;
   image6_alt: string;
   image7_alt: string;
+  imageExt?: string;
 }
 
 export interface WorkCategoryProps {
@@ -40,6 +41,7 @@ export interface ImageComponentProps {
   workId: string;
   image_alt: string;
   numberImg: number;
+  imageExt?: string;
 }
 
 export interface NextWorkProps {
@@ -62,6 +64,7 @@ export interface IconProps {
 
 export interface MyBestProps {
   title: string;
+  description?: string;
 }
 
 export interface SkillsProps {

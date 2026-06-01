@@ -115,7 +115,7 @@ const HomePage = () => {
               <Highlight
                 title={`funerary services website`}
                 filename_small={`pfb_small.png`}
-                filename_big={`pfb_big.jpg`}
+                filename_big={`pfb_big.png`}
                 subtitle={`Next.js + Directus CMS`}
                 link={`work14`}
                 selected={1}
@@ -123,7 +123,7 @@ const HomePage = () => {
               <Highlight
                 title={`stroke assessment toolkit`}
                 filename_small={`race_small.png`}
-                filename_big={`race_big.jpg`}
+                filename_big={`race_big.png`}
                 subtitle={`mobile + dashboard`}
                 link={`work15`}
                 selected={2}

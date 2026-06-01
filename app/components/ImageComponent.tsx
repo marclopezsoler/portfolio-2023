@@ -6,12 +6,12 @@ import closeIcon from "@/public/assets/icons/close.svg";
 import { isMobile } from "react-device-detect";
 import { ImageComponentProps } from "@/app/types";
 
-export default function ImageComponent({ workId, image_alt, numberImg }: ImageComponentProps) {
+export default function ImageComponent({ workId, image_alt, numberImg, imageExt = 'jpg' }: ImageComponentProps) {
   const [hideImg, setHideImg] = useState(true);
   const [noSrc, setNoSrc] = useState(true);
   const [showFullImage, setShowFullImage] = useState(false);
 
-  const imageSrc = `/assets/images/work/${workId}/image${numberImg}.jpg`;
+  const imageSrc = `/assets/images/work/${workId}/image${numberImg}.${imageExt}`;
 
   useEffect(() => {
     if (imageSrc) {

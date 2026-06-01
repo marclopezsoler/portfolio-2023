@@ -298,6 +298,7 @@ const works: Work[] = [
     image5_alt: "mobile view",
     image6_alt: "interior page",
     image7_alt: "contact page",
+    imageExt: "png",
   },
   {
     num: 15,
@@ -320,6 +321,7 @@ const works: Work[] = [
     image5_alt: "clinical dashboard overview",
     image6_alt: "multi-org superadmin view",
     image7_alt: "user and role management",
+    imageExt: "png",
   }
 ];
 
