@@ -25,6 +25,9 @@
     "sass": "^1.66.1",
     "yup": "^1.2.0"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "devDependencies": {
     "@types/node": "25.9.1",
     "@types/react": "^18.3.0",
