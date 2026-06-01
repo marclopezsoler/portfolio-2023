@@ -113,10 +113,10 @@ const HomePage = () => {
             </p>
             <div className={styles.highlight_parent}>
               <Highlight
-                title={`speech rehab platform`}
-                filename_small={`rehab_small.png`}
-                filename_big={`rehab_big.jpg`}
-                subtitle={`healthcare SaaS`}
+                title={`funerary services website`}
+                filename_small={`pfb_small.png`}
+                filename_big={`pfb_big.jpg`}
+                subtitle={`Next.js + Directus CMS`}
                 link={`work14`}
                 selected={1}
               />
