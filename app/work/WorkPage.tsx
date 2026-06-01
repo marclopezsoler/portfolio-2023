@@ -16,7 +16,7 @@ import styles from "@/public/styles/Work.module.scss";
 const WorkPage = () => {
   const [localX, setLocalX] = useState(0);
   const [localY, setLocalY] = useState(0);
-  const [hoveredItemId, setHoveredItemId] = useState(null);
+  const [hoveredItemId, setHoveredItemId] = useState<string | null>(null);
   const [workLoads, setWorkLoads] = useState(0);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const WorkPage = () => {
   }, []);
 
   useEffect(() => {
-    const handleMouseMove = (ev) => {
+    const handleMouseMove = (ev: MouseEvent) => {
       const x = ev.clientX;
       const y = ev.clientY + window.scrollY;
       setLocalX(x);
