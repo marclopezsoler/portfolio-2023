@@ -48,7 +48,7 @@ export default function WorkDetailPage({ params }: WorkDetailParams) {
           <div
             className={styles.bg_image}
             style={{
-              backgroundImage: `url(/assets/images/work/${work.id}/image1.jpg)`,
+              backgroundImage: `url(/assets/images/work/${work.id}/image1.${work.imageExt ?? 'jpg'})`,
             }}
           >
             <div className={styles.main_gradient}></div>

@@ -25,7 +25,7 @@ function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, lo
               </p>
             </Link>
             <Image
-              src={`/assets/images/work/${work.id}/image1.jpg`}
+              src={`/assets/images/work/${work.id}/image1.${work.imageExt ?? 'jpg'}`}
               width={600}
               height={600}
               className={styles.image}
