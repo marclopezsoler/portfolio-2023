@@ -1,6 +1,7 @@
 import styles from "@/public/styles/components/Highlight.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { HighlightProps } from "@/app/types";
 
 export default function Highlight({
   title,
@@ -9,7 +10,7 @@ export default function Highlight({
   subtitle,
   link,
   selected,
-}) {
+}: HighlightProps) {
   return (
     <Link href={`/work/${link}`} className={styles.highlight_box}>
       <div className={styles.first_part}>
@@ -20,6 +21,7 @@ export default function Highlight({
             width={350}
             height={350}
             className={styles.highlight_small_image}
+            alt={title}
           />
           <h3 className={styles.subtitle}>{subtitle}</h3>
         </div>

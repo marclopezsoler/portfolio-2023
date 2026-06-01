@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
 import styles from "@/public/styles/components/ImageComponent.module.scss";
 import { useEffect, useState } from "react";
 import closeIcon from "@/public/assets/icons/close.svg";
 import { isMobile } from "react-device-detect";
+import { ImageComponentProps } from "@/app/types";
 
-export default function ImageComponent({ workId, image_alt, numberImg }) {
+export default function ImageComponent({ workId, image_alt, numberImg }: ImageComponentProps) {
   const [hideImg, setHideImg] = useState(true);
   const [noSrc, setNoSrc] = useState(true);
   const [showFullImage, setShowFullImage] = useState(false);
@@ -12,13 +14,7 @@ export default function ImageComponent({ workId, image_alt, numberImg }) {
   const jpgImagePath = `/assets/images/work/${workId}/image${numberImg}.jpg`;
   const gifImagePath = `/assets/images/work/${workId}/image${numberImg}.gif`;
 
-  let imageSrc = jpgImagePath;
-
-  if (gifImagePath && numberImg === 4) {
-    imageSrc = gifImagePath;
-  } else {
-    imageSrc = jpgImagePath;
-  }
+  const imageSrc = numberImg === 4 ? gifImagePath : jpgImagePath;
 
   useEffect(() => {
     if (imageSrc) {
@@ -27,34 +23,27 @@ export default function ImageComponent({ workId, image_alt, numberImg }) {
       alert("Image does not exist");
     }
 
-    if (image_alt === "" || !image_alt) {
-      setNoSrc(true);
-    } else {
-      setNoSrc(false);
-    }
+    setNoSrc(!image_alt);
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setShowFullImage(false);
+      }
+    };
 
     window.addEventListener("keydown", handleKeyDown);
-
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [imageSrc]);
+  }, [imageSrc, image_alt]);
 
   const toggleFullImage = () => {
     setShowFullImage(!showFullImage);
   };
 
-  const handleKeyDown = (event) => {
-    if (event.key === "Escape") {
-      setShowFullImage(false);
-    }
-  };
-
   return (
     <div className={`${styles.image_parent} ${noSrc ? styles.hide : ""}`}>
-      <div
-        className={`${styles.full_width} ${showFullImage ? styles.show : ""}`}
-      >
+      <div className={`${styles.full_width} ${showFullImage ? styles.show : ""}`}>
         {showFullImage && (
           <>
             <div className={styles.cross} onClick={toggleFullImage}>

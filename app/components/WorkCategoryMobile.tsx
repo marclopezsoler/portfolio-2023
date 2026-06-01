@@ -1,7 +1,8 @@
 import styles from "@/public/styles/Work.module.scss";
 import Link from "next/link";
+import { WorkCategoryMobileProps } from "@/app/types";
 
-function WorkCategoryMobile({ works, categoryType }) {
+function WorkCategoryMobile({ works, categoryType }: WorkCategoryMobileProps) {
   return (
     <div id={categoryType} className={styles.work_type_mobile}>
       <h2 className={styles.category_type}>{categoryType}</h2>

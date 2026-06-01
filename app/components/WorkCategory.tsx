@@ -1,9 +1,9 @@
 import styles from "@/public/styles/Work.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { WorkCategoryProps } from "@/app/types";
 
-function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, localX, localY }) {
-
+function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, localX, localY }: WorkCategoryProps) {
   return (
     <div id={categoryType} className={styles.work_type}>
       <h2 className={styles.category_type}>{categoryType}</h2>
