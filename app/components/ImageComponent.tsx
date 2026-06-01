@@ -11,10 +11,7 @@ export default function ImageComponent({ workId, image_alt, numberImg }: ImageCo
   const [noSrc, setNoSrc] = useState(true);
   const [showFullImage, setShowFullImage] = useState(false);
 
-  const jpgImagePath = `/assets/images/work/${workId}/image${numberImg}.jpg`;
-  const gifImagePath = `/assets/images/work/${workId}/image${numberImg}.gif`;
-
-  const imageSrc = numberImg === 4 ? gifImagePath : jpgImagePath;
+  const imageSrc = `/assets/images/work/${workId}/image${numberImg}.jpg`;
 
   useEffect(() => {
     if (imageSrc) {
