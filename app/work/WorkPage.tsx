@@ -58,18 +58,7 @@ const WorkPage = () => {
       <div className={styles.main}>
         {!isMobile ? (
           <section className={styles.work_content}>
-            <section className={styles.tags_parent}>
-              <div className={styles.work_tags}>
-                <a href="#developing">dev</a>
-                <a href="#design">design</a>
-                <a href="#other">other</a>
-              </div>
-            </section>
             <div className={styles.work_container}>
-              <p className={styles.intro_text}>
-                discover a variety of projects, based on category<br></br>click
-                on them for futher detail
-              </p>
               <section
                 className={`${styles.work_items} ${
                   workLoads === 1 ? styles.animate_content : ""
@@ -80,34 +69,17 @@ const WorkPage = () => {
                   categoryType="developing"
                   {...{ hoveredItemId, setHoveredItemId, localX, localY }}
                 />
-                <WorkCategory
-                  works={works}
-                  categoryType="design"
-                  {...{ hoveredItemId, setHoveredItemId, localX, localY }}
-                />
-                <WorkCategory
-                  works={works}
-                  categoryType="other"
-                  {...{ hoveredItemId, setHoveredItemId, localX, localY }}
-                />
               </section>
             </div>
           </section>
         ) : (
           <section className={styles.work_content_mobile}>
-            <section className={styles.tags_parent_mobile}>
-              <a href="#developing">dev</a>
-              <a href="#design">design</a>
-              <a href="#other">other</a>
-            </section>
             <section
               className={`${styles.work_items_mobile} ${
                 workLoads === 1 ? styles.animate_content : ""
               }`}
             >
               <WorkCategoryMobile works={works} categoryType="developing" />
-              <WorkCategoryMobile works={works} categoryType="design" />
-              <WorkCategoryMobile works={works} categoryType="other" />
             </section>
           </section>
         )}

@@ -54,14 +54,29 @@
   font-size: $h3_smaller;
 }
 
+.tag_container {
+  position: relative;
+  display: inline-block;
+}
+
+.tag_sizer {
+  display: block;
+  visibility: hidden;
+  white-space: nowrap;
+  font-family: $font-texts;
+  font-size: $big_p;
+}
+
 .tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
   color: $green;
-  text-align: center;
   font-family: $font-texts;
   font-size: $big_p;
   margin: 0;
   padding: 0;
-  text-align: left;
 }
 
 .content {
@@ -184,7 +199,7 @@
 .image {
   width: calc(150px + 10vw);
   height: calc(150px + 10vw);
-  background: linear-gradient($blue, #3aff4ac5);
+  background: $blue;
   border: 1px solid $green;
   border-radius: 500px;
   pointer-events: none;
@@ -327,18 +342,18 @@
     flex-direction: column;
   }
 
-  .tag{
+  .tag {
     text-align: center;
   }
 
-  .about{
-    p{
+  .about {
+    p {
       font-size: $mobile_p;
     }
   }
 
-  .hobbies{
-    p{
+  .hobbies {
+    p {
       font-size: $mobile_p;
     }
   }

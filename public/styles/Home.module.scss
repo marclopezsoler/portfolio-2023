@@ -263,8 +263,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 155px 155px 155px 155px;
-  column-gap: 10px;
-  row-gap: 0;
+  column-gap: 16px;
+  row-gap: 16px;
   width: 100%;
 
   > :nth-child(1) { grid-column: 1; grid-row: 1 / 3; }

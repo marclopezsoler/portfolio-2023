@@ -12,6 +12,7 @@ export default function Icon({ url, name }: IconProps) {
         height={300}
         className={styles.icon}
         alt={name}
+        unoptimized={url.endsWith(".svg")}
       />
     </div>
   );

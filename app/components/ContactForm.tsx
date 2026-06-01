@@ -1,25 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
+import { useNotifications } from "notiflow";
 import styles from "@/public/styles/components/ContactForm.module.scss";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const form = useRef<HTMLFormElement>(null);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, []);
+  const { notify } = useNotifications();
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError(null);
     setLoading(true);
 
     try {
@@ -31,24 +22,36 @@ export default function ContactForm() {
 
       if (!res.ok) {
         const data = await res.json();
-        setError(data.error ?? "Something went wrong. Please try again.");
+        notify({
+          message: data.error ?? "Something went wrong. Please try again.",
+          type: "error",
+          duration: 5000,
+          canClose: true,
+        });
         return;
       }
 
       setName("");
       setEmail("");
       setMessage("");
-      setSent(true);
-      timerRef.current = setTimeout(() => setSent(false), 3000);
+      notify({
+        message: "Your message has been successfully sent!",
+        type: "info",
+      });
     } catch {
-      setError("Network error. Please check your connection and try again.");
+      notify({
+        message: "Network error. Please check your connection and try again.",
+        type: "error",
+        duration: 5000,
+        canClose: true,
+      });
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className={styles.main}>
+    <form onSubmit={sendEmail} className={styles.main}>
       <div>
         <label>Name *</label>
         <input
@@ -92,14 +95,6 @@ export default function ContactForm() {
           disabled={loading}
         />
       </button>
-      <p className={`${styles.sent} ${sent ? styles.show : ""}`}>
-        Your message has been successfully sent!
-      </p>
-      {error && (
-        <p className={`${styles.sent} ${styles.show} ${styles.error}`}>
-          {error}
-        </p>
-      )}
     </form>
   );
 }

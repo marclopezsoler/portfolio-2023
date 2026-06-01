@@ -45,18 +45,18 @@ const AboutPage = () => {
   }, []);
 
   const values = [
-    "and I'm a full stack developer",
-    "and I'm a generative artist",
-    "and I'm a community manager",
-    "and I'm a graphic designer",
-    "and I'm a content creator",
+    "and I'm an AI Product Engineer",
+    "and I'm a Cloud & Infrastructure Engineer",
+    "and I'm a Data Engineer",
+    "and I'm a Cross-Platform Mobile Engineer",
+    "and I'm a Frontend Engineer",
   ];
   let index = 0;
 
   const change = () => {
     document.getElementById("word").innerHTML = values[index];
     index = ++index % values.length;
-    setTimeout(change, 2000);
+    setTimeout(change, 5000);
   };
 
   useEffect(() => {
@@ -93,9 +93,14 @@ const AboutPage = () => {
                   IT'S ME,<br></br>
                   <b>marc lópez</b>
                 </h1>
-                <p className={styles.tag} id="word">
-                  full stack developer
-                </p>
+                <div className={styles.tag_container}>
+                  <span className={styles.tag_sizer} aria-hidden="true">
+                    and I&apos;m a Cloud &amp; Infrastructure Engineer
+                  </span>
+                  <p className={styles.tag} id="word">
+                    and I&apos;m an AI Product Engineer
+                  </p>
+                </div>
               </div>
               <Image
                 src={profilePic}
@@ -113,133 +118,124 @@ const AboutPage = () => {
             }}
           >
             <p style={styleBg}>
-              I use my passion and skills to create visually appealing products
-              and experiences.<br></br>
-              <br></br>national customers rely on my experience to design and
-              manage their digital products.
+              I build intelligent, production-grade systems end-to-end — from AI
+              orchestration and database architecture to cloud infrastructure
+              and mobile apps.<br></br>
+              <br></br>I design the environments, pipelines, and data layers
+              that make excellent software.
             </p>
           </section>
           <section className={styles.third_section}>
             <div className={styles.about}>
               <h2>who am I?</h2>
               <p>
-                a multimedia bachelor graduate with a strong passion for
-                combining <i>coding</i> and <i>design</i>.<br></br>
+                a multimedia graduate with a postgraduate in full stack web
+                technologies, currently working as a Full Stack Software
+                Engineer at Polaris Technologies — building SaaS platforms,
+                backend systems, and mobile apps.<br></br>
                 <br></br>
-                <b id={styles.time}>during my college years</b>, I honed my
-                graphic design skills, creating captivating visuals and posters
-                using Illustrator and Photoshop. I also freelanced on platforms
-                like Fiverr. Additionally, I mastered website development with
-                React and React Native, building numerous single-page
-                applications.
-                <br></br>
-                <br></br>
-                <b id={styles.time}>after graduating</b>, I continued to enhance
-                my front and back-end skills. I delved into frameworks like
-                Next.js, improved my proficiency in PHP and databases, and
-                became well-versed in website hosting, deployment, and
-                maintenance.
+                <b id={styles.time}>AI product engineering</b> is where I spend
+                most of my time. I design and build intelligent platforms from
+                scratch — architecting asynchronous LLM orchestration loops,
+                managing state transitions across AI agents, and programming
+                autonomous routines that power next-generation applications like
+                Verbalizapp and Nexen.
                 <br></br>
                 <br></br>
-                <b id={styles.time}>my professional journey</b> began as a
-                graphic designer and community manager for The Sideline football
-                account, responsible for daily brand designs and social media
-                content management.<br></br>
-                <br></br>a year later, I embarked on an internship as a video
-                editor, gaining expertise in video editing and file management.
+                <b id={styles.time}>cloud & infrastructure</b> is the layer
+                beneath everything I ship. I containerize with Docker, architect
+                on GCP, manage secrets with Google Secret Manager, configure
+                Cloud Storage Buckets, and route traffic through Cloudflare. I
+                build the environment the application lives in.
                 <br></br>
-                <br></br>currently, I'm with Dfusió, a local communication
-                agency, where I've evolved into a multimedia developer. Here, I
-                build websites from scratch, maintain them, design various
-                promotional materials, manage social media accounts, and analyze
-                website and social media traffic using various analytics tools.
+                <br></br>
+                <b id={styles.time}>backend & data engineering</b> covers the
+                complex system logic underneath. I model relational databases,
+                integrate real-time and bulk third-party data streams, design
+                custom OAuth architectures, and build advanced search mechanics
+                including semantic search with pgvector and Elasticsearch.
+                <br></br>
+                <br></br>
+                <b id={styles.time}>DevOps & release engineering</b> keeps
+                delivery fast and reliable. I manage CI/CD pipelines with GitHub
+                Actions and GitLab CI/CD, and provision self-hosted environment
+                runners on local hardware — meaning I understand automation at
+                the machine level, not just the config file.
+                <br></br>
+                <br></br>
+                <b id={styles.time}>cross-platform mobile</b> proves I can pivot
+                from deep backend architecture to client-facing experiences. I
+                engineered and shipped production React Native apps to both the
+                iOS App Store and Android Play Store, handling everything from
+                performance optimization to store deployment.
               </p>
             </div>
             <div className={styles.skills_parent}>
               <h2>skills</h2>
               <div className={styles.skills}>
-                <Skills title={"front-end"} num="90%" />
-                <Skills title={"back-end"} num="75%" />
-                <Skills title={"generative art"} num="80%" />
-                <Skills title={"image postprocessing"} num="90%" />
-                <Skills title={"graphic design"} num="85%" />
-                <Skills title={"UI design"} num="85%" />
-                <Skills title={"SEO"} num="80%" />
-                <Skills title={"social media"} num="90%" />
+                <Skills title={"React & Next.js"} num="95%" />
+                <Skills title={"React Native"} num="90%" />
+                <Skills title={"LLM & AI Agents"} num="90%" />
+                <Skills title={"Node.js & REST APIs"} num="90%" />
+                <Skills title={"PostgreSQL & pgvector"} num="85%" />
+                <Skills title={"Docker & CI/CD Pipelines"} num="85%" />
+                <Skills title={"OAuth & Auth Systems"} num="80%" />
+                <Skills title={"GCP & Cloud Architecture"} num="75%" />
               </div>
             </div>
             <div className={styles.tools}>
               <h2>tools</h2>
               <div className={styles.tools_child}>
-                <h3 className={styles.h3}>developing</h3>
+                <h3 className={styles.h3}>languages</h3>
                 <div className={styles.tools_icon}>
+                  <Icon url={"typescript.png"} name="typescript" />
                   <Icon url={"javascript.png"} name="javascript" />
-                  <Icon url={"sass.png"} name="sass" />
-                  <Icon url={"php.svg"} name="php" />
-                  <Icon url={"mysql.svg"} name="mysql" />
-                  <Icon url={"reactjs.png"} name="react.js" />
-                  <Icon url={"nextjs.png"} name="next.js" />
-                  <Icon url={"nodejs.png"} name="node.js" />
-                  <Icon url={"npm.png"} name="npm" />
-                  <Icon url={"git.png"} name="git" />
-                  <Icon url={"processing.png"} name="processing" />
+                  <Icon url={"python.png"} name="python" />
                 </div>
               </div>
               <div className={styles.tools_child}>
-                <h3 className={styles.h3}>design & photography</h3>
+                <h3 className={styles.h3}>frontend</h3>
+                <div className={styles.tools_icon}>
+                  <Icon url={"react.png"} name="react" />
+                  <Icon url={"nextjs.png"} name="next.js" />
+                  <Icon url={"react.png"} name="react native" />
+                  <Icon url={"sass.png"} name="sass" />
+                </div>
+              </div>
+              <div className={styles.tools_child}>
+                <h3 className={styles.h3}>backend</h3>
+                <div className={styles.tools_icon}>
+                  <Icon url={"nodejs.png"} name="node.js" />
+                  <Icon url={"postgresql.png"} name="postgresql" />
+                  <Icon url={"mongodb.png"} name="mongodb" />
+                  <Icon url={"elasticsearch.png"} name="elasticsearch" />
+                </div>
+              </div>
+              <div className={styles.tools_child}>
+                <h3 className={styles.h3}>cloud & devops</h3>
+                <div className={styles.tools_icon}>
+                  <Icon url={"gcp.png"} name="gcp" />
+                  <Icon url={"docker.png"} name="docker" />
+                  <Icon url={"github.png"} name="github" />
+                  <Icon url={"gitlab.png"} name="gitlab" />
+                </div>
+              </div>
+              <div className={styles.tools_child}>
+                <h3 className={styles.h3}>AI</h3>
+                <div className={styles.tools_icon}>
+                  <Icon url={"anthropic.png"} name="anthropic" />
+                  <Icon url={"openai.png"} name="openai" />
+                </div>
+              </div>
+              <div className={styles.tools_child}>
+                <h3 className={styles.h3}>tools</h3>
                 <div className={styles.tools_icon}>
                   <Icon url={"figma.png"} name="figma" />
-                  <Icon url={"illustrator.png"} name="illustrator" />
-                  <Icon url={"lightroom.png"} name="lightroom" />
-                  <Icon url={"photoshop.png"} name="photoshop" />
-                  <Icon url={"xd.png"} name="adobe xd" />
+                  <Icon url={"git.png"} name="git" />
+                  <Icon url={"linear.png"} name="linear" />
+                  <Icon url={"openapi.png"} name="openapi" />
                 </div>
               </div>
-              <div className={styles.tools_child}>
-                <h3 className={styles.h3}>cms & plugins</h3>
-                <div className={styles.tools_icon}>
-                  <Icon url={"drupal.png"} name="drupal" />
-                  <Icon url={"wordpress.png"} name="wordpress" />
-                  <Icon url={"divi.png"} name="divi" />
-                  <Icon url={"elementor.png"} name="elementor" />
-                  <Icon url={"salient.png"} name="salient" />
-                  <Icon url={"yoast.png"} name="yoast seo" />
-                </div>
-              </div>
-              <div className={styles.tools_child}>
-                <h3 className={styles.h3}>others</h3>
-                <div className={styles.tools_icon}>
-                  <Icon url={"processing.png"} name="processing" />
-                  <Icon url={"mailchimp.jpg"} name="mailchimp" />
-                  <Icon url={"analytics.png"} name="analytics" />
-                  <Icon url={"mybusiness.jpg"} name="my business" />
-                </div>
-              </div>
-            </div>
-            <div className={styles.hobbies}>
-              <h2>hobbies</h2>
-              <p>
-                apart from designing and developing, there are three things I
-                truly love doing in my spare time<br></br>
-                <br></br>
-                <b>photography</b>,<br></br>
-                <br></br>
-                <b>basketball</b>
-                <br></br>
-                <br></br>and...<br></br>
-                <br></br>
-                <b>generative art</b>
-                <br></br>
-                <br></br>the first two hobbies help me disconnect from the daily
-                routine, and also help me improve my creative skills (in
-                photohtaphy) and show me how to be better while working with
-                other people (basketball).
-                <br></br>
-                <br></br>finally, generative art is a hobby I discovered
-                recenlty, and helps me connect coding and design on a really
-                interesting way. I'm sure you'll hear about me soon talking more
-                and more about generative art!
-              </p>
             </div>
             <div className={styles.contact}>
               <p>

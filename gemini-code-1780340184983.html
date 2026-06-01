@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc López Soler | Full Stack & AI Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --card-bg: #121216;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #3b82f6;
+            --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 0.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 750px;
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* Grid Layouts */
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stack-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .stack-card h3 {
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stack-card ul {
+            list-style: none;
+        }
+
+        .stack-card li {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 0.4rem;
+        }
+
+        .stack-card li span {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Project Cards Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .project-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .project-badge {
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: #1e1b4b;
+            color: #818cf8;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .item-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.6rem 0 0.8rem 0;
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            font-size: 0.8rem;
+            font-family: monospace;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .project-bullets {
+            padding-left: 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .project-bullets li {
+            margin-bottom: 0.4rem;
+        }
+
+        .project-bullets strong {
+            color: var(--text-main);
+        }
+
+        .experience-timeline {
+            margin-top: 2rem;
+        }
+
+        .timeline-item {
+            border-left: 2px solid var(--border);
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HEADER / HERO -->
+        <header>
+            <h1 class="hero-title">Marc López Soler</h1>
+            <div class="hero-subtitle">Full Stack & AI Engineer</div>
+            <p class="hero-description">
+                Marc López is a Full Stack & AI Engineer who designs robust SaaS architectures, manages secure cloud infrastructure, and automating intelligent workflows while maintaining a unique edge in high-fidelity, interactive frontend execution.
+            </p>
+        </header>
+
+        <!-- TECHNICAL STACK -->
+        <section id="stack">
+            <h2>Technical Stack</h2>
+            <div class="stack-grid">
+                <div class="stack-card">
+                    <h3>AI & Data</h3>
+                    <ul>
+                        <li>OpenAI & Anthropic APIs</li>
+                        <li>Autonomous AI Agents</li>
+                        <li>Semantic Search <span>(pgvector)</span></li>
+                        <li>Elasticsearch <span>(Intermed.)</span></li>
+                        <li>Bulk & Real-Time Streams</li>
+                    </ul>
+                </div>
+                <div class="stack-card">
+                    <h3>Backend Architecture</h3>
+                    <ul>
+                        <li>Node.js / Express.js</li>
+                        <li>TypeScript / JavaScript</li>
+                        <li>NestJS</li>
+                        <li>PostgreSQL & MongoDB</li>
+                        <li>Advanced Database Design</li>
+                        <li>Custom OAuth Integration</li>
+                    </ul>
+                </div>
+                <div class="stack-card">
+                    <h3>Frontend & Mobile</h3>
+                    <ul>
+                        <li>React.js / Next.js</li>
+                        <li>React Native</li>
+                        <li>Tailwind CSS</li>
+                        <li>Styled Components</li>
+                        <li>SASS / HTML5 / CSS3</li>
+                    </ul>
+                </div>
+                <div class="stack-card">
+                    <h3>DevOps & Cloud</h3>
+                    <ul>
+                        <li>Docker Containerization</li>
+                        <li>Google Cloud Platform</li>
+                        <li>GCP Secrets & Buckets</li>
+                        <li>GitLab & GitHub CI/CD</li>
+                        <li>Self-Hosted Runners</li>
+                        <li>Advanced Git Orchestration</li>
+                        <li>Cloudflare</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE PRODUCTION SHIPPED PRODUCTS -->
+        <section id="productions">
+            <h2>Production Deployments & Shipped Products</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                The following production-grade platforms were fully architected or co-built by me during my tenure at Polaris Tech Group. All references respect active NDA boundaries by highlighting publicly accessible features, system logic, and cloud architecture frameworks.
+            </p>
+
+            <div class="project-grid">
+
+                <!-- VERBALIZAPP -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-title">Verbalizapp</span>
+                            <span class="project-meta">| AI Automation Platform</span>
+                        </div>
+                        <span class="project-badge">Fully Shipped</span>
+                    </div>
+                    <div class="item-tags">
+                        <span class="tag">TypeScript</span><span class="tag">OpenAI API</span><span class="tag">Anthropic API</span><span class="tag">AI Agents</span><span class="tag">OAuth</span>
+                    </div>
+                    <ul class="project-bullets">
+                        <li><strong>Full-Stack Ownership:</strong> Fully built the front-to-backend ecosystem, developing an applied AI engine designed to process and optimize automated workflow tasks.</li>
+                        <li><strong>AI Orchestration:</strong> Programmed complex multi-turn asynchronous loops handling state transitions across LLM models and proprietary automated agent routines.</li>
+                        <li><strong>Security & Identity:</strong> Designed database entities and secure customer multi-provider OAuth registration routes.</li>
+                    </ul>
+                </div>
+
+                <!-- NEXEN -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-title">Nexen / NexenLive</span>
+                            <span class="project-meta">| Enterprise SaaS Ecosystem</span>
+                        </div>
+                        <span class="project-badge">Co-Built (50/50)</span>
+                    </div>
+                    <div class="item-tags">
+                        <span class="tag">Docker</span><span class="tag">GCP</span><span class="tag">pgvector</span><span class="tag">Elasticsearch</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span>
+                    </div>
+                    <ul class="project-bullets">
+                        <li><strong>Core Architecture:</strong> Co-engineered a digital infrastructure network from scratch with one colleague, taking charge of end-to-end frontend architecture and backend routes.</li>
+                        <li><strong>Data Engineering & Search:</strong> Implemented precise <strong>Semantic Search</strong> integration using <code>pgvector</code> alongside stable <strong>Elasticsearch</strong> structures to process real-time and bulk third-party data streams.</li>
+                        <li><strong>Infrastructure Scale:</strong> Containerized software images using <strong>Docker</strong> to maintain automated environment delivery on <strong>Google Cloud Platform (GCP)</strong>.</li>
+                    </ul>
+                </div>
+
+                <!-- RACE+ & RACE SCALE -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-title">Race+ & Race Scale</span>
+                            <span class="project-meta">| Analytics Architectures</span>
+                        </div>
+                        <span class="project-badge">Fully Shipped</span>
+                    </div>
+                    <div class="item-tags">
+                        <span class="tag">Database Modeling</span><span class="tag">Node.js</span><span class="tag">Google Secret Manager</span><span class="tag">Data Precision</span>
+                    </div>
+                    <ul class="project-bullets">
+                        <li><strong>System Modeling:</strong> Fully developed backend schemas and system logic optimized to store high-density operational performance records securely.</li>
+                        <li><strong>Secrets Management:</strong> Sanitized system security profiles by migrating static credentials into <strong>Google Secret Manager</strong> environments.</li>
+                    </ul>
+                </div>
+
+                <!-- EBREBIOSFERA 4ALL -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-title">EbreBiosfera 4All</span>
+                            <span class="project-meta">| Public Sector Cross-Platform Mobile</span>
+                        </div>
+                        <span class="project-badge">Fully Shipped</span>
+                    </div>
+                    <div class="item-tags">
+                        <span class="tag">React Native</span><span class="tag">iOS App Store</span><span class="tag">Android Play Store</span><span class="tag">Mobile UX</span>
+                    </div>
+                    <ul class="project-bullets">
+                        <li><strong>Mobile Engineering:</strong> Programmed and deployed the official, production-ready cross-platform application using <strong>React Native</strong> for local tourism accessibility tracking.</li>
+                        <li><strong>Asset Pipeline:</strong> Standardized continuous asset building and safely navigated strict verification criteria for public App Store and Play Store distributions.</li>
+                    </ul>
+                </div>
+
+                <!-- UOC -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-title">UOC (Universitat Oberta de Catalunya)</span>
+                            <span class="project-meta">| Integration Architecture</span>
+                        </div>
+                        <span class="project-badge">Fully Shipped</span>
+                    </div>
+                    <div class="item-tags">
+                        <span class="tag">System Integration</span><span class="tag">GitLab Runners</span><span class="tag">CI/CD Pipelines</span><span class="tag">Webhooks</span>
+                    </div>
+                    <ul class="project-bullets">
+                        <li><strong>Complex Routing Logic:</strong> Fully designed and developed backend data orchestration connectors and integration webhooks to synchronize system parameters.</li>
+                        <li><strong>Pipeline Provisioning:</strong> Configured automated continuous integration tasks by orchestrating dedicated <strong>self-hosted GitLab/GitHub environment runners</strong> on physical local machines.</li>
+                    </ul>
+                </div>
+
+                <!-- NOTIFLOW (OPEN SOURCE) -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-title">notiflow</span>
+                            <span class="project-meta">| Open-Source Utility</span>
+                        </div>
+                        <span class="project-badge" style="background:#064e3b; color:#34d399;">OSS</span>
+                    </div>
+                    <div class="item-tags">
+                        <span class="tag">npm package</span><span class="tag">React Hooks</span><span class="tag">Context API</span>
+                    </div>
+                    <ul class="project-bullets">
+                        <li><strong>Package Architecture:</strong> Built and shipped a zero-dependency, lightweight message notification library on npm utilizing custom React hooks and Context architectures.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROFESSIONAL TIMELINE PROFILE -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h3 style="font-size:1.15rem;">Full Stack Software Engineer</h3>
+                    <div style="color:var(--text-muted); font-size:0.95rem; margin-bottom:0.25rem;">Polaris Technologies | Badalona</div>
+                    <div style="font-size:0.85rem; color:var(--accent); font-weight:600;">2024 – Present</div>
+                </div>
+                <div class="timeline-item">
+                    <h3 style="font-size:1.15rem;">HMI UX/UI Tester</h3>
+                    <div style="color:var(--text-muted); font-size:0.95rem; margin-bottom:0.25rem;">Capgemini Engineering (for SEAT & Cupra)</div>
+                    <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">2024</div>
+                </div>
+                <div class="timeline-item">
+                    <h3 style="font-size:1.15rem;">Website Designer & Developer</h3>
+                    <div style="color:var(--text-muted); font-size:0.95rem; margin-bottom:0.25rem;">Dfusió | Terrassa</div>
+                    <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">2022 – 2024</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="project-card">
+                <h3 style="font-size: 1.1rem; font-weight:700;">Bachelor's Degree in Multimedia</h3>
+                <div style="color: var(--text-muted); font-size:0.95rem;">Universitat Politècnica de Catalunya (UPC)</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Marc López Soler &copy; 2026 | Barcelona & Surrounding Area</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

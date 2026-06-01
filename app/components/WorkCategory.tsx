@@ -5,8 +5,7 @@ import { WorkCategoryProps } from "@/app/types";
 
 function WorkCategory({ works, categoryType, hoveredItemId, setHoveredItemId, localX, localY }: WorkCategoryProps) {
   return (
-    <div id={categoryType} className={styles.work_type}>
-      <h2 className={styles.category_type}>{categoryType}</h2>
+    <div className={styles.work_type}>
       {works.map((work) =>
         work.category === categoryType ? (
           <button

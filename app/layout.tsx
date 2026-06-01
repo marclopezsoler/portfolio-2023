@@ -10,6 +10,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Popup from "./components/Popup";
 
+import "./notiflow.config";
+import { NotificationManager, NotificationsProvider } from "notiflow";
+
 import "./globals.scss";
 
 interface RootLayoutProps {
@@ -26,7 +29,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           content="This is
           Marc López's portfolio website, where you can check all his projects and experience."
         />
-        <meta name="theme-color" content="#020b55" />
+        <meta name="theme-color" content="#000" />
         <link rel="manifest" href="./manifest.webmanifest" />
         <link rel="icon" href="./icon.ico" type="image/x-icon" />
 
@@ -90,12 +93,17 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       </Head>
 
       <body>
-        <section className="content">
-          <Header />
-          {isMobile ? <Popup /> : <Cursor />}
-          <div className="main">{children}</div>
-          <Footer />
-        </section>
+        <NotificationsProvider>
+          <div style={{ position: "relative", zIndex: 999999 }}>
+            <NotificationManager />
+          </div>
+          <section className="content">
+            <Header />
+            {isMobile ? <Popup /> : <Cursor />}
+            <div className="main">{children}</div>
+            <Footer />
+          </section>
+        </NotificationsProvider>
       </body>
     </html>
   );

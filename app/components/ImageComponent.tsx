@@ -40,11 +40,11 @@ export default function ImageComponent({ workId, image_alt, numberImg, imageExt 
 
   return (
     <div className={`${styles.image_parent} ${noSrc ? styles.hide : ""}`}>
-      <div className={`${styles.full_width} ${showFullImage ? styles.show : ""}`}>
+      <div className={`${styles.full_width} ${showFullImage ? styles.show : ""}`} onClick={toggleFullImage}>
         {showFullImage && (
           <>
             <div className={styles.cross} onClick={toggleFullImage}>
-              <Image src={closeIcon} alt="Close" width={30} height={30} />
+              <Image src={closeIcon} alt="Close" width={20} height={20} />
             </div>
             <Image
               id="fullImage"
@@ -53,6 +53,7 @@ export default function ImageComponent({ workId, image_alt, numberImg, imageExt 
               height={800}
               className={styles.full_image}
               alt={image_alt}
+              onClick={(e) => e.stopPropagation()}
             />
           </>
         )}

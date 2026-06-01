@@ -7,19 +7,19 @@ $font-titles: "Syne";
 
 //COLOR PALETTE
 
-$blue: #020b55;
-$bluehv: rgba(23, 36, 139, 0.763);
-$blueop: #020c556b;
-$green: #3aff49;
-$greenop2: #3aff4a72;
-$greenhv: #aeffb4;
-$greenop: rgba(174, 255, 179, 0.743);
+$blue: #000000;
+$bluehv: rgba(0, 0, 0, 0.763);
+$blueop: #0000006b;
+$green: #fff;
+$greenop2: #ffffff72;
+$greenhv: rgb(214, 214, 214);
+$greenop: rgba(255, 255, 255, 0.743);
 
 //FONT SIZES
 
 $menu_keys: calc(1.2rem + 1vw);
 $menu_toggle: calc(1.6rem + 2vw);
-$h1: calc(3rem + 3.4vw);
+$h1: calc(3rem + 2vw);
 $h2: calc(2.8rem + 1vw);
 $h3: calc(2rem + 0.8vw);
 $h3_smaller: calc(1.6rem + 0.6vw);

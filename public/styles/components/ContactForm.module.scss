@@ -33,10 +33,19 @@
     font-weight: 400;
     background-color: transparent;
     border-radius: 0;
-    background-color: transparent;
     resize: none;
     outline: none;
     font-size: $p;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: $green;
+      -webkit-box-shadow: 0 0 0 1000px $blue inset;
+      box-shadow: 0 0 0 1000px $blue inset;
+      border-bottom: 1.5px solid $green;
+      caret-color: $green;
+    }
   }
 
   label {

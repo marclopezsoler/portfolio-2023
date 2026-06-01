@@ -2,20 +2,53 @@
 
 .best_container {
   border: 1px solid $green;
+  height: 100%;
   min-height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-areas: "content";
+  place-items: center;
   padding: 5%;
-  gap: 5px;
+  box-sizing: border-box;
+
+  .title,
+  .description {
+    grid-area: content;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+  }
 
   .title {
     font-family: $font-titles;
     font-weight: 500;
-    margin: 0;
     font-size: $h5;
-    text-align: center;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .description {
+    font-family: $font-texts;
+    font-weight: 400;
+    font-size: $p;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  &:hover {
+    .title {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .description {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 

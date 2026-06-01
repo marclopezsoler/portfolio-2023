@@ -136,7 +136,7 @@ const HomePage = () => {
         <section className={styles.home_section_4}>
           <h2 className={styles.section4_title}>hey! you got to the bottom</h2>
           <p className={styles.section4_subtitle}>
-            feel free to explore the other sections
+            feel free to explore my work
           </p>
         </section>
       </main>

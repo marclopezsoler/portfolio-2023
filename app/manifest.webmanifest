@@ -1,6 +1,6 @@
 {
-   "theme_color": "#020b55",
-   "background_color": "#020b55",
+   "theme_color": "#000",
+   "background_color": "#000",
    "display": "standalone",
    "scope": "/",
    "start_url": "/",
@@ -22,4 +22,4 @@
          "purpose": "maskable"
       }
    ]
- }
+}

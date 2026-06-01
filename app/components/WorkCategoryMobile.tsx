@@ -4,8 +4,7 @@ import { WorkCategoryMobileProps } from "@/app/types";
 
 function WorkCategoryMobile({ works, categoryType }: WorkCategoryMobileProps) {
   return (
-    <div id={categoryType} className={styles.work_type_mobile}>
-      <h2 className={styles.category_type}>{categoryType}</h2>
+    <div className={styles.work_type_mobile}>
       {works.map((work) =>
         work.category === categoryType ? (
           <button className={styles.workItem_mobile} key={work.id}>
