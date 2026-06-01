@@ -1,9 +1,13 @@
 "use client";
-import styles from "@/public/styles/Contact.module.scss";
-import { motion } from "framer-motion";
+
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+
+import { motion } from "framer-motion";
+
 import ContactForm from "../components/ContactForm";
+
+import styles from "@/public/styles/Contact.module.scss";
 
 const ContactPage = () => {
   useEffect(() => {

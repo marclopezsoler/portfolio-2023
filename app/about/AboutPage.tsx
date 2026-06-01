@@ -1,12 +1,20 @@
 "use client";
-import styles from "@/public/styles/About.module.scss";
-import { motion } from "framer-motion";
+
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+
 import { Helmet } from "react-helmet";
-import Skills from "../components/Skills";
+
+import { motion } from "framer-motion";
+
+import profilePic from "@/public/assets/images/about/profile_pic.png";
+
 import Icon from "../components/Icon";
+import Skills from "../components/Skills";
+
+import styles from "@/public/styles/About.module.scss";
 
 const AboutPage = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -28,7 +36,7 @@ const AboutPage = () => {
 
   const combinedTop = `calc(20% + ${0.3 * scrollY}px)`;
 
-  const styleBg = {
+  const styleBg: React.CSSProperties = {
     top: combinedTop,
   };
 
@@ -94,10 +102,11 @@ const AboutPage = () => {
                 </p>
               </div>
               <Image
-                src={require(`/public/assets/images/about/profile_pic.png`)}
+                src={profilePic}
                 width={300}
                 height={300}
                 className={styles.image}
+                alt="Marc López profile picture"
               />
             </section>
           </div>

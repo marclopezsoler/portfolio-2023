@@ -1,39 +1,38 @@
 "use client";
-import works from "@/app/_data/data";
-import ImageComponent from "@/app/components/ImageComponent";
-import NextWork from "@/app/components/NextWork";
-import styles from "@/public/styles/WorkDetail.module.scss";
-import { motion } from "framer-motion";
+
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-export async function generateMetadata({ params }) {
-  const work = works.find((work) => work.id === params.id);
+import { motion } from "framer-motion";
+
+import works from "@/app/_data/data";
+import ImageComponent from "@/app/components/ImageComponent";
+import NextWork from "@/app/components/NextWork";
+
+import styles from "@/public/styles/WorkDetail.module.scss";
+
+interface WorkDetailParams {
+  params: { id: string };
 }
 
-export default function WorkDetailPage({ params }) {
+export async function generateMetadata({ params }: WorkDetailParams) {
+  const work = works.find((work) => work.id === params.id);
+  return { title: work ? `${work.title} | marc lópez portfolio` : 'marc lópez portfolio' };
+}
+
+export default function WorkDetailPage({ params }: WorkDetailParams) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const work = works.find((work) => work.id === params.id);
 
-  let nextWorkNum = 1;
-
-  const highestNum = works.reduce(
-    (max, work) => (work.num > max ? work.num : max),
-    0
-  );
-
-  if (highestNum === work.num) {
-    nextWorkNum = 1;
-  } else {
-    nextWorkNum = work.num + 1;
-  }
-
   if (!work) {
     return <div>Work not found</div>;
   }
+
+  const highestNum = works.reduce((max, w) => (w.num > max ? w.num : max), 0);
+  const nextWorkNum = work.num === highestNum ? 1 : work.num + 1;
 
   return (
     <motion.div

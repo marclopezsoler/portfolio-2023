@@ -1,12 +1,17 @@
 "use client";
-import styles from "@/public/styles/Work.module.scss";
-import { motion } from "framer-motion";
+
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { Helmet } from "react-helmet";
+
+import { motion } from "framer-motion";
+
 import works from "../_data/data";
+
 import WorkCategory from "../components/WorkCategory";
 import WorkCategoryMobile from "../components/WorkCategoryMobile";
+
+import styles from "@/public/styles/Work.module.scss";
 
 const WorkPage = () => {
   const [localX, setLocalX] = useState(0);
@@ -104,21 +109,9 @@ const WorkPage = () => {
                 workLoads === 1 ? styles.animate_content : ""
               }`}
             >
-              <WorkCategoryMobile
-                works={works}
-                categoryType="developing"
-                {...{ hoveredItemId, setHoveredItemId, localX, localY }}
-              />
-              <WorkCategoryMobile
-                works={works}
-                categoryType="design"
-                {...{ hoveredItemId, setHoveredItemId, localX, localY }}
-              />
-              <WorkCategoryMobile
-                works={works}
-                categoryType="other"
-                {...{ hoveredItemId, setHoveredItemId, localX, localY }}
-              />
+              <WorkCategoryMobile works={works} categoryType="developing" />
+              <WorkCategoryMobile works={works} categoryType="design" />
+              <WorkCategoryMobile works={works} categoryType="other" />
             </section>
           </section>
         )}

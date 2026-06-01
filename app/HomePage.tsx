@@ -1,11 +1,14 @@
 "use client";
-import styles from "@/public/styles/Home.module.scss";
-import { motion } from "framer-motion";
-import Head from "next/head";
+
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+
+import { motion } from "framer-motion";
+
 import Highlight from "./components/Highlight";
 import MyBest from "./components/MyBest";
-import { Helmet } from "react-helmet";
+
+import styles from "@/public/styles/Home.module.scss";
 
 const HomePage = () => {
   const [homeLoads, setHomeLoads] = useState(0);
@@ -73,7 +76,10 @@ const HomePage = () => {
         </section>
         <section className={styles.home_section_2}>
           <h2 className={styles.subtitle_part2}>what I do best</h2>
-          <p className={styles.p}>These are some aspects I excel at, for further detail, go to the about section!</p>
+          <p className={styles.p}>
+            These are some aspects I excel at, for further detail, go to the
+            about section!
+          </p>
           <div className={styles.best_parent}>
             <MyBest title={"Front End Developing"} />
             <MyBest title={"Responsive Web & Apps"} />
@@ -86,7 +92,10 @@ const HomePage = () => {
         <section className={styles.home_section_3}>
           <div className={styles.highlight_container}>
             <h2 className={styles.h2}>highlighted projects</h2>
-            <p className={styles.p}>Check out a few highlighted projects, if you want to explore more of them, go to the work section!</p>
+            <p className={styles.p}>
+              Check out a few highlighted projects, if you want to explore more
+              of them, go to the work section!
+            </p>
             <div className={styles.highlight_parent}>
               <Highlight
                 title={`generative splatter paintings`}
@@ -109,7 +118,9 @@ const HomePage = () => {
         </section>
         <section className={styles.home_section_4}>
           <h2 className={styles.section4_title}>hey! you got to the bottom</h2>
-          <p className={styles.section4_subtitle}>feel free to explore the other sections</p>
+          <p className={styles.section4_subtitle}>
+            feel free to explore the other sections
+          </p>
         </section>
       </main>
     </motion.div>
