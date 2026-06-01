@@ -44,7 +44,6 @@ export interface ImageComponentProps {
 
 export interface NextWorkProps {
   nextWork: number;
-  short_slug?: string;
 }
 
 export interface HighlightProps {
