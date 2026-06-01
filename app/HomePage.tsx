@@ -114,19 +114,21 @@ const HomePage = () => {
             <div className={styles.highlight_parent}>
               <Highlight
                 title={`funerary services website`}
-                filename_small={`pfb_small.png`}
-                filename_big={`pfb_big.png`}
+                image={`pfb_big.png`}
                 subtitle={`Next.js + Directus CMS`}
                 link={`work14`}
-                selected={1}
               />
               <Highlight
                 title={`stroke assessment toolkit`}
-                filename_small={`race_small.png`}
-                filename_big={`race_big.png`}
+                image={`race_big.png`}
                 subtitle={`mobile + dashboard`}
                 link={`work15`}
-                selected={2}
+              />
+              <Highlight
+                title={`generative splatter paintings`}
+                image={`pollock.png`}
+                subtitle={`final degree project`}
+                link={`work5`}
               />
             </div>
           </div>

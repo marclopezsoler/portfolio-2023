@@ -50,11 +50,9 @@ export interface NextWorkProps {
 
 export interface HighlightProps {
   title: string;
-  filename_small: string;
-  filename_big: string;
+  image: string;
   subtitle: string;
   link: string;
-  selected: number;
 }
 
 export interface IconProps {
