@@ -24,13 +24,9 @@ const WorkPage = () => {
   }, []);
 
   useEffect(() => {
-    let count = sessionStorage.getItem("workLoads");
-    if (count === null) {
-      count = 1;
-    } else {
-      count = Number(count) + 1;
-    }
-    sessionStorage.setItem("workLoads", count);
+    const stored = sessionStorage.getItem("workLoads");
+    const count = stored === null ? 1 : Number(stored) + 1;
+    sessionStorage.setItem("workLoads", String(count));
 
     setWorkLoads(count);
   }, []);

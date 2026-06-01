@@ -18,13 +18,9 @@ const HomePage = () => {
   }, []);
 
   useEffect(() => {
-    let count = sessionStorage.getItem("homeLoads");
-    if (count === null) {
-      count = 1;
-    } else {
-      count = Number(count) + 1;
-    }
-    sessionStorage.setItem("homeLoads", count);
+    const stored = sessionStorage.getItem("homeLoads");
+    const count = stored === null ? 1 : Number(stored) + 1;
+    sessionStorage.setItem("homeLoads", String(count));
 
     setHomeLoads(count);
   }, []);

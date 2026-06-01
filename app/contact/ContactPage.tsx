@@ -17,13 +17,9 @@ const ContactPage = () => {
   const [contactLoads, setContactLoads] = useState(0);
 
   useEffect(() => {
-    let count = sessionStorage.getItem("contactLoads");
-    if (count === null) {
-      count = 1;
-    } else {
-      count = Number(count) + 1;
-    }
-    sessionStorage.setItem("contactLoads", count);
+    const stored = sessionStorage.getItem("contactLoads");
+    const count = stored === null ? 1 : Number(stored) + 1;
+    sessionStorage.setItem("contactLoads", String(count));
 
     setContactLoads(count);
   }, []);

@@ -64,13 +64,9 @@ const AboutPage = () => {
   }, []);
 
   useEffect(() => {
-    let count = sessionStorage.getItem("aboutLoads");
-    if (count === null) {
-      count = 1;
-    } else {
-      count = Number(count) + 1;
-    }
-    sessionStorage.setItem("aboutLoads", count);
+    const stored = sessionStorage.getItem("aboutLoads");
+    const count = stored === null ? 1 : Number(stored) + 1;
+    sessionStorage.setItem("aboutLoads", String(count));
 
     setContactLoads(count);
   }, []);
