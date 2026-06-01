@@ -42,7 +42,7 @@ const HomePage = () => {
                 homeLoads === 1 ? styles.animate_titleY : ""
               }`}
             >
-              creative
+              full stack
             </h1>
             <div className={styles.title_parent2}>
               <h1
@@ -50,14 +50,14 @@ const HomePage = () => {
                   homeLoads === 1 ? styles.animate_titleX2 : ""
                 }`}
               >
-                digital{" "}
+                software{" "}
               </h1>
               <h1
                 className={`${styles.home_title} ${
                   homeLoads === 1 ? styles.animate_titleX : ""
                 }`}
               >
-                artist
+                engineer
               </h1>
             </div>
           </div>
@@ -66,8 +66,9 @@ const HomePage = () => {
               homeLoads === 1 ? styles.animate_subtitle : ""
             }`}
           >
-            marc lópez is a digital artist and developer from Barcelona, he's
-            keen on creating cool and simple stuff
+            marc lópez is a Full Stack & AI Engineer who designs robust SaaS
+            architectures and manages cloud infrastructure while maintaining a
+            high-fidelity & interactive frontend experience
           </h2>
         </section>
         <section className={styles.home_section_2}>
@@ -77,12 +78,30 @@ const HomePage = () => {
             about section!
           </p>
           <div className={styles.best_parent}>
-            <MyBest title={"Front End Developing"} />
-            <MyBest title={"Responsive Web & Apps"} />
-            <MyBest title={"SEO, Google Analytics and MyBusiness"} />
-            <MyBest title={"Graphic Design"} />
-            <MyBest title={"UI Design"} />
-            <MyBest title={"Social Media managing"} />
+            <MyBest
+              title={"Full Stack Architecture"}
+              description="Designing robust, end-to-end SaaS applications using TypeScript, Node.js, Express, and NestJS backends paired with modern React environments."
+            />
+            <MyBest
+              title={"AI & Agentic Workflows"}
+              description="Integrating LLM orchestration (OpenAI, Anthropic APIs) and building automated AI agent loops directly into production application logic."
+            />
+            <MyBest
+              title={"SEO, Google Analytics and MyBusiness"}
+              description="Structuring complex relational databases, handling real-time third-party streams, and optimizing vector mechanics like semantic search via pgvector and Elasticsearch."
+            />
+            <MyBest
+              title={"DevOps & CI/CD Pipelines"}
+              description="Automating workflows via GitHub/GitLab CI/CD, configuring self-hosted environment runners, and managing containerized applications with Docker."
+            />
+            <MyBest
+              title={"Secure Cloud Infrastructure"}
+              description="Provisioning resources across Google Cloud Platform (GCP), handling object storage with Cloud Storage Buckets, and securing credentials through Secret Manager."
+            />
+            <MyBest
+              title={"Product UI/UX Engineering"}
+              description="Bridging the gap between code and high-fidelity interaction design to build responsive web apps and native mobile applications via React Native."
+            />
           </div>
         </section>
         <section className={styles.home_section_3}>
@@ -94,19 +113,19 @@ const HomePage = () => {
             </p>
             <div className={styles.highlight_parent}>
               <Highlight
-                title={`generative splatter paintings`}
-                filename_small={`pollock.png`}
-                filename_big={`video_tfg.gif`}
-                subtitle={`final degree project`}
-                link={`work5`}
+                title={`speech rehab platform`}
+                filename_small={`rehab_small.png`}
+                filename_big={`rehab_big.jpg`}
+                subtitle={`healthcare SaaS`}
+                link={`work14`}
                 selected={1}
               />
               <Highlight
-                title={`happenin' app`}
-                filename_small={`happenin.jpg`}
-                filename_big={`happenin_video.gif`}
-                subtitle={`events mobile app`}
-                link={`work4`}
+                title={`stroke assessment toolkit`}
+                filename_small={`race_small.png`}
+                filename_big={`race_big.jpg`}
+                subtitle={`mobile + dashboard`}
+                link={`work15`}
                 selected={2}
               />
             </div>
