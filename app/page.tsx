@@ -1,6 +1,8 @@
-import dynamic from "next/dynamic";
+import loadDynamic from "next/dynamic";
 
-const App = dynamic(() => import("./HomePage"), {
+export const dynamic = "force-static";
+
+const App = loadDynamic(() => import("./HomePage"), {
   ssr: false,
 });
 
