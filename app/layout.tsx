@@ -1,6 +1,5 @@
 "use client";
 
-import Head from "next/head";
 import Script from "next/script";
 
 import { isMobile } from "react-device-detect";
@@ -23,65 +22,21 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" className="main">
-      <Head>
+      <head>
         <title>marc lópez portfolio</title>
-        <meta
-          name="description"
-          content="This is
-          Marc López's portfolio website, where you can check all his projects and experience."
-        />
+        <meta name="description" content="Marc López's portfolio website, where you can check all his projects and experience." />
         <meta name="theme-color" content="#000" />
         <link rel="manifest" href="./manifest.webmanifest" />
         <link rel="icon" href="./icon.ico" type="image/x-icon" />
-
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap"
-          as="style"
-          crossOrigin="anonymous"
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap"
-          media="print"
+          href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
         />
-        <noscript>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap"
-          />
-        </noscript>
-
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
-          as="style"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
-          media="print"
-        />
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;800&display=swap"
-        />
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
-        />
-        <noscript>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
-          />
-        </noscript>
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-CYPLVVSN8B`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-CYPLVVSN8B"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
@@ -91,7 +46,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           gtag('config', 'G-CYPLVVSN8B');
         `}
         </Script>
-      </Head>
+      </head>
 
       <body>
         <ClientNotifications>
