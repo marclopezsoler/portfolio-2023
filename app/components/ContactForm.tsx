@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "@/public/styles/components/ContactForm.module.scss";
 
 export default function ContactForm() {
@@ -9,6 +9,13 @@ export default function ContactForm() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const form = useRef<HTMLFormElement>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -32,7 +39,7 @@ export default function ContactForm() {
       setEmail("");
       setMessage("");
       setSent(true);
-      setTimeout(() => setSent(false), 3000);
+      timerRef.current = setTimeout(() => setSent(false), 3000);
     } catch {
       setError("Network error. Please check your connection and try again.");
     } finally {
@@ -89,7 +96,7 @@ export default function ContactForm() {
         Your message has been successfully sent!
       </p>
       {error && (
-        <p className={`${styles.sent} ${styles.show}`} style={{ color: "red" }}>
+        <p className={`${styles.sent} ${styles.show} ${styles.error}`}>
           {error}
         </p>
       )}
